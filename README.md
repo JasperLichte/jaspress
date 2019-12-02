@@ -1,5 +1,8 @@
-THERE IS NOTHING TO READ
-..
-..
-..
-YET
+ToDo
+
+Design Pattern
+Singleton
+Factory
+Observer
+MVC
+dependency Injection
