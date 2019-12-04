@@ -1,8 +1,8 @@
 <?php
 
-use config\Config;
+    use components\Application;
+    use config\Config;
+    use render\Content;
 
-require_once('./server/autoload.php');
-$app = components\Application::getInstance(new Config());
-$app->run();
-//$app->debug(app\components\Application::app()->db);
+    require_once('./server/autoload.php');
+    echo Application::getInstance(new Config())->run(Content::START);

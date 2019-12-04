@@ -1,20 +1,30 @@
 <?php
 
-namespace render;
+    namespace render;
 
+    use render\components\content\ContentComponentInterface;
+    use render\components\content\ContentComponent;
+    use render\components\content\StartContent;
 
-use config\Config;
-
-class Content
-{
-    /**
-     * @var Config
-     */
-    private $config;
-
-    public function __construct(Config $config)
+    class Content
     {
-        $this->config = $config;
+
+        public const START = 'start';
+
+        private $contentKey = '';
+
+        public function __construct(string $contentKey)
+        {
+            $this->contentKey = $contentKey;
+        }
+
+        public function getComponent(): ContentComponentInterface
+        {
+            switch ($this->contentKey) {
+                case self::START:
+                    return new StartContent();
+            }
+            return new ContentComponent();
     }
 
-}
+    }

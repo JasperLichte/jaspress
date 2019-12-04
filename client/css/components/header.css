@@ -1,0 +1,95 @@
+header {
+    background-color: navy;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+header.expanded {
+    height: 360px;
+    background-image: url("../../../static/img/RoboticCrow.jpg");
+}
+
+header.expanded::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(40, 40, 40, 0.6);
+}
+
+header #nav-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 8px 12px 8px 2rem;
+}
+
+header #nav-container h1 {
+    display: inline-block;
+    flex-grow: 1;
+    color: white;
+    margin-right: 2rem;
+}
+
+header nav {
+
+}
+
+header nav ul {
+    margin-top: 0.5rem;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 970px) {
+    header.expanded #nav-container {
+        background-color: rgba(255, 255, 255, .7);
+    }
+
+    header.expanded nav ul li a {
+        color: black;
+    }
+
+    header.expanded #nav-container h1 {
+        color: black;
+    }
+}
+
+
+@media screen and (max-width: 560px) {
+
+    header.expanded {
+        height: auto;
+    }
+
+    header.expanded #nav-container {
+        height: 100%;
+    }
+
+    header #nav-container {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        display: block;
+        padding: 4px;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    header #nav-container {
+        padding-left: 8px;
+    }
+
+}

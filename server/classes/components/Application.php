@@ -8,9 +8,15 @@ use render\PageStructure;
 
 class Application
 {
-    private static Application $instance;
+    /**
+     * @var Application
+     */
+    private static $instance = null;
 
-    private Config $config;
+    /**
+     * @var Config
+     */
+    private $config = null;
 
     public function __construct(Config $config)
     {
@@ -25,8 +31,8 @@ class Application
         return self::$instance;
     }
 
-    public function run()
+    public function run(string $contentType):string
     {
-        echo (new PageStructure(new Content($this->config)))->build();
+        return (new PageStructure(new Content($contentType)))->build();
     }
 }
