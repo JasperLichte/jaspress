@@ -1,3 +1,2 @@
-server/classes/database/Connection.php
 server/classes/config/Credentials.php
 .idea
