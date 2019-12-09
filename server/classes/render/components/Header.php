@@ -4,10 +4,21 @@
     namespace render\components;
 
 
+    use config\Config;
     use helper\HtmlHelper;
 
     class Header implements Component
     {
+        /**
+         * @var bool
+         */
+        private $isExpanded;
+
+        public function __construct(bool $isExpanded)
+        {
+            $this->isExpanded = $isExpanded;
+        }
+
         public function render(): string
         {
             $linksHtml = '';
@@ -24,10 +35,16 @@
                 );
             }
 
+            $appName = Config::APP_NAME;
+            $classes = [];
+            if ($this->isExpanded) {
+                $classes[] = 'expanded';
+            }
+            $classList = implode(' ', $classes);
             return <<<HTML
-<header class="expanded">
+<header class="$classList">
     <div id="nav-container">
-        <h1>HeavyHawk</h1>
+        <h1>$appName</h1>
         <nav>
             <ul>$linksHtml</ul>
         </nav>
@@ -36,7 +53,8 @@
 HTML;
         }
 
-        private function links() {
+        private function links()
+        {
             return [
                 'Home' => 'hshshs',
                 'About' => 'hshshs',

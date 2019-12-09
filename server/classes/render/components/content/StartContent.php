@@ -2,15 +2,25 @@
 
     namespace render\components\content;
 
+    use blog\Blog;
+
     class StartContent extends ContentComponent implements ContentComponentInterface
     {
         public function render(): string
         {
-            return 'huhu';
+            $blogContent = (new Blog())->render();
+            return <<<HTML
+$blogContent
+HTML;
         }
 
         public function title(): string
         {
-            return 'START';
+            return $this->buildTitle('START');
+        }
+
+        public function cssFiles(): array
+        {
+            return ['pages/start.css'];
         }
     }

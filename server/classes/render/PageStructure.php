@@ -26,6 +26,8 @@
             return [
                 'document.css',
                 'components/header.css',
+                'components/footer.css',
+                'components/main.css',
             ];
         }
 
@@ -97,7 +99,7 @@
                             implode(
                                 '',
                                 [
-                                    (new Header())->render(),
+                                    (new Header($contentComponent->headerIsExpanded()))->render(),
                                     (new Main($this->content))->render(),
                                     (new Footer())->render(),
                                 ]

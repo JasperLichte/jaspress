@@ -4,8 +4,21 @@
     namespace render\components\content;
 
 
+    use config\Config;
+    use helper\Request;
+
     class ContentComponent implements ContentComponentInterface
     {
+
+        /**
+         * @var Request
+         */
+        protected $request;
+
+        public function __construct(Request $request)
+        {
+            $this->request = $request;
+        }
 
         public function render(): string
         {
@@ -25,5 +38,15 @@
         public function cssFiles(): array
         {
             return [];
+        }
+
+        public function headerIsExpanded(): bool
+        {
+            return true;
+        }
+
+        protected function buildTitle(string $title = ''): string
+        {
+            return (empty($title) ? Config::APP_NAME : Config::APP_NAME . ' | ' . $title);
         }
     }

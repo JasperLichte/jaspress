@@ -1,0 +1,10 @@
+footer{
+    position: relative;
+    display: block;
+    height: auto;
+    bottom: 0;
+}
+
+footer h3{
+    text-align: center;
+}

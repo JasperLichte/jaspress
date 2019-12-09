@@ -10,3 +10,7 @@
 body {
     min-height: 100vh;
 }
+
+a, a:link, a:visited, a:active, a:hover {
+    color: currentColor;
+}

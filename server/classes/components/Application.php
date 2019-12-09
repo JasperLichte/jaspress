@@ -2,7 +2,7 @@
 
 namespace components;
 
-use config\Config;
+use helper\Request;
 use render\Content;
 use render\PageStructure;
 
@@ -14,25 +14,25 @@ class Application
     private static $instance = null;
 
     /**
-     * @var Config
+     * @var Request
      */
-    private $config = null;
+    private $request = null;
 
-    public function __construct(Config $config)
+    public function __construct(Request $request)
     {
-        $this->config = $config;
+        $this->request = $request;
     }
 
-    public static function getInstance(Config $config)
+    public static function getInstance(Request $request)
     {
         if (self::$instance === null) {
-            self::$instance = new Application($config);
+            self::$instance = new Application($request);
         }
         return self::$instance;
     }
 
     public function run(string $contentType):string
     {
-        return (new PageStructure(new Content($contentType)))->build();
+        return (new PageStructure(new Content($contentType, $this->request)))->build();
     }
 }
