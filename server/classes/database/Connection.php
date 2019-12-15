@@ -38,7 +38,7 @@ class Connection {
             Credentials::DB_PASSWORD,
             Credentials::DB_NAME
         );
-        $db->dbConn->set_charset('utf8');
+        $db->dbConn->set_charset('utf8mb4');
         return $db;
     }
     /**
