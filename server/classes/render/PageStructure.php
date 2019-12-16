@@ -4,6 +4,8 @@
 
 
     use config\Config;
+    use config\CssVersions;
+    use config\JsVersions;
     use helper\HtmlHelper;
     use render\components\Footer;
     use render\components\Header;
@@ -54,7 +56,9 @@
                 if (!is_string($file)) {
                     continue;
                 }
-                $file = Config::STYLES_ROOT_DIR() . $file;
+                $version = (isset(CssVersions::VERSIONS[$file]) ? (int)CssVersions::VERSIONS[$file] : 0);
+
+                $file = Config::STYLES_ROOT_DIR() . $file . ($version ? '?v=' . $version : '');
                 $html .= "<link rel=\"stylesheet\" href=\"{$file}\">\n";
             }
             return $html;
@@ -71,7 +75,9 @@
                 if (!is_string($file) || !is_string($fileType)) {
                     continue;
                 }
-                $file = Config::SCRIPTS_ROOT_DIR() . $file;
+                $version = (isset(JsVersions::VERSIONS[$file]) ? (int)JsVersions::VERSIONS[$file] : 0);
+
+                $file = Config::SCRIPTS_ROOT_DIR() . ($version ? '?v=' . $version : '');
                 $html .= HtmlHelper::jsImport($file, $fileType);
             }
             return $html;
