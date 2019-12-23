@@ -11,9 +11,10 @@
         {
             $protocol = stripos($_SERVER['SERVER_PROTOCOL'], 'https') === 0 ? 'https://' : 'http://';
 
-            $domainName = stripos($_SERVER['HTTP_HOST'], 'localhost') === 1 ?
-                $_SERVER['HTTP_HOST'] . '/' :
-                $_SERVER['HTTP_HOST'] . '/' . self::APP_NAME . '/';;
+            //ToDO check if there is a cleaner way
+            $domainName = ($_SERVER['HTTP_HOST'] === 'localhost')  ?
+                $_SERVER['HTTP_HOST'] . '/' . self::APP_NAME . '/' :
+                $_SERVER['HTTP_HOST'] . '/' ;
 
 
             return $protocol . $domainName;
