@@ -9,26 +9,14 @@
 
         public static function getRootUrl(): string
         {
-            if (isset($_SERVER['HTTPS'])) {
-                $protocol = ($_SERVER['HTTPS'] && $_SERVER['HTTPS'] != "off") ? "https" : "http";
-            } else {
-                $protocol = 'http';
-            }
+            $protocol = stripos($_SERVER['SERVER_PROTOCOL'], 'https') === 0 ? 'https://' : 'http://';
 
-            $extraDir = dirname($_SERVER["REQUEST_URI"] . '?');
-            $extraDir = explode('/', $extraDir);
-            $extraDir = array_filter($extraDir, function ($str) {
-                return (bool)$str;
-            });
-            $extraDir = (string)reset($extraDir);
+            $domainName = stripos($_SERVER['HTTP_HOST'], 'localhost') === 1 ?
+                $_SERVER['HTTP_HOST'] . '/' :
+                $_SERVER['HTTP_HOST'] . '/' . self::APP_NAME . '/';;
 
-            return
-                $protocol .
-                '://' .
-                $_SERVER['SERVER_NAME'] .
-                '/' .
-                $extraDir .
-                '/';
+
+            return $protocol . $domainName;
         }
 
 
