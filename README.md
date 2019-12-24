@@ -1,15 +1,20 @@
-Notes
+# OOP Blog
 
-php 7.3 since XAMPP isn't supporting 7.4 ;( 
+##Installation:
+Requires atleast PHP 7.3
 
-Design Pattern
 
-Singleton
+### Adding gitignored files
+You will need to create following PHP classes to get the app running:
+* `server/classes/config/Credentials.php` (see `server/classes/config/example.Credentials.php`)
 
-Factory
+### Running the SQL schema
+At `server/classes/database/db.sql` you can find an SQL schema which is needed to set up the database
 
-Observer
+##ToDo
 
-MVC
+* implement Twig
 
-dependency Injection
+* get rid of the Helpers
+
+* implement Doctrine
