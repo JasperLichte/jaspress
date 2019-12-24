@@ -22,6 +22,7 @@ class QueryHelper
         }
         return $results;
     }
+
     /**
      * @param mysqli $link
      * @param string $table
@@ -53,6 +54,7 @@ class QueryHelper
         }
         return self::query($link, $query);
     }
+
     /**
      * @param mysqli $link
      * @param $table
@@ -87,7 +89,7 @@ class QueryHelper
      * @param string $field
      * @param string $condition
      * @param string $order
-     * @return array
+     * @return string
      */
     public static  function getTableFieldElement(
         mysqli $link,
@@ -100,7 +102,7 @@ class QueryHelper
         if (isset($res[$field]) && !empty($res[$field])) {
             return $res[$field];
         }
-        return [];
+        return '';
     }
     /**
      * @param mysqli $link

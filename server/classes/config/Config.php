@@ -16,7 +16,6 @@
                 $_SERVER['HTTP_HOST'] . '/' . self::APP_NAME . '/' :
                 $_SERVER['HTTP_HOST'] . '/' ;
 
-
             return $protocol . $domainName;
         }
 

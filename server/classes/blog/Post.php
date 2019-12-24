@@ -77,7 +77,8 @@
 
             return <<<HTML
 <a href="$url" class="post">
-    <h3 class="title">$title</h3>
+    <h1 class="title">$title</h1>
+    <br>
     <p class="message">$message</p>
     <span class="creation-date">$this->creationDate</span>
 </a>

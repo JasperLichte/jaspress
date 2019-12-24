@@ -29,6 +29,7 @@
                 $db,
                 'blog_post',
                 [
+                    //ToDo write quoteStringFunction
                     'title' => '"' . $db->real_escape_string($postTitle). '"',
                     'message' => '"' . $db->real_escape_string($postMessage). '"',
                     'creation_date' => 'NOW()',
