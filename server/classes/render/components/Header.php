@@ -56,11 +56,12 @@ HTML;
         private function links()
         {
             return [
-                'Home' => 'hshshs',
-                'About' => 'hshshs',
-                'Referenzen' => 'hshshs',
-                'Kontakt' => 'hshshs',
-                'Impressum' => 'hshshs',
+                //ToDO
+                'Home' => '..',
+                'About' => '..',
+                'Referenzen' => '..',
+                'Kontakt' => '..',
+                'Impressum' => '..',
             ];
         }
     }
