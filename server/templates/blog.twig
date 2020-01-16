@@ -1,0 +1,11 @@
+{% include 'header.twig' %}
+<body>
+<div id="blog-content"></div>
+{% for post in posts %}
+    <a href="{{ URL }}blog/show_post.php?id={{ post.id }}" class="post">
+        <br>
+        <h1 class="message">{{ post.message }}</h1>
+        <p class="creation-date">{{ post.creation_date }}</p>
+    </a>
+{% endfor %}
+</body>

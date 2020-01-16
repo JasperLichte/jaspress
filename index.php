@@ -1,8 +1,11 @@
 <?php
 
-    use components\Application;
-    use helper\Request;
-    use render\Content;
+    require __DIR__ . '/vendor/autoload.php';
 
-    require_once('./server/autoload.php');
-    echo Application::getInstance(new Request($_GET, $_POST))->run(Content::START);
+    use Twig\Environment;
+    use Twig\Loader\FilesystemLoader;
+
+    $loader = new FilesystemLoader(__DIR__ . '/server/templates');
+    $twig = new Environment($loader);
+
+    echo $twig->render('blog.twig', []);
