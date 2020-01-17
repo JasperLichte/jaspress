@@ -1,0 +1,8 @@
+{#{% include '../page-structure/header.twig' %}#}
+<body>
+<div id="blog-content">
+    {% for post in posts %}
+        {% include '../post-card.twig' with {'post': post} only %}
+    {% endfor %}
+</div>
+</body>

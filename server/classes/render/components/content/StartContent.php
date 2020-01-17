@@ -8,10 +8,7 @@
     {
         public function render(): string
         {
-            $blogContent = (new Blog())->render();
-            return <<<HTML
-$blogContent
-HTML;
+            return (new Blog())->render();
         }
 
         public function title(): string

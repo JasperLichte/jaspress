@@ -15,6 +15,8 @@ At `server/classes/database/db.sql` you can find an SQL schema which is needed t
 
 * implement Twig
 
-* get rid of the Helpers
+* get rid of HTML Helpers
 
 * implement Doctrine
+
+*get rid of Query Helpers
