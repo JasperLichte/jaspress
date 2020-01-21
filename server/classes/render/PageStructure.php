@@ -7,9 +7,9 @@
     use config\CssVersions;
     use config\JsVersions;
     use helper\HtmlHelper;
-    use render\components\Footer;
-    use render\components\Header;
-    use render\components\Main;
+    use render\components\content\StartContent;
+    use Twig\Environment;
+    use Twig\Loader\FilesystemLoader;
 
     class PageStructure
     {
@@ -86,33 +86,8 @@
         public function build(): string
         {
             $contentComponent = $this->content->getComponent();
-            return
-                "<!DOCTYPE html>\n" .
-                HtmlHelper::element(
-                    'html',
-                    ['lang' => 'de',],
-                    (
-                        HtmlHelper::element(
-                            'head',
-                            [],
-                            $this->metas() .
-                            HtmlHelper::title($contentComponent->title()) .
-                            $this->cssIncludes(array_merge($this->cssFiles(), $contentComponent->cssFiles()))
-                        ) .
-                        HtmlHelper::element(
-                            'body',
-                            [],
-                            implode(
-                                '',
-                                [
-                                    (new Header($contentComponent->headerIsExpanded()))->render(),
-                                    (new Main($this->content))->render(),
-                                    (new Footer())->render(),
-                                ]
-                            ) .
-                            $this->jsIncludes(array_merge($this->jsFiles(), $contentComponent->jsFiles()))
-                        )
-                    )
-                );
+           //twig build
+
+            return;
         }
     }

@@ -1,8 +1,15 @@
-{#{% include '../page-structure/header.twig' %}#}
-<body>
-<div id="blog-content">
-    {% for post in posts %}
-        {% include '../post-card.twig' with {'post': post} only %}
-    {% endfor %}
-</div>
-</body>
+{% include 'page-structure/document.twig' %}
+{% include 'page-structure/header.twig' %}
+{% block body %}
+    <link href="{{ URL }}/client/css/pages/start.css" rel="stylesheet">
+    <body>
+    <main>
+        <div id="blog-content">
+            <script>console.log({{ _context | json_encode | raw }});</script>
+            {% for post in posts %}
+                {% include 'components/blog/post/post-card.twig' with {'post': post} only %}
+            {% endfor %}
+        </div>
+    </main>
+    </body>
+{% endblock %}

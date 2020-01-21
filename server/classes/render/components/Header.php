@@ -55,13 +55,13 @@ HTML;
 
         private function links()
         {
+            $url = Config::getRootUrl();
+
             return [
-                //ToDO
-                'Home' => '..',
-                'About' => '..',
-                'Referenzen' => '..',
-                'Kontakt' => '..',
-                'Impressum' => '..',
+                ['name' => 'About', 'url' => $url . 'blog/about.php'],
+                ['name' => 'Portfolio', 'url' => $url . 'blog/portfolio.php'],
+                ['name' => 'Testimonials', 'url' => $url . 'blog/testimonials'],
+                ['name' => 'Articles', 'url' => $url . 'blog/articles'],
             ];
         }
     }

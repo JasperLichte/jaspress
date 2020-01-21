@@ -27,7 +27,7 @@ header #nav-container {
     padding: 8px 12px 8px 2rem;
 }
 
-header #nav-container h1 {
+header #nav-container h2 {
     display: inline-block;
     flex-grow: 1;
     color: white;
@@ -61,7 +61,7 @@ header nav ul li a {
         color: black;
     }
 
-    header.expanded #nav-container h1 {
+    header.expanded #nav-container h2 {
         color: black;
     }
 }

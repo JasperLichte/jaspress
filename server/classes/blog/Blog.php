@@ -3,25 +3,18 @@
 
     namespace blog;
 
-
     use database\Connection;
     use database\QueryHelper;
-    use helper\HtmlHelper;
 
     class Blog
     {
-
-        /**
-         * @var Post[]
-         */
-        private $posts = [];
 
         public function __construct()
         {
             $this->loadPosts();
         }
 
-        private function loadPosts()
+        public function loadPosts()
         {
             $db = Connection::getInstance();
             $posts = QueryHelper::getTableFields(
@@ -32,31 +25,22 @@
                 'creation_date DESC'
             );
 
-            foreach ($posts as $p) {
-                $post = new Post();
-                $post->setId($p['id']);
-                $post->setTitle($p['title']);
-                $post->setMessage($p['message']);
-                $post->setCreationDate($p['creation_date']);
-
-                $this->posts[] = $post;
-            }
+            return $posts;
         }
 
-        public function render(): string
+        public function getLinks()
         {
-            return HtmlHelper::div(
-                ['id' => 'blog-content'],
-                implode(
-                    '',
-                    array_map(
-                        function (Post $post) {
-                            return $post->render();
-                        },
-                        $this->posts
-                    )
-                ),
-                false
+            $db = Connection::getInstance();
+            $links = QueryHelper::getTableFields(
+                $db,
+                'links',
+                ['ID', 'Name'],
+                null,
+                'ID ASC'
             );
+
+
+
+            return $links;
         }
     }

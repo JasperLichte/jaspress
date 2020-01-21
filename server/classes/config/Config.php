@@ -19,21 +19,17 @@
             return $protocol . $domainName;
         }
 
-
-        /**
-         * @return string
-         */
-        public static function STYLES_ROOT_DIR()
+        public static function STYLES_ROOT_DIR() : string
         {
             return self::getRootUrl() . 'client/css/';
         }
 
-        public static function SCRIPTS_ROOT_DIR()
+        public static function SCRIPTS_ROOT_DIR() : string
         {
             return self::getRootUrl() . 'client/js/';
         }
 
-        public static function API_ROOT_DIR()
+        public static function API_ROOT_DIR() : string
         {
             return self::getRootUrl() . 'api/';
         }

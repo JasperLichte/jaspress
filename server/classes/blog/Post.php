@@ -59,6 +59,7 @@
             $this->message = $message;
         }
 
+        // Delete?
         public function getCreationDate(): string
         {
             return $this->creationDate;

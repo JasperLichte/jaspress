@@ -1,14 +1,15 @@
-<html lang="{{ LANG }}">
-<head>
-    <title>{{ TITLE }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="{{ URL }}lib/fontawesome-free-5.6.3-web/css/all.css">
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
-    {% block globalStyles %}
-        <link href="{{ URL }}css/common.css" rel="stylesheet">
-        <link href="{{ URL }}css/sidebar.css" rel="stylesheet">
-    {% endblock %}
-    {% block styles %}{% endblock %}
-</head>
+<header class="expanded">
+    ::before
+    <div id="nav-container">
+        <h2>{{ APP }}</h2>
+        <nav>
+            <ul>
+                {% for link in links %}
+                    <li>
+                        <a href={{ link.url }}>{{ link.name }} </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>

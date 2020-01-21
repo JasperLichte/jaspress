@@ -20,3 +20,5 @@ At `server/classes/database/db.sql` you can find an SQL schema which is needed t
 * implement Doctrine
 
 *get rid of Query Helpers
+
+*no indexed Arrays
