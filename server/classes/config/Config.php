@@ -5,16 +5,12 @@
     class Config
     {
 
-        public const APP_NAME = 'HeavyHawk'; // TODO remove
-
         public static function getRootUrl(): string
         {
             $protocol = stripos($_SERVER['SERVER_PROTOCOL'], 'https') === 0 ? 'https://' : 'http://';
 
             //ToDO check if there is a cleaner way
-            $domainName = ($_SERVER['HTTP_HOST'] === 'localhost')  ?
-                $_SERVER['HTTP_HOST'] . '/' . self::APP_NAME . '/' :
-                $_SERVER['HTTP_HOST'] . '/' ;
+            $domainName = $_SERVER['HTTP_HOST'] . '/' ;
 
             return $protocol . $domainName;
         }

@@ -6,6 +6,8 @@
 
     use config\Config;
     use request\Request;
+    use settings\Settings;
+    use settings\settings\AppNameSetting;
 
     class ContentComponent implements ContentComponentInterface
     {
@@ -47,6 +49,7 @@
 
         protected function buildTitle(string $title = ''): string
         {
-            return (empty($title) ? Config::APP_NAME : Config::APP_NAME . ' | ' . $title);
+            $appName = Settings::getInstance()->getByKey(AppNameSetting::DB_KEY)->getValue();
+            return (empty($title) ? $appName : $appName . ' | ' . $title);
         }
     }
