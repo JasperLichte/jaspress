@@ -4,7 +4,6 @@ namespace application;
 
 use request\Request;
 use render\ContentFactory;
-use render\PageStructure;
 
 class Application
 {
@@ -33,6 +32,6 @@ class Application
 
     public function run(string $contentType):string
     {
-        return (new PageStructure(ContentFactory::get($contentType, $this->request)))->build();
+        return ContentFactory::get($contentType, $this->request)->render();
     }
 }

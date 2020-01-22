@@ -3,11 +3,13 @@
 
     namespace render\components\content;
 
+    require_once __DIR__ . './../../../../vendor/autoload.php';
 
-    use config\Config;
     use request\Request;
     use settings\Settings;
     use settings\settings\AppNameSetting;
+    use Twig\Environment;
+    use Twig\Loader\FilesystemLoader;
 
     class ContentComponent implements ContentComponentInterface
     {
@@ -17,9 +19,19 @@
          */
         protected $request;
 
+        /**
+         * @var Environment
+         */
+        protected $twig;
+
         public function __construct(Request $request)
         {
             $this->request = $request;
+
+            $loader = new FilesystemLoader();
+            $loader->addPath(realpath(__DIR__ . './../../../../templates/pages/'), 'pages');
+
+            $this->twig = new Environment($loader);
         }
 
         public function render(): string
