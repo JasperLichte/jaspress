@@ -2,7 +2,7 @@
 
     namespace api\actions;
 
-    use helper\Request;
+    use request\Request;
 
     class Action implements ActionInterface
     {
@@ -34,7 +34,7 @@
 
         protected function setContentType(string $contentType)
         {
-            header('Content-Type: ' . (string)$contentType);
+            header('ContentFactory-Type: ' . (string)$contentType);
         }
 
         public function getStatusCode(): int

@@ -5,9 +5,7 @@
 
 
     use config\Config;
-    use database\Connection;
-    use database\QueryHelper;
-    use helper\Request;
+    use request\Request;
 
     class ContentComponent implements ContentComponentInterface
     {

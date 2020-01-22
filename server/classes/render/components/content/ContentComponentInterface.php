@@ -2,7 +2,7 @@
 
     namespace render\components\content;
 
-    use helper\Request;
+    use request\Request;
 
     interface ContentComponentInterface
     {

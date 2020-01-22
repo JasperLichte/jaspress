@@ -3,7 +3,7 @@
 
     namespace api\actions;
 
-    use helper\Request;
+    use request\Request;
 
     interface ActionInterface
     {

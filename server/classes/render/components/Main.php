@@ -3,16 +3,16 @@
 
     namespace render\components;
 
-    use render\Content;
+    use render\ContentFactory;
 
     class Main implements Component
     {
         /**
-         * @var Content
+         * @var ContentFactory
          */
         private $content;
 
-        public function __construct(Content $content)
+        public function __construct(ContentFactory $content)
         {
             $this->content = $content;
         }
