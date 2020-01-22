@@ -5,7 +5,7 @@
     class Config
     {
 
-        public const APP_NAME = 'HeavyHawk';
+        public const APP_NAME = 'HeavyHawk'; // TODO remove
 
         public static function getRootUrl(): string
         {

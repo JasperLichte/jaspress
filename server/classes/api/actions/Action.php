@@ -34,7 +34,7 @@
 
         protected function setContentType(string $contentType)
         {
-            header('ContentFactory-Type: ' . (string)$contentType);
+            header('Content-Type: ' . (string)$contentType);
         }
 
         public function getStatusCode(): int
