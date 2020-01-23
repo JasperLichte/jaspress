@@ -10,22 +10,24 @@ class Application
     /**
      * @var Application
      */
-    private static $instance = null;
+    private static $instance;
 
     /**
      * @var Request
      */
-    private $request = null;
+    private $request;
 
-    public function __construct(Request $request)
-    {
-        $this->request = $request;
-    }
+    /**
+     * @var AppState
+     */
+    private $state;
 
-    public static function getInstance(Request $request)
+    private function __construct() {}
+
+    public static function getInstance()
     {
         if (self::$instance === null) {
-            self::$instance = new Application($request);
+            self::$instance = new Application();
         }
         return self::$instance;
     }
@@ -33,5 +35,20 @@ class Application
     public function run(string $contentType):string
     {
         return ContentFactory::get($contentType, $this->request)->render();
+    }
+
+    public function getState(): AppState
+    {
+        return $this->state;
+    }
+
+    public function setState(AppState $state): void
+    {
+        $this->state = $state;
+    }
+
+    public function setRequest(Request $request): void
+    {
+        $this->request = $request;
     }
 }

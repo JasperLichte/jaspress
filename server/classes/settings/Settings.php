@@ -4,7 +4,6 @@ namespace settings;
 
 
 use settings\settings\AppNameSetting;
-
 class Settings
 {
 

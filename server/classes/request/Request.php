@@ -14,10 +14,10 @@
          */
         private $post;
 
-        public function __construct(array $get = [], array $post = [])
+        public function __construct()
         {
-            $this->get = $get;
-            $this->post = $post;
+            $this->get = $_GET;
+            $this->post = $_POST;
         }
 
         /**
