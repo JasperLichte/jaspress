@@ -6,13 +6,33 @@ class Menu
 {
 
     /**
-     * @var MenuEntry
+     * @var MenuEntry[]
      */
-    private $activeEntry;
+    private $entries = [];
 
-    public function getActiveEntry(): MenuEntry
+    public function __construct()
     {
-        return $this->activeEntry;
+        $this->entries = self::loadEntries();
+    }
+
+    /**
+     * @return MenuEntry[]
+     */
+    public function getEntries(): array
+    {
+        return $this->entries;
+    }
+
+    /**
+     * @return MenuEntry[]
+     */
+    private static function loadEntries(): array
+    {
+        $entries = [];
+
+        // TODO load menu entries from db
+
+        return $entries;
     }
 
 }
