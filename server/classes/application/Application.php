@@ -38,7 +38,13 @@ class Application
 
     public function run(string $pageType):string
     {
+        $this->saveRequest();
         return PageFactory::get($pageType, $this->request)->render();
+    }
+
+    private function saveRequest()
+    {
+        // TODO save request in db
     }
 
     public function getState(): AppState
