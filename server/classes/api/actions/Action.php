@@ -27,11 +27,6 @@
             $this->request = $request;
         }
 
-        protected function setStatusCode(int $statusCode): void
-        {
-            $this->statusCode = $statusCode;
-        }
-
         protected function setContentType(string $contentType)
         {
             header('Content-Type: ' . (string)$contentType);
@@ -42,8 +37,14 @@
             return $this->statusCode;
         }
 
+        protected function setStatusCode(int $statusCode): void
+        {
+            $this->statusCode = $statusCode;
+        }
+
         public function run(): string
         {
             return '';
         }
+        
     }
