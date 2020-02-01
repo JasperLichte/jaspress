@@ -3,10 +3,10 @@
 require_once('./server/autoload.php');
 
 use application\Application;
-use render\ContentFactory;
+use render\ContentTypes;
 use request\Request;
 
 $app = Application::getInstance();
 $app->setRequest(new Request());
 
-echo $app->run(ContentFactory::START);
+echo $app->run(ContentTypes::START);

@@ -17,7 +17,7 @@
         /**
          * @var Request
          */
-        protected $request;
+        protected $req;
 
         /**
          * @var Environment
@@ -26,7 +26,7 @@
 
         public function __construct(Request $request)
         {
-            $this->request = $request;
+            $this->req = $request;
 
             $loader = new FilesystemLoader();
             $loader->addPath(realpath(__DIR__ . './../../../../templates/pages/'), 'pages');

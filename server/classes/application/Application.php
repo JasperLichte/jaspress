@@ -22,7 +22,10 @@ class Application
      */
     private $state;
 
-    private function __construct() {}
+    private function __construct()
+    {
+        $this->state = new AppState();
+    }
 
     public static function getInstance()
     {

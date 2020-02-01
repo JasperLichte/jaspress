@@ -13,6 +13,11 @@ class AppState
      */
     private $menu;
 
+    public function __construct()
+    {
+        $this->menu = new Menu();
+    }
+
     public function getMenu(): Menu
     {
         return $this->menu;
