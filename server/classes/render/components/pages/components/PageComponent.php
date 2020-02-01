@@ -1,14 +1,14 @@
 <?php
 
-namespace render\components\content\components;
+namespace render\components\pages\components;
 
 use application\Application;
 use content\models\Page;
-use render\components\content\ContentComponent;
-use render\components\content\ContentComponentInterface;
+use render\components\pages\PageComponentBase;
+use render\components\pages\PageComponentInterface;
 use request\Request;
 
-class PageComponent extends ContentComponent implements ContentComponentInterface
+class PageComponent extends PageComponentBase implements PageComponentInterface
 {
 
     public const GET_PAGE_KEY = 'p';

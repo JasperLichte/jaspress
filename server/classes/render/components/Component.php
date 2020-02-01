@@ -1,10 +1,10 @@
 <?php
 
-    namespace render\components;
+namespace render\components;
 
-    interface Component
-    {
+interface Component
+{
 
-        public function render(): string;
+    public function render(): string;
 
-    }
+}

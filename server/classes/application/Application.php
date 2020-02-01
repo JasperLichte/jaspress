@@ -3,7 +3,7 @@
 namespace application;
 
 use request\Request;
-use render\ContentFactory;
+use render\PageFactory;
 
 class Application
 {
@@ -25,6 +25,7 @@ class Application
     private function __construct()
     {
         $this->state = new AppState();
+        $this->request = new Request();
     }
 
     public static function getInstance()
@@ -35,9 +36,9 @@ class Application
         return self::$instance;
     }
 
-    public function run(string $contentType):string
+    public function run(string $pageType):string
     {
-        return ContentFactory::get($contentType, $this->request)->render();
+        return PageFactory::get($pageType, $this->request)->render();
     }
 
     public function getState(): AppState
@@ -48,10 +49,5 @@ class Application
     public function setState(AppState $state): void
     {
         $this->state = $state;
-    }
-
-    public function setRequest(Request $request): void
-    {
-        $this->request = $request;
     }
 }

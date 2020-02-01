@@ -1,13 +1,13 @@
 <?php
 
 
-namespace render\components\content\components;
+namespace render\components\pages\components;
 
-use render\components\content\ContentComponent;
-use render\components\content\ContentComponentInterface;
+use render\components\pages\PageComponentBase;
+use render\components\pages\PageComponentInterface;
 use request\Request;
 
-class StartComponent extends ContentComponent implements ContentComponentInterface
+class StartComponentBase extends PageComponentBase implements PageComponentInterface
 {
 
     public static function shouldRenderPageContent(Request $request): bool
