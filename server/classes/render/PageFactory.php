@@ -3,7 +3,7 @@
     namespace render;
 
     use render\components\pages\components\PageComponent;
-    use render\components\pages\components\StartComponentBase;
+    use render\components\pages\components\StartComponent;
     use request\Request;
     use render\components\pages\PageComponentInterface;
 
@@ -14,10 +14,10 @@
         {
             switch ($pageKey) {
                 case PageTypes::START:
-                    if (StartComponentBase::shouldRenderPageContent($request)) {
+                    if (StartComponent::shouldRenderPageContent($request)) {
                         return new PageComponent($request);
                     }
-                    return new StartComponentBase($request);
+                    return new StartComponent($request);
             }
             return new PageComponent($request);
         }

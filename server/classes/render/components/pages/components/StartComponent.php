@@ -7,7 +7,7 @@ use render\components\pages\PageComponentBase;
 use render\components\pages\PageComponentInterface;
 use request\Request;
 
-class StartComponentBase extends PageComponentBase implements PageComponentInterface
+class StartComponent extends PageComponentBase implements PageComponentInterface
 {
 
     public static function shouldRenderPageContent(Request $request): bool
