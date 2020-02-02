@@ -61,4 +61,10 @@ class User implements Serializable
         // TODO load existing user from db
     }
 
+    public static function loadFromSession(): User
+    {
+        $userId = $_SESSION['user_id'];
+        return null;
+    }
+
 }

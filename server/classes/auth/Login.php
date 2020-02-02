@@ -32,6 +32,9 @@ class Login
         if (!password_verify($this->user->getPassword(), $dbUser->getPassword())) {
             throw new WrongPasswordException();
         }
+
+        session_start();
+        $_SESSION['user_id'] = $dbUser->getId();
     }
 
 }
