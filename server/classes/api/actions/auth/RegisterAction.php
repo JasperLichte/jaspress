@@ -2,14 +2,13 @@
 
 namespace api\actions\auth;
 
-
 use api\actions\Action;
 use auth\exceptions\UnknownUserException;
 use auth\exceptions\WrongPasswordException;
 use auth\Login;
 use auth\models\User;
 
-class LoginAction extends Action
+class RegisterAction extends Action
 {
 
     public function run(): string
@@ -19,7 +18,12 @@ class LoginAction extends Action
             return $this->res->setErrorMessage('Empty user passed')->asJson();
         }
 
+        if (User::loadByEmail($user->getEmail()) != null) {
+            return $this->res->setErrorMessage('User exists')->asJson();
+        }
+
         try {
+            User::storeNew($user);
             $login = new Login($user);
             $login->perform();
         } catch(UnknownUserException $e) {
@@ -28,7 +32,7 @@ class LoginAction extends Action
             return $this->res->exception($e)->asJson();
         }
 
-        return $this->res->setSuccessMessage('Successfully logged in');
+        return $this->res->setSuccessMessage('Successfully registered');
     }
 
 }

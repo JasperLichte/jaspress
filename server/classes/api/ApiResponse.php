@@ -39,6 +39,14 @@ class ApiResponse
         return $this;
     }
 
+    public function setSuccessMessage(string $message): ApiResponse
+    {
+        $this->setSuccess(true);
+        $this->setMessage($message);
+
+        return $this;
+    }
+
     public function withData($data): ApiResponse
     {
         $this->data = $data;

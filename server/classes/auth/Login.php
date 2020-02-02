@@ -24,7 +24,7 @@ class Login
      */
     public function perform()
     {
-        $dbUser = User::load($this->user->getEmail());
+        $dbUser = User::loadByEmail($this->user->getEmail());
         if ($dbUser == null) {
             throw new UnknownUserException($this->user);
         }

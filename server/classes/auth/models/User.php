@@ -55,7 +55,7 @@ class User implements Serializable
         return $this->password;
     }
 
-    public static function load(string $email): User
+    public static function loadByEmail(string $email): User
     {
         return null;
         // TODO load existing user from db
@@ -65,6 +65,12 @@ class User implements Serializable
     {
         $userId = $_SESSION['user_id'];
         return null;
+    }
+
+    public static function storeNew(User $user): User
+    {
+        return $user;
+        // TODO store $user in db, assign id
     }
 
 }
