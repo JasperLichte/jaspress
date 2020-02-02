@@ -1,9 +1,9 @@
 <?php
 
-namespace render\components\pages\components;
+namespace render\components\pages;
 
-use render\components\pages\PageComponentBase;
-use render\components\pages\PageComponentInterface;
+use render\components\PageComponentBase;
+use render\components\PageComponentInterface;
 use request\Request;
 use request\Url;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace render\components\pages;
+namespace render\components;
 
-use render\RenderController;
+use render\controller\RenderController;
 use request\Request;
 use request\Url;
 

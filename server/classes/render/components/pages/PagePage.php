@@ -1,12 +1,12 @@
 <?php
 
-namespace render\components\pages\components;
+namespace render\components\pages;
 
 use application\Application;
 use content\models\Page;
-use render\components\pages\PageComponentBase;
-use render\components\pages\PageComponentInterface;
-use render\RenderController;
+use render\components\PageComponentBase;
+use render\components\PageComponentInterface;
+use render\controller\RenderController;
 use request\Request;
 use request\Url;
 

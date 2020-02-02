@@ -1,6 +1,6 @@
 <?php
 
-namespace render;
+namespace render\controller;
 
 interface RenderController
 {

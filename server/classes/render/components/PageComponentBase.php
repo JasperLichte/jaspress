@@ -1,8 +1,9 @@
 <?php
 
-namespace render\components\pages;
+namespace render\components;
 
-use render\RenderController;
+use application\Application;
+use render\controller\RenderController;
 use request\Request;
 use request\Url;
 use settings\Settings;
@@ -25,6 +26,9 @@ class PageComponentBase implements PageComponentInterface
 
     public function render(): string
     {
+        $state = Application::getInstance()->getState();
+        Application::getInstance()->setState($state->setUi($state->getUi()->setTitle('')));
+        // TODO abstract
         return '';
     }
 

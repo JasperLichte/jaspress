@@ -2,10 +2,11 @@
 
 namespace render;
 
-use render\components\pages\components\PagePage;
-use render\components\pages\components\StartPage;
+use render\components\pages\PagePage;
+use render\components\pages\StartPage;
+use render\controller\TwigController;
 use request\Request;
-use render\components\pages\PageComponentInterface;
+use render\components\PageComponentInterface;
 
 class PageFactory
 {

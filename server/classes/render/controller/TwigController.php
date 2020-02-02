@@ -1,8 +1,8 @@
 <?php
 
-namespace render;
+namespace render\controller;
 
-require_once __DIR__ . './../../vendor/autoload.php';
+require_once __DIR__ . './../../../vendor/autoload.php';
 
 use application\Application;
 use settings\Settings;
