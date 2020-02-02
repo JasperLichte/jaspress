@@ -2,7 +2,7 @@
 
 namespace request;
 
-use application\Application;
+use application\App;
 use auth\models\User;
 use config\Config;
 
@@ -14,14 +14,10 @@ class Request
     /** @var array */
     private $post;
 
-    /** @var User */
-    private $user;
-
     public function __construct()
     {
         $this->get = $_GET;
         $this->post = $_POST;
-        $this->user = Application::getInstance()->getState()->getUser();
     }
 
     public function getAllPost(): array
@@ -56,7 +52,7 @@ class Request
 
     public function getUser(): User
     {
-        return $this->user;
+        return App::getInstance()->getState()->getUser();
     }
 
     public function redirectTo(Url $url): void
