@@ -2,8 +2,9 @@
 
 namespace settings;
 
-
 use settings\settings\AppNameSetting;
+use settings\settings\LanguageSetting;
+
 class Settings
 {
 
@@ -36,6 +37,7 @@ class Settings
     {
         $this->settings = [
             new AppNameSetting(),
+            new LanguageSetting(),
         ];
     }
 

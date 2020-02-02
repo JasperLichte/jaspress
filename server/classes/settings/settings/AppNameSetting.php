@@ -2,7 +2,6 @@
 
 namespace settings\settings;
 
-
 use settings\BaseSetting;
 
 class AppNameSetting extends BaseSetting
