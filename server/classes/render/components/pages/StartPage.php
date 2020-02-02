@@ -19,7 +19,12 @@ class StartPage extends PageComponentBase implements PageComponentInterface
     
     public function render(): string
     {
-        return $this->renderController->render('@pages/start', []);
+        return $this->renderController->render('@pages/start');
+    }
+
+    public function title(): string
+    {
+        return $this->buildTitle('Start');
     }
 
     public static function endPoint(): Url

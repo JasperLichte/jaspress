@@ -2,24 +2,19 @@
 
 namespace application;
 
+use application\state\AppState;
 use request\Request;
 use render\PageFactory;
 
-class Application
+class App
 {
-    /**
-     * @var Application
-     */
+    /** @var App */
     private static $instance;
 
-    /**
-     * @var Request
-     */
+    /** @var Request */
     private $request;
 
-    /**
-     * @var AppState
-     */
+    /** @var AppState */
     private $state;
 
     private function __construct()
@@ -31,7 +26,7 @@ class Application
     public static function getInstance()
     {
         if (self::$instance === null) {
-            self::$instance = new Application();
+            self::$instance = new App();
         }
         return self::$instance;
     }

@@ -2,7 +2,7 @@
 
 namespace render\components\pages;
 
-use application\Application;
+use application\App;
 use content\models\Page;
 use render\components\PageComponentBase;
 use render\components\PageComponentInterface;
@@ -30,10 +30,15 @@ class PagePage extends PageComponentBase implements PageComponentInterface
         return $this->renderController->render(
             '@pages/page',
             [
-                'state' => Application::getInstance()->getState(),
+                'state' => App::getInstance()->getState(),
                 'page' => $this->page,
             ]
         );
+    }
+
+    public function title(): string
+    {
+        return $this->buildTitle($this->page->getTitle());
     }
 
     public static function endPoint(): Url

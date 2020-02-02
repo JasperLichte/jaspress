@@ -2,7 +2,7 @@
 
 require_once('./server/autoload.php');
 
-use application\Application;
+use application\App;
 use render\PageTypes;
 
-echo Application::getInstance()->run(PageTypes::START);
+echo App::getInstance()->run(PageTypes::START);

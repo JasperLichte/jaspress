@@ -2,7 +2,7 @@
 
 namespace render\components;
 
-use application\Application;
+use application\App;
 use render\controller\RenderController;
 use request\Request;
 use request\Url;
@@ -26,9 +26,6 @@ class PageComponentBase implements PageComponentInterface
 
     public function render(): string
     {
-        $state = Application::getInstance()->getState();
-        Application::getInstance()->setState($state->setUi($state->getUi()->setTitle('')));
-        // TODO abstract
         return '';
     }
 
@@ -39,7 +36,7 @@ class PageComponentBase implements PageComponentInterface
 
     public function title(): string
     {
-        return '';
+        return $this->buildTitle('');
     }
 
     public function jsFiles(): array
@@ -54,7 +51,13 @@ class PageComponentBase implements PageComponentInterface
 
     protected function buildTitle(string $title = ''): string
     {
-        $appName = Settings::getInstance()->getByKey(AppNameSetting::DB_KEY)->getValue();
-        return (empty($title) ? $appName : $appName . ' | ' . $title);
+        $appName = Settings::getInstance()->byKey(AppNameSetting::DB_KEY)->getValue();
+        $title = (empty($title) ? $appName : $appName . ' | ' . $title);
+
+        $app = App::getInstance();
+        $state = $app->getState();
+        $app->setState($state->setUi($state->getUi()->setTitle($title)));
+
+        return $title;
     }
 }

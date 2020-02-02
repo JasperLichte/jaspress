@@ -63,13 +63,13 @@ class User implements Serializable
         return $this->isAdmin;
     }
 
-    public static function loadByEmail(string $email): User
+    public static function loadByEmail(string $email): ?User
     {
         return null;
         // TODO load existing user from db
     }
 
-    public static function loadFromSession(): User
+    public static function loadFromSession(): ?User
     {
         if (!isset($_SESSION['user_id'])) {
             return null;

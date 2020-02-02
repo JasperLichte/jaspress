@@ -5,6 +5,6 @@ namespace render\controller;
 interface RenderController
 {
 
-    public function render(string $template, array $arguments): string;
+    public function render(string $template, array $arguments = []): string;
 
 }

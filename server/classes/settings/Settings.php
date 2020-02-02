@@ -46,7 +46,7 @@ class Settings
         // TODO load settings from db, assign them to the corresponding `Setting` object in `$this->settings`
     }
 
-    public function getByKey(string $dbKey): BaseSetting
+    public function byKey(string $dbKey): ?BaseSetting
     {
         foreach ($this->settings as $setting) {
             if ($setting::DB_KEY === $dbKey) {
