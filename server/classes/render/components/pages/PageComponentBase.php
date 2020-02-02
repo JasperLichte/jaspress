@@ -4,6 +4,7 @@ namespace render\components\pages;
 
 use render\RenderController;
 use request\Request;
+use request\Url;
 use settings\Settings;
 use settings\settings\AppNameSetting;
 
@@ -27,6 +28,11 @@ class PageComponentBase implements PageComponentInterface
         return '';
     }
 
+    public static function endPoint(): Url
+    {
+        return new Url('/');
+    }
+
     public function title(): string
     {
         return '';
@@ -40,11 +46,6 @@ class PageComponentBase implements PageComponentInterface
     public function cssFiles(): array
     {
         return [];
-    }
-
-    public function headerIsExpanded(): bool
-    {
-        return true;
     }
 
     protected function buildTitle(string $title = ''): string

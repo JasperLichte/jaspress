@@ -2,8 +2,8 @@
 
 namespace render;
 
-use render\components\pages\components\PageComponent;
-use render\components\pages\components\StartComponent;
+use render\components\pages\components\PagePage;
+use render\components\pages\components\StartPage;
 use request\Request;
 use render\components\pages\PageComponentInterface;
 
@@ -15,12 +15,12 @@ class PageFactory
         $renderController = new TwigController();
         switch ($pageKey) {
             case PageTypes::START:
-                if (StartComponent::shouldRenderPageContent($request)) {
-                    return new PageComponent($request, $renderController);
+                if (StartPage::shouldRenderPageContent($request)) {
+                    return new PagePage($request, $renderController);
                 }
-                return new StartComponent($request, $renderController);
+                return new StartPage($request, $renderController);
         }
-        return new PageComponent($request, $renderController);
+        return new PagePage($request, $renderController);
     }
 
 }

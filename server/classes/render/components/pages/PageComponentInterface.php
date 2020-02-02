@@ -4,6 +4,7 @@ namespace render\components\pages;
 
 use render\RenderController;
 use request\Request;
+use request\Url;
 
 interface PageComponentInterface
 {
@@ -12,12 +13,12 @@ interface PageComponentInterface
 
     public function render(): string;
 
+    public static function endPoint(): Url;
+
     public function title(): string;
 
     public function jsFiles(): array;
 
     public function cssFiles(): array;
-
-    public function headerIsExpanded(): bool;
 
 }

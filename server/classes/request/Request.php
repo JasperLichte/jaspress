@@ -4,6 +4,7 @@ namespace request;
 
 use application\Application;
 use auth\models\User;
+use config\Config;
 
 class Request
 {
@@ -56,6 +57,14 @@ class Request
     public function getUser(): User
     {
         return $this->user;
+    }
+
+    public function redirectTo(Url $url): void
+    {
+        $url->setPath(Config::ROOT_URL() . $url->getPath());
+
+        header('Location: ' . $url->getPath());
+        exit();
     }
 
 }

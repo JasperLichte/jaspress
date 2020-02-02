@@ -8,15 +8,14 @@ use render\components\pages\PageComponentBase;
 use render\components\pages\PageComponentInterface;
 use render\RenderController;
 use request\Request;
+use request\Url;
 
-class PageComponent extends PageComponentBase implements PageComponentInterface
+class PagePage extends PageComponentBase implements PageComponentInterface
 {
 
     public const GET_PAGE_KEY = 'p';
 
-    /**
-     * @var Page
-     */
+    /** @var Page */
     private $page;
 
     public function __construct(Request $request, RenderController $renderController)
@@ -35,6 +34,11 @@ class PageComponent extends PageComponentBase implements PageComponentInterface
                 'page' => $this->page,
             ]
         );
+    }
+
+    public static function endPoint(): Url
+    {
+        return new Url('/');
     }
 
 }
