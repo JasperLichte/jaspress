@@ -1,6 +1,5 @@
 <?php
 
-
 namespace render\components\pages\components;
 
 use render\components\pages\PageComponentBase;
