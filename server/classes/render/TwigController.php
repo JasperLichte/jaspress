@@ -2,13 +2,12 @@
 
 namespace render;
 
+require_once __DIR__ . './../../vendor/autoload.php';
+
 use application\Application;
 use settings\Settings;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
-
-require_once __DIR__ . './../../vendor/autoload.php';
-
 
 class TwigController implements RenderController
 {

@@ -2,7 +2,6 @@
 
 namespace render;
 
-
 interface RenderController
 {
 

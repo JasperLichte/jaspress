@@ -2,7 +2,6 @@
 
 namespace render;
 
-
 abstract class PageTypes
 {
 
