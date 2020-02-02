@@ -34,7 +34,7 @@ class App
     public function run(string $pageType):string
     {
         $this->saveRequest();
-        return PageFactory::get($pageType, $this->request)->render();
+        return PageFactory::get($pageType, $this->request)->build();
     }
 
     private function saveRequest()

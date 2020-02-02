@@ -13,6 +13,8 @@ interface PageComponentInterface
 
     public function render(): string;
 
+    public function build(): string;
+
     public static function endPoint(): Url;
 
     public function title(): string;

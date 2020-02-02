@@ -19,8 +19,9 @@ class TwigController implements RenderController
 
     public function __construct()
     {
-        $loader = new FilesystemLoader();
-        $loader->addPath(realpath(__DIR__ . './../../../../templates/pages/'), 'pages');
+        $loader = new FilesystemLoader('/', getcwd() . '/');
+        $loader->addPath(getcwd() . '/server/templates', '__main__');
+        $loader->addPath(getcwd() . '/server/templates/pages', 'pages');
 
         $this->twig = new Environment($loader);
     }
@@ -28,7 +29,7 @@ class TwigController implements RenderController
     public function render(string $template, array $arguments = []): string
     {
         try {
-            $this->twig->render(
+            return $this->twig->render(
                 $template . '.twig',
                 array_merge($arguments, [
                     'state' => App::getInstance()->getState(),

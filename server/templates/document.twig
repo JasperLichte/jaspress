@@ -1,11 +1,7 @@
-<html lang="{{ LANG }}">
+<html lang="{{ state.ui.language }}">
 <head>
-    <title>{{ TITLE }}</title>
+    <title>{{ state.ui.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    {% block globalStyles %}
-        <link href="{{ URL }}client/css/components/header.css" rel="stylesheet">
-        <link href="{{ URL }}client/css/components/main.css" rel="stylesheet">
-        <link href="{{ URL }}client/css/document.css" rel="stylesheet">
-    {% endblock %}
 </head>
+<body>

@@ -24,6 +24,15 @@ class PageComponentBase implements PageComponentInterface
         $this->renderController = $renderController;
     }
 
+    public function build(): string
+    {
+        $app = App::getInstance();
+        $state = $app->getState();
+        $app->setState($state->setUi($state->getUi()->setTitle($this->title())));
+
+        return $this->render();
+    }
+
     public function render(): string
     {
         return '';
@@ -52,12 +61,6 @@ class PageComponentBase implements PageComponentInterface
     protected function buildTitle(string $title = ''): string
     {
         $appName = Settings::getInstance()->byKey(AppNameSetting::DB_KEY)->getValue();
-        $title = (empty($title) ? $appName : $appName . ' | ' . $title);
-
-        $app = App::getInstance();
-        $state = $app->getState();
-        $app->setState($state->setUi($state->getUi()->setTitle($title)));
-
-        return $title;
+        return (empty($title) ? $appName : $title . ' | ' . $appName);
     }
 }

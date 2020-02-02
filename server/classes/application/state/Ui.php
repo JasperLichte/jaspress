@@ -16,7 +16,7 @@ class Ui
 
     public function __construct()
     {
-        $this->language = Settings::getInstance()->byKey(LanguageSetting::DB_KEY);
+        $this->language = Settings::getInstance()->byKey(LanguageSetting::DB_KEY)->getValue();
     }
 
     public function getTitle(): string

@@ -38,7 +38,12 @@ class PagePage extends PageComponentBase implements PageComponentInterface
 
     public function title(): string
     {
-        return $this->buildTitle($this->page->getTitle());
+        $title = '404';
+        if ($this->page != null && !$this->page->isEmpty()) {
+            $title = $this->page->getTitle();
+        }
+
+        return $this->buildTitle($title);
     }
 
     public static function endPoint(): Url

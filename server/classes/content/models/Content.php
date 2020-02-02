@@ -7,7 +7,7 @@ class Content
 {
 
     /**
-     * @var \DateTime
+     * @var null|\DateTime
      */
     protected $creationDate;
 
@@ -17,11 +17,11 @@ class Content
     protected $title = '';
 
     /**
-     * @var Markdown
+     * @var null|Markdown
      */
     protected $markdown;
 
-    public function getCreationDate(): \DateTime
+    public function getCreationDate(): ?\DateTime
     {
         return $this->creationDate;
     }
@@ -41,7 +41,7 @@ class Content
         $this->title = $title;
     }
 
-    public function getMarkdown(): Markdown
+    public function getMarkdown(): ?Markdown
     {
         return $this->markdown;
     }

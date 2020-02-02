@@ -11,13 +11,10 @@ class Page extends Content
      */
     private $slug;
 
-    public static function load(string $slug): Page
+    public static function load(string $slug): ?Page
     {
-        $page = new Page();
-
         // TODO fetch page from db
-
-        return $page;
+        return null;
     }
 
     public function getSlug(): string
