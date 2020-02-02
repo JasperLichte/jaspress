@@ -1,59 +1,61 @@
 <?php
 
-    namespace request;
+namespace request;
 
-    class Request
+use application\Application;
+use auth\models\User;
+
+class Request
+{
+    /** @var array */
+    private $get;
+
+    /** @var array */
+    private $post;
+
+    /** @var User */
+    private $user;
+
+    public function __construct()
     {
-        /**
-         * @var array
-         */
-        private $get;
-
-        /**
-         * @var array
-         */
-        private $post;
-
-        public function __construct()
-        {
-            $this->get = $_GET;
-            $this->post = $_POST;
-        }
-
-        /**
-         * @return array
-         */
-        public function getAllPost(): array
-        {
-            return $this->post;
-        }
-
-        /**
-         * @return array
-         */
-        public function getAllGet(): array
-        {
-            return $this->get;
-        }
-
-        public function issetPost(string $key): bool
-        {
-            return isset($this->post[$key]);
-        }
-
-        public function issetGet(string $key): bool
-        {
-            return isset($this->get[$key]);
-        }
-
-        public function getPost(string $key): string
-        {
-            return $this->post[$key];
-        }
-
-        public function getGet(string $key): string
-        {
-            return $this->get[$key];
-        }
-
+        $this->get = $_GET;
+        $this->post = $_POST;
+        $this->user = Application::getInstance()->getState()->getUser();
     }
+
+    public function getAllPost(): array
+    {
+        return $this->post;
+    }
+
+    public function getAllGet(): array
+    {
+        return $this->get;
+    }
+
+    public function issetPost(string $key): bool
+    {
+        return isset($this->post[$key]);
+    }
+
+    public function issetGet(string $key): bool
+    {
+        return isset($this->get[$key]);
+    }
+
+    public function getPost(string $key): string
+    {
+        return $this->post[$key];
+    }
+
+    public function getGet(string $key): string
+    {
+        return $this->get[$key];
+    }
+
+    public function getUser(): User
+    {
+        return $this->user;
+    }
+
+}

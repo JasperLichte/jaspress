@@ -16,6 +16,9 @@ class User implements Serializable
     /** @var string */
     private $password = '';
 
+    /** @var bool */
+    private $isAdmin = false;
+
     /**
      * @param array $input
      * @return User
@@ -55,6 +58,11 @@ class User implements Serializable
         return $this->password;
     }
 
+    public function isAdmin(): bool
+    {
+        return $this->isAdmin;
+    }
+
     public static function loadByEmail(string $email): User
     {
         return null;
@@ -63,6 +71,9 @@ class User implements Serializable
 
     public static function loadFromSession(): User
     {
+        if (!isset($_SESSION['user_id'])) {
+            return null;
+        }
         $userId = $_SESSION['user_id'];
         return null;
     }

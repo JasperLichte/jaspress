@@ -13,7 +13,7 @@ class AppState
     private $menu;
 
     /** @var User */
-    private $user;
+    private $user = null;
 
     public function __construct()
     {
