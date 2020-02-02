@@ -12,14 +12,15 @@
 
         public static function get(string $pageKey, Request $request): PageComponentInterface
         {
+            $renderController = new TwigController();
             switch ($pageKey) {
                 case PageTypes::START:
                     if (StartComponent::shouldRenderPageContent($request)) {
-                        return new PageComponent($request);
+                        return new PageComponent($request, $renderController);
                     }
-                    return new StartComponent($request);
+                    return new StartComponent($request, $renderController);
             }
-            return new PageComponent($request);
+            return new PageComponent($request, $renderController);
         }
 
     }

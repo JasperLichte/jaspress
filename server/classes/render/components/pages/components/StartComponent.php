@@ -18,7 +18,7 @@ class StartComponent extends PageComponentBase implements PageComponentInterface
     
     public function render(): string
     {
-        return $this->twig->render('@pages/start.twig', []);
+        return $this->renderController->render('@pages/start', []);
     }
 
 }

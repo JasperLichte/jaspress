@@ -2,35 +2,24 @@
 
 namespace render\components\pages;
 
-require_once __DIR__ . './../../../../vendor/autoload.php';
-
+use render\RenderController;
 use request\Request;
 use settings\Settings;
 use settings\settings\AppNameSetting;
-use Twig\Environment;
-use Twig\Loader\FilesystemLoader;
 
 class PageComponentBase implements PageComponentInterface
 {
 
-    /**
-     * @var Request
-     */
+    /** @var Request */
     protected $req;
 
-    /**
-     * @var Environment
-     */
-    protected $twig;
+    /** @var RenderController */
+    protected $renderController;
 
-    public function __construct(Request $request)
+    public function __construct(Request $request, RenderController $renderController)
     {
         $this->req = $request;
-
-        $loader = new FilesystemLoader();
-        $loader->addPath(realpath(__DIR__ . './../../../../templates/pages/'), 'pages');
-
-        $this->twig = new Environment($loader);
+        $this->renderController = $renderController;
     }
 
     public function render(): string

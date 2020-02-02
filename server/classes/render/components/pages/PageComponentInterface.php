@@ -2,12 +2,13 @@
 
 namespace render\components\pages;
 
+use render\RenderController;
 use request\Request;
 
 interface PageComponentInterface
 {
 
-    public function __construct(Request $request);
+    public function __construct(Request $request, RenderController $renderController);
 
     public function render(): string;
 
