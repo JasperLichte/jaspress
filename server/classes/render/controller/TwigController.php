@@ -5,6 +5,7 @@ namespace render\controller;
 require_once __DIR__ . './../../../vendor/autoload.php';
 
 use application\App;
+use request\Url;
 use settings\Settings;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
@@ -32,8 +33,9 @@ class TwigController implements RenderController
             return $this->twig->render(
                 $template . '.twig',
                 array_merge($arguments, [
-                    'state' => App::getInstance()->getState(),
-                    'settings' => Settings::getInstance(),
+                    'state'      => App::getInstance()->getState(),
+                    'settings'   => Settings::getInstance(),
+                    'url'        => new Url(),
                 ])
             );
         } catch (\Exception $e) {}

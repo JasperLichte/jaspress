@@ -2,13 +2,15 @@
 
 namespace request;
 
+use config\Config;
+
 class Url
 {
 
     /** @var string */
     private $path = '';
 
-    public function __construct(string $path)
+    public function __construct(string $path = '')
     {
         $this->path = $path;
     }
@@ -37,6 +39,13 @@ class Url
         $this->setPath(http_build_url($urlParts));
 
         return $this;
+    }
+
+    public static function to(string $path): Url
+    {
+        $url = new Url($path);
+        $url->setPath(Config::ROOT_URL() . $url->getPath());
+        return $url;
     }
 
 }

@@ -57,7 +57,7 @@ class Request
 
     public function redirectTo(Url $url): void
     {
-        $url->setPath(Config::ROOT_URL() . $url->getPath());
+        $url->setPath(Url::to($url->getPath()));
 
         header('Location: ' . $url->getPath());
         exit();
