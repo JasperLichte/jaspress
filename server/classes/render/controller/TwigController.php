@@ -23,6 +23,8 @@ class TwigController implements RenderController
         $loader = new FilesystemLoader('/', getcwd() . '/');
         $loader->addPath(getcwd() . '/server/templates', '__main__');
         $loader->addPath(getcwd() . '/server/templates/pages', 'pages');
+        $loader->addPath(getcwd() . '/server/templates/components', 'components');
+        $loader->addPath(getcwd() . '/server/templates/components/errors/', 'errors');
 
         $this->twig = new Environment($loader);
     }

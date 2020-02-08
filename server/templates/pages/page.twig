@@ -1,7 +1,7 @@
 {% include 'document.twig' %}
 
 {% if page is null %}
-    <h1>404</h1>
+    {% include '@errors/404.twig' with {'description': 'Page not found'} %}
 {% else %}
     <h1>{{ page.title }}</h1>
     <p>{{ page.markdown.content }}</p>
