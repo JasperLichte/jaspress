@@ -17,12 +17,12 @@ class Url
 
     public function getPath(): string
     {
-        return $this->path;
+        return Url::sanitize($this->path);
     }
 
     public function setPath(string $path): Url
     {
-        $this->path = $path;
+        $this->path = Url::sanitize($path);
 
         return $this;
     }
@@ -62,6 +62,11 @@ class Url
         $this->setPath($this->getPath() . $path);
 
         return $this;
+    }
+
+    public static function sanitize(string $path): string
+    {
+        return filter_var($path, FILTER_VALIDATE_URL);
     }
 
 }

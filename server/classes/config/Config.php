@@ -2,6 +2,8 @@
 
     namespace config;
 
+    use request\Url;
+
     class Config
     {
 
@@ -9,15 +11,12 @@
         {
             $protocol = stripos($_SERVER['SERVER_PROTOCOL'], 'https') === 0 ? 'https://' : 'http://';
 
-            //ToDO check if there is a cleaner way
-            $domainName = $_SERVER['HTTP_HOST'] . '/' ;
-
-            return $protocol . $domainName;
+            return Url::sanitize($protocol . $_SERVER['HTTP_HOST']);
         }
 
         public static function STYLES_ROOT_DIR() : string
         {
-            return self::ROOT_URL() . 'client/css/';
+            return self::ROOT_URL() . '/client/css/';
         }
 
         public static function SCRIPTS_ROOT_DIR() : string
