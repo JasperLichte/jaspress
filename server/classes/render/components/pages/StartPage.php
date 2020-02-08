@@ -3,11 +3,10 @@
 namespace render\components\pages;
 
 use render\components\PageComponentBase;
-use render\components\PageComponentInterface;
 use request\Request;
 use request\Url;
 
-class StartPage extends PageComponentBase implements PageComponentInterface
+class StartPage extends PageComponentBase
 {
 
     public static function shouldRenderPageContent(Request $request): bool

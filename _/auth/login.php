@@ -3,6 +3,6 @@
 require_once('./../../server/autoload.php');
 
 use application\App;
-use render\PageTypes;
+use render\components\pages\auth\LoginPage;
 
-echo App::getInstance()->run(PageTypes::LOGIN);
+echo App::getInstance()->run(new LoginPage());

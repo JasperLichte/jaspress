@@ -3,6 +3,6 @@
 require_once('./server/autoload.php');
 
 use application\App;
-use render\PageTypes;
+use render\components\pages\StartPage;
 
-echo App::getInstance()->run(PageTypes::START);
+echo App::getInstance()->run(new StartPage());

@@ -3,8 +3,10 @@
 namespace application;
 
 use application\state\AppState;
+use render\components\PageComponentBase;
+use render\controller\RenderController;
+use render\controller\TwigController;
 use request\Request;
-use render\PageFactory;
 
 class App
 {
@@ -17,6 +19,9 @@ class App
     /** @var Environment */
     private $env;
 
+    /** @var RenderController */
+    private $renderController;
+
     /** @var AppState */
     private $state;
 
@@ -25,6 +30,7 @@ class App
         $this->state = new AppState();
         $this->request = new Request();
         $this->env = new Environment();
+        $this->renderController = new TwigController();
     }
 
     public static function getInstance()
@@ -35,10 +41,14 @@ class App
         return self::$instance;
     }
 
-    public function run(string $pageType):string
+    public function run(PageComponentBase $page): string
     {
         $this->saveRequest();
-        return PageFactory::get($pageType, $this->request)->build();
+
+        return $page
+            ->setReq($this->request)
+            ->setRenderController($this->renderController)
+            ->render();
     }
 
     private function saveRequest()

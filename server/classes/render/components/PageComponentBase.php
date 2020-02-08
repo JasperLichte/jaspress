@@ -4,12 +4,13 @@ namespace render\components;
 
 use application\App;
 use render\controller\RenderController;
+use render\controller\TwigController;
 use request\Request;
 use request\Url;
 use settings\Settings;
 use settings\settings\AppNameSetting;
 
-class PageComponentBase implements PageComponentInterface
+class PageComponentBase
 {
 
     /** @var Request */
@@ -17,12 +18,6 @@ class PageComponentBase implements PageComponentInterface
 
     /** @var RenderController */
     protected $renderController;
-
-    public function __construct(Request $request, RenderController $renderController)
-    {
-        $this->req = $request;
-        $this->renderController = $renderController;
-    }
 
     public function build(): string
     {
@@ -62,5 +57,18 @@ class PageComponentBase implements PageComponentInterface
     {
         $appName = Settings::getInstance()->byKey(AppNameSetting::DB_KEY)->getValue();
         return (empty($title) ? $appName : $title . ' | ' . $appName);
+    }
+
+    public function setReq(Request $req): PageComponentBase
+    {
+        $this->req = $req;
+
+        return $this;
+    }
+
+    public function setRenderController(RenderController $renderController): PageComponentBase
+    {
+        $this->renderController = $renderController;
+        return $this;
     }
 }

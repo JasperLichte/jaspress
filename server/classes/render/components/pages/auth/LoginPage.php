@@ -4,10 +4,9 @@ namespace render\components\pages\auth;
 
 
 use render\components\PageComponentBase;
-use render\components\PageComponentInterface;
 use request\Url;
 
-class LoginPage extends PageComponentBase implements PageComponentInterface
+class LoginPage extends PageComponentBase
 {
 
     public function render(): string

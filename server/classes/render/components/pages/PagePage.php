@@ -5,12 +5,9 @@ namespace render\components\pages;
 use application\App;
 use content\models\Page;
 use render\components\PageComponentBase;
-use render\components\PageComponentInterface;
-use render\controller\RenderController;
-use request\Request;
 use request\Url;
 
-class PagePage extends PageComponentBase implements PageComponentInterface
+class PagePage extends PageComponentBase
 {
 
     public const GET_PAGE_KEY = 'p';
@@ -18,11 +15,13 @@ class PagePage extends PageComponentBase implements PageComponentInterface
     /** @var Page */
     private $page;
 
-    public function __construct(Request $request, RenderController $renderController)
+    public function __construct()
     {
-        parent::__construct($request, $renderController);
+        parent::__construct();
 
-        $this->page = Page::load($this->req->getGet(self::GET_PAGE_KEY));
+        if ($this->req->issetGet(self::GET_PAGE_KEY)) {
+            $this->page = Page::load($this->req->getGet(self::GET_PAGE_KEY));
+        }
     }
 
     public function render(): string
@@ -48,7 +47,7 @@ class PagePage extends PageComponentBase implements PageComponentInterface
 
     public static function endPoint(): Url
     {
-        return new Url('/');
+        return new Url('/_/page.php');
     }
 
 }
