@@ -50,7 +50,7 @@ class Request
         return $this->get[$key];
     }
 
-    public function getUser(): User
+    public function getUser(): ?User
     {
         return App::getInstance()->getState()->getUser();
     }
