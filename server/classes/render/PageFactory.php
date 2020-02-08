@@ -2,6 +2,7 @@
 
 namespace render;
 
+use render\components\pages\auth\LoginPage;
 use render\components\pages\PagePage;
 use render\components\pages\StartPage;
 use render\controller\TwigController;
@@ -20,6 +21,8 @@ class PageFactory
                     return new PagePage($request, $renderController);
                 }
                 return new StartPage($request, $renderController);
+            case PageTypes::LOGIN:
+                return new LoginPage($request, $renderController);
         }
         return new PagePage($request, $renderController);
     }

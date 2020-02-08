@@ -20,12 +20,14 @@ class TwigController implements RenderController
 
     public function __construct()
     {
-        $loader = new FilesystemLoader('/', getcwd() . '/');
-        $loader->addPath(getcwd() . '/server/templates', '__main__');
-        $loader->addPath(getcwd() . '/server/templates/pages', 'pages');
-        $loader->addPath(getcwd() . '/server/templates/components', 'components');
-        $loader->addPath(getcwd() . '/server/templates/components/errors/', 'errors');
-        $loader->addPath(getcwd() . '/server/templates/api/', 'api');
+        $basePath = realpath(__DIR__ . './../../../../');
+
+        $loader = new FilesystemLoader('/', $basePath . '/');
+        $loader->addPath($basePath . '/server/templates', '__main__');
+        $loader->addPath($basePath . '/server/templates/pages', 'pages');
+        $loader->addPath($basePath . '/server/templates/components', 'components');
+        $loader->addPath($basePath . '/server/templates/components/errors/', 'errors');
+        $loader->addPath($basePath . '/server/templates/api/', 'api');
 
         $this->twig = new Environment($loader);
     }
