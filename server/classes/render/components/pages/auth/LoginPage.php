@@ -20,4 +20,9 @@ class LoginPage extends PageComponentBase implements PageComponentInterface
         return new Url('/_/auth/login.php');
     }
 
+    public function title(): string
+    {
+        return $this->buildTitle('Login');
+    }
+
 }
