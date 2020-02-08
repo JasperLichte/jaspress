@@ -55,4 +55,11 @@ class Login
         $_SESSION['user_id'] = $userId;
     }
 
+    public static function endSession()
+    {
+        unset($_SESSION);
+        session_destroy();
+        session_write_close();
+    }
+
 }

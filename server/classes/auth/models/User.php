@@ -2,6 +2,7 @@
 
 namespace auth\models;
 
+use auth\Login;
 use util\interfaces\Serializable;
 
 class User implements Serializable
@@ -61,6 +62,11 @@ class User implements Serializable
     public function isAdmin(): bool
     {
         return $this->isAdmin;
+    }
+
+    public function logout(): void
+    {
+        Login::endSession();
     }
 
     public static function loadByEmail(string $email): ?User
