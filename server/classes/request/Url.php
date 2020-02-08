@@ -20,9 +20,11 @@ class Url
         return $this->path;
     }
 
-    public function setPath(string $path): void
+    public function setPath(string $path): Url
     {
         $this->path = $path;
+
+        return $this;
     }
 
     public function addGetParams(array $params): Url
@@ -44,8 +46,22 @@ class Url
     public static function to(string $path): Url
     {
         $url = new Url($path);
-        $url->setPath(Config::ROOT_URL() . $url->getPath());
+        $url->prepend(Config::ROOT_URL());
         return $url;
+    }
+
+    public function prepend($path): Url
+    {
+        $this->setPath($path . $this->getPath());
+
+        return $this;
+    }
+
+    public function append($path): Url
+    {
+        $this->setPath($this->getPath() . $path);
+
+        return $this;
     }
 
 }
