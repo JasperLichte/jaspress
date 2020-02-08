@@ -43,10 +43,10 @@ class Url
         return $this;
     }
 
-    public static function to(string $path): Url
+    public static function to(string $path, bool $subPage = true): Url
     {
         $url = new Url($path);
-        $url->prepend(Config::ROOT_URL());
+        $url->prepend(Config::ROOT_URL() . ($subPage ? '/_' : ''));
         return $url;
     }
 
@@ -59,7 +59,7 @@ class Url
 
     public function append($path): Url
     {
-        $this->setPath($this->getPath() . $path);
+        $this->setPath($this->getPath() . '/' . $path);
 
         return $this;
     }
