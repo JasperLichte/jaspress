@@ -23,9 +23,7 @@ class LoginAction extends Action
         try {
             $login = new Login($user);
             $login->perform();
-        } catch(UnknownUserException $e) {
-            return $this->res->exception($e)->status(401);
-        } catch (WrongPasswordException $e) {
+        } catch(UnknownUserException | WrongPasswordException $e) {
             return $this->res->exception($e)->status(401);
         }
 

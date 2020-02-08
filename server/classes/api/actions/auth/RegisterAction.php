@@ -27,9 +27,7 @@ class RegisterAction extends Action
             User::storeNew($user);
             $login = new Login($user);
             $login->perform();
-        } catch(UnknownUserException $e) {
-            return $this->res->exception($e)->asJson();
-        } catch (WrongPasswordException $e) {
+        } catch(UnknownUserException | WrongPasswordException $e) {
             return $this->res->exception($e)->asJson();
         }
 
