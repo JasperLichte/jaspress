@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+    {% if message|length %}
+        <h1>
+            {% if success == false %}
+                <span>Error: </span>
+            {% endif %}
+            message
+        </h1>
+    {% endif %}
+
+</body>
+</html>

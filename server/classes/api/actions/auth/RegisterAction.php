@@ -3,6 +3,7 @@
 namespace api\actions\auth;
 
 use api\actions\Action;
+use api\ApiResponse;
 use auth\exceptions\UnknownUserException;
 use auth\exceptions\WrongPasswordException;
 use auth\Login;
@@ -11,7 +12,7 @@ use auth\models\User;
 class RegisterAction extends Action
 {
 
-    public function run(): string
+    public function run(): ApiResponse
     {
         $user = (new User())->deserialize($this->req->getAllPost());
         if ($user->isEmpty()) {

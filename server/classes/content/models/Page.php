@@ -3,13 +3,16 @@
 namespace content\models;
 
 
+
+use util\exceptions\EmptyMemberException;
+
 class Page extends Content
 {
 
     /**
      * @var string
      */
-    private $slug;
+    private $slug = '';
 
     public static function load(string $slug): ?Page
     {
@@ -22,9 +25,27 @@ class Page extends Content
         return $this->slug;
     }
 
-    public function setSlug(string $slug): void
+    /**
+     * @throws EmptyMemberException
+     */
+    public function save(): Page
     {
-        $this->slug = $slug;
+        if (empty($this->slug)) {
+            throw new EmptyMemberException('Slug cannot be empty');
+        }
+        if (empty($this->title)) {
+            throw new EmptyMemberException('Title cannot be empty');
+        }
+        if ($this->markdown === null) {
+            throw new EmptyMemberException('Markdown cannot be null');
+        }
+        if (empty($this->markdown->getContent())) {
+            throw new EmptyMemberException('Markdown content cannot be empty');
+        }
+
+        // Todo: save entity in db
+
+        return $this;
     }
 
 }
