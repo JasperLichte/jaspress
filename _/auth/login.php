@@ -1,6 +1,6 @@
 <?php
 
-require_once('./../../server/autoload.php');
+require_once('./../../server/base.php');
 
 use render\components\pages\auth\LoginPage;
 

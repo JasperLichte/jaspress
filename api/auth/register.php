@@ -2,6 +2,6 @@
 
 use api\actions\auth\RegisterAction;
 
-require_once('./../../server/autoload.php');
+require_once('./../../server/base.php');
 
 echo (new RegisterAction())->run();

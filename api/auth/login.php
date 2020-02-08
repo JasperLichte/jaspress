@@ -2,6 +2,6 @@
 
 use api\actions\auth\LoginAction;
 
-require_once('./../../server/autoload.php');
+require_once('./../../server/base.php');
 
 echo (new LoginAction())->run();
