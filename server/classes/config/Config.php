@@ -21,12 +21,12 @@
 
         public static function SCRIPTS_ROOT_DIR() : string
         {
-            return self::ROOT_URL() . 'client/js/';
+            return self::ROOT_URL() . '/client/js/';
         }
 
         public static function API_ROOT_DIR() : string
         {
-            return self::ROOT_URL() . 'api/';
+            return self::ROOT_URL() . '/api/';
         }
 
     }
