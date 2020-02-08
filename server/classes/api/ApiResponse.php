@@ -93,7 +93,9 @@ class ApiResponse
 
     public function __toString(): string
     {
-        $retVals = [];
+        $retVals = [
+            'status' => $this->statusCode,
+        ];
         if ($this->success !== null) {
             $retVals['success'] = $this->success;
         }
