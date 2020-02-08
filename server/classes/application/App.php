@@ -65,4 +65,14 @@ class App
     {
         $this->state = $state;
     }
+
+    public function getRequest(): Request
+    {
+        return $this->request;
+    }
+
+    public function getRenderController(): RenderController
+    {
+        return $this->renderController;
+    }
 }

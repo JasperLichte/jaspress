@@ -9,6 +9,7 @@ use request\Request;
 use request\Url;
 use settings\Settings;
 use settings\settings\AppNameSetting;
+use util\exceptions\LogicException;
 
 class PageComponentBase
 {
@@ -19,18 +20,42 @@ class PageComponentBase
     /** @var RenderController */
     protected $renderController;
 
-    public function build(): string
+    /** @var bool */
+    private $calledParent = false;
+
+    public function __construct()
     {
         $app = App::getInstance();
+
+        $this->req = $app->getRequest();
+        $this->renderController = $app->getRenderController();
+    }
+
+    /**
+     * NOTICE:
+     * Inheriting classes should always call parent::render() on the first line in their render method!
+     */
+    protected function render(): string
+    {
+        $this->calledParent = true;
+
+        $app = App::getInstance();
+
         $state = $app->getState();
         $app->setState($state->setUi($state->getUi()->setTitle($this->title())));
 
-        return $this->render();
+        return '';
     }
 
-    public function render(): string
+    public function __toString(): string
     {
-        return '';
+        $out = $this->render();
+
+        if (!$this->calledParent) {
+            throw new LogicException('PageComponents have to call super::parent() in their `render` method!');
+        }
+
+        return $out;
     }
 
     public static function endPoint(): Url
@@ -43,32 +68,9 @@ class PageComponentBase
         return $this->buildTitle('');
     }
 
-    public function jsFiles(): array
-    {
-        return [];
-    }
-
-    public function cssFiles(): array
-    {
-        return [];
-    }
-
     protected function buildTitle(string $title = ''): string
     {
         $appName = Settings::getInstance()->byKey(AppNameSetting::DB_KEY)->getValue();
         return (empty($title) ? $appName : $title . ' | ' . $appName);
-    }
-
-    public function setReq(Request $req): PageComponentBase
-    {
-        $this->req = $req;
-
-        return $this;
-    }
-
-    public function setRenderController(RenderController $renderController): PageComponentBase
-    {
-        $this->renderController = $renderController;
-        return $this;
     }
 }

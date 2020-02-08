@@ -9,8 +9,10 @@ use request\Url;
 class LoginPage extends PageComponentBase
 {
 
-    public function render(): string
+    protected function render(): string
     {
+        parent::render();
+
         return $this->renderController->render('@pages/auth/login');
     }
 

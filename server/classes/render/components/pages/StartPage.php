@@ -15,9 +15,11 @@ class StartPage extends PageComponentBase
             && !empty($request->getGet(PagePage::GET_PAGE_KEY))
         );
     }
-    
-    public function render(): string
+
+    protected function render(): string
     {
+        parent::render();
+
         return $this->renderController->render('@pages/start');
     }
 
