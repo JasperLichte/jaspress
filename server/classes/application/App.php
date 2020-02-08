@@ -3,7 +3,7 @@
 namespace application;
 
 use application\state\AppState;
-use render\components\PageComponentBase;
+use render\components\AbstractPageComponent;
 use render\controller\RenderController;
 use render\controller\TwigController;
 use request\Request;
@@ -41,7 +41,7 @@ class App
         return self::$instance;
     }
 
-    public function run(PageComponentBase $page): string
+    public function run(AbstractPageComponent $page): string
     {
         $this->saveRequest();
 

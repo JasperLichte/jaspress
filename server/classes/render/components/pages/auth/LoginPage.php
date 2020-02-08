@@ -3,10 +3,10 @@
 namespace render\components\pages\auth;
 
 
-use render\components\PageComponentBase;
+use render\components\PageComponent;
 use request\Url;
 
-class LoginPage extends PageComponentBase
+class LoginPage extends PageComponent
 {
 
     protected function render(): string

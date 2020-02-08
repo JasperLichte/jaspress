@@ -4,10 +4,10 @@ namespace render\components\pages;
 
 use application\App;
 use content\models\Page;
-use render\components\PageComponentBase;
+use render\components\PageComponent;
 use request\Url;
 
-class PagePage extends PageComponentBase
+class PagePage extends PageComponent
 {
 
     public const GET_PAGE_KEY = 'p';

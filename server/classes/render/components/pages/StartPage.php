@@ -2,11 +2,11 @@
 
 namespace render\components\pages;
 
-use render\components\PageComponentBase;
+use render\components\PageComponent;
 use request\Request;
 use request\Url;
 
-class StartPage extends PageComponentBase
+class StartPage extends PageComponent
 {
 
     public static function shouldRenderPageContent(Request $request): bool

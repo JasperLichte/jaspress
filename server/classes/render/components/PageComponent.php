@@ -4,14 +4,13 @@ namespace render\components;
 
 use application\App;
 use render\controller\RenderController;
-use render\controller\TwigController;
 use request\Request;
 use request\Url;
 use settings\Settings;
 use settings\settings\AppNameSetting;
 use util\exceptions\LogicException;
 
-class PageComponentBase
+class PageComponent extends AbstractPageComponent
 {
 
     /** @var Request */
@@ -19,9 +18,6 @@ class PageComponentBase
 
     /** @var RenderController */
     protected $renderController;
-
-    /** @var bool */
-    private $calledParent = false;
 
     public function __construct()
     {
@@ -31,13 +27,9 @@ class PageComponentBase
         $this->renderController = $app->getRenderController();
     }
 
-    /**
-     * NOTICE:
-     * Inheriting classes should always call parent::render() on the first line in their render method!
-     */
     protected function render(): string
     {
-        $this->calledParent = true;
+        $this->calledParentInRender = true;
 
         $app = App::getInstance();
 
@@ -47,11 +39,14 @@ class PageComponentBase
         return '';
     }
 
+    /**
+     * @throws LogicException
+     */
     public function __toString(): string
     {
         $out = $this->render();
 
-        if (!$this->calledParent) {
+        if (!$this->calledParentInRender) {
             throw new LogicException('PageComponents have to call super::parent() in their `render` method!');
         }
 
@@ -73,4 +68,5 @@ class PageComponentBase
         $appName = Settings::getInstance()->byKey(AppNameSetting::DB_KEY)->getValue();
         return (empty($title) ? $appName : $title . ' | ' . $appName);
     }
+
 }
