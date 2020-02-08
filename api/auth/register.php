@@ -1,7 +1,7 @@
 <?php
 
-use api\actions\auth\RegisterAction;
+require_once(__DIR__ . './../../server/base.php');
 
-require_once('./../../server/base.php');
+use api\actions\auth\RegisterAction;
 
 echo (new RegisterAction())->run();

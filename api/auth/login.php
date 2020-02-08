@@ -1,7 +1,7 @@
 <?php
 
-use api\actions\auth\LoginAction;
+require_once(__DIR__ . './../../server/base.php');
 
-require_once('./../../server/base.php');
+use api\actions\auth\LoginAction;
 
 echo (new LoginAction())->run();
