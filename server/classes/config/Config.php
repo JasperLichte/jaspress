@@ -9,9 +9,13 @@
 
         public static function ROOT_URL(): string
         {
-            $protocol = stripos($_SERVER['SERVER_PROTOCOL'], 'https') === 0 ? 'https://' : 'http://';
+            if (!isset($_ENV['ROOT_URL'])) {
+                $protocol = stripos($_SERVER['SERVER_PROTOCOL'], 'https') === 0 ? 'https://' : 'http://';
 
-            return Url::sanitize($protocol . $_SERVER['HTTP_HOST']);
+                return Url::sanitize($protocol . $_SERVER['HTTP_HOST']);
+            }
+
+            return Url::sanitize($_ENV['ROOT_URL']);
         }
 
         public static function STYLES_ROOT_DIR() : string

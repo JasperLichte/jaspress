@@ -22,7 +22,7 @@ class Url
 
     public function setPath(string $path): Url
     {
-        $this->path = Url::sanitize($path);
+        $this->path = $path;
 
         return $this;
     }
@@ -52,7 +52,7 @@ class Url
 
     public function prepend($path): Url
     {
-        $this->setPath($path . $this->getPath());
+        $this->setPath($path . $this->path);
 
         return $this;
     }
@@ -67,6 +67,11 @@ class Url
     public static function sanitize(string $path): string
     {
         return filter_var($path, FILTER_VALIDATE_URL);
+    }
+
+    public function __toString()
+    {
+        return $this->getPath();
     }
 
 }

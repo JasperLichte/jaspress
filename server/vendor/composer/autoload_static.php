@@ -21,6 +21,10 @@ class ComposerStaticInit748ea78c063c98d86ef6bd479c186a3d
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
         ),
+        'M' => 
+        array (
+            'M1\\Env\\' => 7,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -36,6 +40,21 @@ class ComposerStaticInit748ea78c063c98d86ef6bd479c186a3d
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
+        'M1\\Env\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/m1/env/src',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'j' => 
+        array (
+            'josegonzalez\\Dotenv' => 
+            array (
+                0 => __DIR__ . '/..' . '/josegonzalez/dotenv/src',
+                1 => __DIR__ . '/..' . '/josegonzalez/dotenv/tests',
+            ),
+        ),
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -43,6 +62,7 @@ class ComposerStaticInit748ea78c063c98d86ef6bd479c186a3d
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit748ea78c063c98d86ef6bd479c186a3d::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit748ea78c063c98d86ef6bd479c186a3d::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit748ea78c063c98d86ef6bd479c186a3d::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

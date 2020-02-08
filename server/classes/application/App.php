@@ -14,6 +14,9 @@ class App
     /** @var Request */
     private $request;
 
+    /** @var Environment */
+    private $env;
+
     /** @var AppState */
     private $state;
 
@@ -21,6 +24,7 @@ class App
     {
         $this->state = new AppState();
         $this->request = new Request();
+        $this->env = new Environment();
     }
 
     public static function getInstance()
