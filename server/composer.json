@@ -1,6 +1,7 @@
 {
     "require": {
         "twig/twig": "^3.0",
-        "josegonzalez/dotenv": "dev-master"
+        "josegonzalez/dotenv": "dev-master",
+      "ext-pdo": "*"
     }
 }
