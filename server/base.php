@@ -4,11 +4,11 @@ require_once __DIR__ . './autoload.php';
 
 ini_set('display_errors', 0);
 
-function exceptionHandler(Exception $e) {
+function exceptionHandler($e) {
     echo $e->getMessage();
 }
 
-function errorHandler(Error $e) {
+function errorHandler($e) {
     echo $e->getMessage();
 }
 

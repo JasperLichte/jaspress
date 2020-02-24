@@ -3,6 +3,7 @@
 namespace api\actions;
 
 use api\ApiResponse;
+use database\Connection;
 use request\Request;
 
 class Action
@@ -14,10 +15,15 @@ class Action
     /** @var ApiResponse */
     protected $res;
 
+    /** @var Connection */
+    protected $db;
+
     public function __construct()
     {
         $this->req = new Request();
         $this->res = new ApiResponse();
+
+        $this->db = Connection::getInstance();
     }
 
     public function run(): ApiResponse

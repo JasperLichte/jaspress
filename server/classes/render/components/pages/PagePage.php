@@ -31,7 +31,6 @@ class PagePage extends PageComponent
         return $this->renderController->render(
             '@pages/page',
             [
-                'state' => App::getInstance()->getState(),
                 'page' => $this->page,
             ]
         );

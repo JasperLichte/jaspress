@@ -3,6 +3,7 @@
 namespace render\components;
 
 use application\App;
+use database\Connection;
 use render\controller\RenderController;
 use request\Request;
 use request\Url;
@@ -19,12 +20,17 @@ class PageComponent extends AbstractPageComponent
     /** @var RenderController */
     protected $renderController;
 
+     /** @var Connection */
+    protected $db;
+
     public function __construct()
     {
         $app = App::getInstance();
 
         $this->req = $app->getRequest();
         $this->renderController = $app->getRenderController();
+
+        $this->db = Connection::getInstance();
     }
 
     protected function render(): string
