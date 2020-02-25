@@ -16,7 +16,7 @@ class Connection
 
     private function __construct()
     {
-        $env = new Environment();
+        $env = Environment::getInstance();
         $this->pdo = new PDO(
             'mysql:host=' . $env->get('DB_HOST') . ';dbname=' . $env->get('DB_NAME'),
             $env->get('DB_USER'),

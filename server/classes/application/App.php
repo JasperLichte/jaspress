@@ -29,7 +29,7 @@ class App
     {
         $this->state = new AppState();
         $this->request = new Request();
-        $this->env = new Environment();
+        $this->env = Environment::getInstance();
         $this->renderController = new TwigController();
     }
 

@@ -31,4 +31,9 @@ class Action
         return $this->res;
     }
 
+    public function __invoke()
+    {
+        return $this->run();
+    }
+
 }
