@@ -3,13 +3,14 @@
 namespace api\actions\admin\page;
 
 use api\actions\Action;
+use api\actions\admin\AdminAction;
 use api\ApiResponse;
 use content\models\Markdown;
 use content\models\Page;
 use util\exceptions\EmptyMemberException;
 use util\exceptions\LogicException;
 
-class NewPageAction extends Action
+class NewPageAction extends AdminAction
 {
 
     /** @var string */

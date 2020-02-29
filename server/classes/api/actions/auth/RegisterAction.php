@@ -10,7 +10,7 @@ use auth\Login;
 use auth\models\User;
 use render\components\pages\StartPage;
 
-class RegisterAction extends Action
+class RegisterAction extends AuthAction
 {
 
     public function run(): ApiResponse

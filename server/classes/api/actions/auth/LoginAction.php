@@ -11,7 +11,7 @@ use auth\Login;
 use auth\models\User;
 use render\components\pages\StartPage;
 
-class LoginAction extends Action
+class LoginAction extends AuthAction
 {
 
     public function run(): ApiResponse

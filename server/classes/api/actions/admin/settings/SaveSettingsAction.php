@@ -2,13 +2,12 @@
 
 namespace api\actions\admin\settings;
 
-
-use api\actions\Action;
+use api\actions\admin\AdminAction;
 use api\ApiResponse;
 use render\components\pages\admin\SettingsPage;
 use settings\Settings;
 
-class SaveSettingsAction extends  Action
+class SaveSettingsAction extends AdminAction
 {
 
     /** @var Settings */
