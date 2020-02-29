@@ -1,5 +1,7 @@
 {% include 'document.twig' %}
 
+{% include '@common/header.twig' %}
+
 <form
     action="{{ url.api('/admin/settings/save.php') }}"
     method="post"

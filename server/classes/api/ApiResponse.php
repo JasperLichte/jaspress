@@ -23,7 +23,7 @@ class ApiResponse
     /** @var string */
     private $message = '';
 
-    /** @var string */
+    /** @var array */
     private $data = [];
 
     public function setSuccess(bool $success): ApiResponse
@@ -43,6 +43,7 @@ class ApiResponse
     public function setErrorMessage(string $message): ApiResponse
     {
         $this->setSuccess(false);
+        $this->status(500);
         $this->setMessage($message);
 
         return $this;
@@ -51,6 +52,7 @@ class ApiResponse
     public function setSuccessMessage(string $message): ApiResponse
     {
         $this->setSuccess(true);
+        $this->status(200);
         $this->setMessage($message);
 
         return $this;
@@ -63,9 +65,9 @@ class ApiResponse
         return $this;
     }
 
-    public function withData($data): ApiResponse
+    public function withData(array $data): ApiResponse
     {
-        $this->data = $data;
+        $this->data = (array)$data;
 
         return $this;
     }

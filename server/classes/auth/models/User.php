@@ -3,6 +3,7 @@
 namespace auth\models;
 
 use auth\Login;
+use database\Connection;
 use util\interfaces\Serializable;
 
 class User implements Serializable
@@ -34,6 +35,9 @@ class User implements Serializable
         }
         if (isset($input['password'])) {
             $this->password = (string)$input['password'];
+        }
+        if (isset($input['is_admin'])) {
+            $this->isAdmin = (bool)$input['is_admin'];
         }
 
         return $this;
@@ -69,25 +73,44 @@ class User implements Serializable
         Login::endSession();
     }
 
-    public static function loadByEmail(string $email): ?User
+    public static function loadByEmail(Connection $db, string $email): ?User
     {
-        return null;
-        // TODO load existing user from db
+        $stmt = $db()->prepare('SELECT * FROM users WHERE email = ?');
+        $stmt->execute([$email]);
+
+        $user = (new User())->deserialize((array)$stmt->fetch());
+
+        return ($user->isEmpty() ? null : $user);
     }
 
-    public static function loadFromSession(): ?User
+    public static function loadById(Connection $db, int $id): ?User
+    {
+        $stmt = $db()->prepare('SELECT * FROM users WHERE id = ?');
+        $stmt->execute([(int)$id]);
+
+        $user = (new User())->deserialize((array)$stmt->fetch());
+
+        return ($user->isEmpty() ? null : $user);
+    }
+
+    public static function loadFromSession(Connection $db): ?User
     {
         if (!isset($_SESSION['user_id'])) {
             return null;
         }
-        $userId = $_SESSION['user_id'];
-        return null;
+        $userId = (int)$_SESSION['user_id'];
+        if (empty($userId)) {
+            return null;
+        }
+
+        return User::loadById($db, $userId);
     }
 
-    public static function storeNew(User $user): User
+    public static function storeNew(Connection $db, User $user)
     {
-        return $user;
-        // TODO store $user in db, assign id
+        $db()
+            ->prepare('INSERT INTO users (email, password) VALUES (?, ?)')
+            ->execute([$user->getEmail(), password_hash($user->getPassword(), PASSWORD_DEFAULT)]);
     }
 
 }

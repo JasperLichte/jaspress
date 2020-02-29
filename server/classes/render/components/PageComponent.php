@@ -30,7 +30,7 @@ class PageComponent extends AbstractPageComponent
         $this->req = $app->getRequest();
         $this->renderController = $app->getRenderController();
 
-        $this->db = Connection::getInstance();
+        $this->db = $app->getDb();
     }
 
     protected function render(): string
@@ -71,7 +71,7 @@ class PageComponent extends AbstractPageComponent
 
     protected function buildTitle(string $title = ''): string
     {
-        $appName = Settings::getInstance()->byKey(AppNameSetting::dbKey())->getValue();
+        $appName = Settings::getInstance()->get(AppNameSetting::dbKey())->getValue();
         return (empty($title) ? $appName : $title . ' | ' . $appName);
     }
 

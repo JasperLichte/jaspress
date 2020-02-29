@@ -1,5 +1,7 @@
 {% include 'document.twig' %}
 
+{% include '@common/header.twig' %}
+
 {% if page is null %}
     {% include '@errors/404.twig' with {'description': 'Page not found'} %}
 {% else %}

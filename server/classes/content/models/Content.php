@@ -3,22 +3,21 @@
 namespace content\models;
 
 
-class Content
+use util\interfaces\Serializable;
+
+class Content implements Serializable
 {
 
-    /**
-     * @var null|\DateTime
-     */
+    /** @var string */
+    protected $slug = '';
+
+    /** @var null|\DateTime */
     protected $creationDate;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $title = '';
 
-    /**
-     * @var null|Markdown
-     */
+    /** @var null|Markdown */
     protected $markdown;
 
     public function getCreationDate(): ?\DateTime
@@ -38,6 +37,8 @@ class Content
 
     public function setTitle(string $title): void
     {
+        $this->slug = self::createSlug($title);
+
         $this->title = $title;
     }
 
@@ -57,6 +58,48 @@ class Content
             empty($this->title)
             || empty($this->markdown)
         );
+    }
+
+    public function getSlug(): string
+    {
+        return $this->slug;
+    }
+
+    private static function createSlug(string $title): string
+    {
+        // replace non letter or digits by -
+        $title = preg_replace('~[^\pL\d]+~u', '-', $title);
+
+        // transliterate
+        $title = iconv('utf-8', 'us-ascii//TRANSLIT', $title);
+
+        // remove unwanted characters
+        $title = preg_replace('~[^-\w]+~', '', $title);
+
+        // trim
+        $title = trim($title, '-');
+
+        // remove duplicate -
+        $title = preg_replace('~-+~', '-', $title);
+
+        // lowercase
+        $title = strtolower($title);
+
+        return $title;
+    }
+
+    /**
+     * @param array $input
+     * @return Content
+     */
+    public function deserialize(array $input): Serializable
+    {
+        $this->slug = $input['slug'];
+        $this->title = $input['title'];
+        $this->markdown = new Markdown((string)$input['markdown']);
+        $this->creationDate = new \DateTime((string)$input['creation_date']);
+
+        return $this;
     }
 
 }

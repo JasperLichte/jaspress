@@ -90,13 +90,13 @@ class Request
         return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     }
 
-    public function save()
+    public function save(Connection $db)
     {
         if ($this->isLocal()) {
             return;
         }
 
-        (Connection::getInstance())()
+        $db
             ->prepare('INSERT INTO requests (ip, path, time) VALUES (?, ?, NOW())')
             ->execute([$this->getIp(), $this->getRequestedPath()]);
     }

@@ -47,7 +47,7 @@ class Settings
     private function loadValues(): void
     {
         foreach ($this->db->getPdo()->query('SELECT id, value FROM settings')->fetchAll() as $data) {
-            $setting = $this->byKey($data['id']);
+            $setting = $this->get($data['id']);
             if ($setting === null) {
                 continue;
             }
@@ -55,7 +55,7 @@ class Settings
         }
     }
 
-    public function byKey(string $dbKey): ?BaseSetting
+    public function get(string $dbKey): ?BaseSetting
     {
         foreach ($this->settings as $setting) {
             if ($setting::dbKey() === $dbKey) {

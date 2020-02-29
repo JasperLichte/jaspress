@@ -32,13 +32,13 @@ class SaveSettingsAction extends  Action
     private function saveSettings()
     {
         foreach ($this->req->getAllPost() as $key => $value) {
-            $setting = $this->settings->byKey($key);
+            $setting = $this->settings->get($key);
             if ($setting === null) {
                 continue;
             }
 
             if ($value !== $setting->getValue()) {
-                $setting->save($setting::dbKey(), (string)$value);
+                $setting->save($this->db, $setting::dbKey(), (string)$value);
             }
         }
     }

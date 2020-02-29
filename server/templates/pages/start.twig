@@ -1,7 +1,12 @@
 {% include 'document.twig' %}
 
-<h1>Start</h1>
-<a href="{{ url.to('/auth/login.php') }}">Login</a>
-<a href="{{ url.to('/admin') }}">Admin</a>
+{% include '@common/header.twig' %}
+
+{% for post in blog.posts %}
+    <a href="{{ post.endpoint }}" class="post">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.markdown.content }}</p>
+</a>
+{% endfor %}
 
 {% include 'html-end.twig' %}

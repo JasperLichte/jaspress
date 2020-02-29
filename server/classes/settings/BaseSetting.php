@@ -36,9 +36,8 @@ class BaseSetting
         return '';
     }
 
-    public static function save(string $dbKey, string $value)
+    public static function save(Connection $db, string $dbKey, string $value)
     {
-        $db = Connection::getInstance();
         $statement = $db()->prepare('REPLACE INTO settings (id, value) VALUES(?, ?)');
         $statement->execute([$dbKey, $value]);
     }
@@ -46,6 +45,11 @@ class BaseSetting
     public function isOptionSetting(): bool
     {
         return ($this instanceof OptionsSetting);
+    }
+
+    public function __toString()
+    {
+        return $this->getValue();
     }
 
 }

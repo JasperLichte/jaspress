@@ -5,6 +5,7 @@ namespace application\state;
 
 use application\menu\Menu;
 use auth\models\User;
+use database\Connection;
 
 class AppState
 {
@@ -18,11 +19,11 @@ class AppState
     /** @var User */
     private $user = null;
 
-    public function __construct()
+    public function __construct(Connection $db)
     {
         $this->menu = new Menu();
         $this->ui = new Ui();
-        $this->user = User::loadFromSession();
+        $this->user = User::loadFromSession($db);
     }
 
     public function getMenu(): Menu
@@ -30,7 +31,7 @@ class AppState
         return $this->menu;
     }
 
-    public function getUser(): User
+    public function getUser(): ?User
     {
         return $this->user;
     }

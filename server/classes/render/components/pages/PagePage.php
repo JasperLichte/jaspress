@@ -20,7 +20,7 @@ class PagePage extends PageComponent
         parent::__construct();
 
         if ($this->req->issetGet(self::GET_PAGE_KEY)) {
-            $this->page = Page::load($this->req->getGet(self::GET_PAGE_KEY));
+            $this->page = Page::load($this->db, $this->req->getGet(self::GET_PAGE_KEY));
         }
     }
 

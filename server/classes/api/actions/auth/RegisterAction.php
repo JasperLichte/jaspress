@@ -8,6 +8,7 @@ use auth\exceptions\UnknownUserException;
 use auth\exceptions\WrongPasswordException;
 use auth\Login;
 use auth\models\User;
+use render\components\pages\StartPage;
 
 class RegisterAction extends Action
 {
@@ -19,17 +20,18 @@ class RegisterAction extends Action
             return $this->res->setErrorMessage('Empty user passed')->asJson();
         }
 
-        if (User::loadByEmail($user->getEmail()) != null) {
+        if (User::loadByEmail($this->db, $user->getEmail()) != null) {
             return $this->res->setErrorMessage('User exists')->asJson();
         }
 
         try {
-            User::storeNew($user);
-            (new Login($user))->perform();
+            User::storeNew($this->db, $user);
+            (new Login($this->db, $user))->perform();
         } catch(UnknownUserException | WrongPasswordException $e) {
             return $this->res->exception($e)->asJson();
         }
 
+        $this->req->redirectTo(StartPage::endPoint());
         return $this->res->setSuccessMessage('Successfully registered');
     }
 

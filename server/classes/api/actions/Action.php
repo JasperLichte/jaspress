@@ -3,6 +3,7 @@
 namespace api\actions;
 
 use api\ApiResponse;
+use application\App;
 use database\Connection;
 use request\Request;
 
@@ -20,10 +21,10 @@ class Action
 
     public function __construct()
     {
-        $this->req = new Request();
+        $app = App::getInstance();
+        $this->req = $app->getRequest();
+        $this->db = $app->getDb();
         $this->res = new ApiResponse();
-
-        $this->db = Connection::getInstance();
     }
 
     public function run(): ApiResponse

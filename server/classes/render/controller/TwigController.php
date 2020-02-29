@@ -26,6 +26,7 @@ class TwigController implements RenderController
         $loader->addPath($basePath . '/server/templates', '__main__');
         $loader->addPath($basePath . '/server/templates/pages', 'pages');
         $loader->addPath($basePath . '/server/templates/components', 'components');
+        $loader->addPath($basePath . '/server/templates/components/common', 'common');
         $loader->addPath($basePath . '/server/templates/components/errors/', 'errors');
         $loader->addPath($basePath . '/server/templates/api/', 'api');
 

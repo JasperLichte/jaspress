@@ -2,6 +2,8 @@
 
 require_once __DIR__ . './autoload.php';
 
+session_start();
+
 ini_set('display_errors', 0);
 
 function exceptionHandler($e) {

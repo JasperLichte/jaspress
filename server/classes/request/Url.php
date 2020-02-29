@@ -45,6 +45,10 @@ class Url
 
     public static function to(string $path, bool $subPage = true): Url
     {
+        if ($path === '/') {
+            $subPage = false;
+        }
+
         $url = new Url($path);
         $url->prepend(Config::ROOT_URL() . ($subPage ? '/_' : ''));
         return $url;

@@ -6,6 +6,7 @@ namespace auth;
 use auth\exceptions\UnknownUserException;
 use auth\exceptions\WrongPasswordException;
 use auth\models\User;
+use database\Connection;
 use util\exceptions\InvalidArgumentsException;
 
 class Login
@@ -14,9 +15,13 @@ class Login
     /** @var User */
     private $user;
 
-    public function __construct(User $user)
+    /** @var Connection */
+    private $db;
+
+    public function __construct(Connection $db, User $user)
     {
         $this->user = $user;
+        $this->db = $db;
     }
 
     /**
@@ -25,7 +30,7 @@ class Login
      */
     public function perform()
     {
-        $dbUser = User::loadByEmail($this->user->getEmail());
+        $dbUser = User::loadByEmail($this->db, $this->user->getEmail());
         if ($dbUser == null || $dbUser->isEmpty()) {
             throw new UnknownUserException($this->user);
         }
@@ -50,8 +55,6 @@ class Login
         if (empty($userId)) {
             throw new InvalidArgumentsException('userId cannot be empty');
         }
-
-        session_start();
         $_SESSION['user_id'] = $userId;
     }
 

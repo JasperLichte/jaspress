@@ -2,12 +2,12 @@
 
 {% include '@common/header.twig' %}
 
-<h1>Login</h1>
-<form action="{{ url.api('/auth/login.php') }}" method="post">
+<h1>Register</h1>
+<form action="{{ url.api('/auth/register.php') }}" method="post">
     <input type="text" name="email" />
     <input type="password" name="password" />
     <input type="submit" value="Login">
 </form>
-<a href="{{ url.to('/auth/register.php') }}">Register instead</a>
+<a href="{{ url.to('/auth/login.php') }}">Login instead</a>
 
 {% include 'html-end.twig' %}
