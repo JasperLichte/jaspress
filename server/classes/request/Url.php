@@ -50,6 +50,13 @@ class Url
         return $url;
     }
 
+    public static function api(string $path): Url
+    {
+        $url = new Url($path);
+        $url->prepend(Config::ROOT_URL() . '/api');
+        return $url;
+    }
+
     public function prepend($path): Url
     {
         $this->setPath($path . $this->path);

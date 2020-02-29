@@ -1,0 +1,46 @@
+{% include 'document.twig' %}
+
+<form
+    action="{{ url.api('/admin/settings/save.php') }}"
+    method="post"
+    class="settings-form"
+>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for setting in settings.settings %}
+            <tr>
+                <td>{{ setting.dbKey }}</td>
+                <td>
+                    {% if setting.isOptionSetting %}
+                        <select name="{{ setting.dbKey }}" title="{{ setting.dbKey }}">
+                            {% for option in setting.options %}
+                                <option
+                                    value="{{ option.value }}"
+                                    {% if setting.value == option.value %}
+                                        selected="selected"
+                                    {% endif %}
+                                >{{ option.name }}</option>
+                            {% endfor %}
+                        </select>
+                    {% else %}
+                        <input
+                            type="text"
+                            value="{{ setting.value }}"
+                            name="{{ setting.dbKey }}"
+                        />
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <input type="submit" value="Save" />
+</form>
+
+{% include 'html-end.twig' %}

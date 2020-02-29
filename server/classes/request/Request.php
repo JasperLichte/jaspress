@@ -5,6 +5,7 @@ namespace request;
 use application\App;
 use auth\models\User;
 use config\Config;
+use database\Connection;
 
 class Request
 {
@@ -55,12 +56,49 @@ class Request
         return App::getInstance()->getState()->getUser();
     }
 
-    public function redirectTo(Url $url): void
+    public function redirectTo($url): void
     {
-        $url->setPath(Url::to($url->getPath()));
+        if (is_string($url)) {
+            header('Location: ' . Url::to($url));
+            exit();
+        }
+        if ($url instanceof Url) {
+            header('Location: ' . $url);
+            exit();
+        }
+    }
 
-        header('Location: ' . $url->getPath());
-        exit();
+    public function getIp(): string
+    {
+        if (isset($_SERVER['REMOTE_ADDR']) && !empty($_SERVER['REMOTE_ADDR'])) {
+            return $_SERVER['REMOTE_ADDR'];
+        }
+        return '';
+    }
+
+    public function isLocal()
+    {
+        return in_array($this->getIp(), [
+            '127.0.0.1',
+            '::1',
+            'localhost'
+        ]);
+    }
+
+    public function getRequestedPath(): string
+    {
+        return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    }
+
+    public function save()
+    {
+        if ($this->isLocal()) {
+            return;
+        }
+
+        (Connection::getInstance())()
+            ->prepare('INSERT INTO requests (ip, path, time) VALUES (?, ?, NOW())')
+            ->execute([$this->getIp(), $this->getRequestedPath()]);
     }
 
 }

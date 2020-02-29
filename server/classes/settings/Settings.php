@@ -2,6 +2,7 @@
 
 namespace settings;
 
+use database\Connection;
 use settings\settings\AppNameSetting;
 use settings\settings\LanguageSetting;
 
@@ -13,10 +14,11 @@ class Settings
      */
     private static $instance = null;
 
-    /**
-     * @var BaseSetting[]
-     */
+    /** @var BaseSetting[] */
     private $settings = [];
+
+    /** @var Connection */
+    private $db;
 
     public static function getInstance(): Settings
     {
@@ -29,8 +31,9 @@ class Settings
 
     public function __construct()
     {
-       $this->initSettings();
-       $this->loadValues();
+        $this->db = Connection::getInstance();
+        $this->initSettings();
+        $this->loadValues();
     }
 
     private function initSettings(): void
@@ -43,17 +46,28 @@ class Settings
 
     private function loadValues(): void
     {
-        // TODO load settings from db, assign them to the corresponding `Setting` object in `$this->settings`
+        foreach ($this->db->getPdo()->query('SELECT id, value FROM settings')->fetchAll() as $data) {
+            $setting = $this->byKey($data['id']);
+            if ($setting === null) {
+                continue;
+            }
+            $setting->setValue($data['value']);
+        }
     }
 
     public function byKey(string $dbKey): ?BaseSetting
     {
         foreach ($this->settings as $setting) {
-            if ($setting::DB_KEY === $dbKey) {
+            if ($setting::dbKey() === $dbKey) {
                 return $setting;
             }
         }
         return null;
+    }
+
+    public function getSettings(): array
+    {
+        return $this->settings;
     }
 
 }

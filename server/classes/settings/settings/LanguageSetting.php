@@ -2,12 +2,25 @@
 
 namespace settings\settings;
 
-use settings\BaseSetting;
+use settings\types\options\Option;
+use settings\types\options\OptionsSetting;
 
-class LanguageSetting extends BaseSetting
+class LanguageSetting extends OptionsSetting
 {
 
-    public const DB_KEY = 'APP_LANG';
     protected $defaultValue = 'en';
+
+    public static function dbKey(): string
+    {
+        return 'APP_LANG';
+    }
+
+    public function options()
+    {
+        return [
+            new Option('English', 'en'),
+            new Option('Deutsch', 'de'),
+        ];
+    }
 
 }

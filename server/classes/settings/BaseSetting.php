@@ -3,6 +3,9 @@
 namespace settings;
 
 
+use database\Connection;
+use settings\types\options\OptionsSetting;
+
 class BaseSetting
 {
 
@@ -11,9 +14,6 @@ class BaseSetting
 
     /** @var string */
     protected $defaultValue = '';
-
-    /** @var string */
-    public const DB_KEY = '';
 
 
     public function setValue(string $value): void
@@ -29,6 +29,23 @@ class BaseSetting
     public function getDefaultValue(): string
     {
         return $this->defaultValue;
+    }
+
+    public static function dbKey(): string
+    {
+        return '';
+    }
+
+    public static function save(string $dbKey, string $value)
+    {
+        $db = Connection::getInstance();
+        $statement = $db()->prepare('REPLACE INTO settings (id, value) VALUES(?, ?)');
+        $statement->execute([$dbKey, $value]);
+    }
+
+    public function isOptionSetting(): bool
+    {
+        return ($this instanceof OptionsSetting);
     }
 
 }

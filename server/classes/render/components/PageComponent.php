@@ -53,7 +53,7 @@ class PageComponent extends AbstractPageComponent
         $out = $this->render();
 
         if (!$this->calledParentInRender) {
-            throw new LogicException('PageComponents have to call super::parent() in their `render` method!');
+            throw new LogicException('PageComponents have to call parent::render() in their `render` method!');
         }
 
         return $out;
@@ -71,7 +71,7 @@ class PageComponent extends AbstractPageComponent
 
     protected function buildTitle(string $title = ''): string
     {
-        $appName = Settings::getInstance()->byKey(AppNameSetting::DB_KEY)->getValue();
+        $appName = Settings::getInstance()->byKey(AppNameSetting::dbKey())->getValue();
         return (empty($title) ? $appName : $title . ' | ' . $appName);
     }
 

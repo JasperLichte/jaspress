@@ -3,7 +3,6 @@
 namespace application;
 
 use application\state\AppState;
-use render\components\AbstractPageComponent;
 use render\controller\RenderController;
 use render\controller\TwigController;
 use request\Request;
@@ -31,6 +30,8 @@ class App
         $this->request = new Request();
         $this->env = Environment::getInstance();
         $this->renderController = new TwigController();
+
+        $this->request->save();
     }
 
     public static function getInstance()
@@ -39,21 +40,6 @@ class App
             self::$instance = new App();
         }
         return self::$instance;
-    }
-
-    public function run(AbstractPageComponent $page): string
-    {
-        $this->saveRequest();
-
-        return $page
-            ->setReq($this->request)
-            ->setRenderController($this->renderController)
-            ->render();
-    }
-
-    private function saveRequest()
-    {
-        // TODO save request in db
     }
 
     public function getState(): AppState

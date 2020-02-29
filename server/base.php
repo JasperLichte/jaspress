@@ -12,8 +12,8 @@ function errorHandler($e) {
     echo $e->getMessage();
 }
 
-set_exception_handler('exceptionHandler');
-set_error_handler('errorHandler');
+//set_exception_handler('exceptionHandler');
+//set_error_handler('errorHandler');
 register_shutdown_function(function() {
     $err = error_get_last();
     if (is_null($err)) {
