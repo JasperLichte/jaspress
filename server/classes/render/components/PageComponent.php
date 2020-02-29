@@ -4,6 +4,7 @@ namespace render\components;
 
 use application\App;
 use database\Connection;
+use permissions\Permission;
 use render\controller\RenderController;
 use request\Request;
 use request\Url;
@@ -11,7 +12,7 @@ use settings\Settings;
 use settings\settings\AppNameSetting;
 use util\exceptions\LogicException;
 
-class PageComponent extends AbstractPageComponent
+abstract class PageComponent extends AbstractPageComponent
 {
 
     /** @var Request */
@@ -23,24 +24,25 @@ class PageComponent extends AbstractPageComponent
      /** @var Connection */
     protected $db;
 
+    /** @var App */
+    private $app;
+
     public function __construct()
     {
-        $app = App::getInstance();
+        $this->app = App::getInstance();
 
-        $this->req = $app->getRequest();
-        $this->renderController = $app->getRenderController();
+        $this->req = $this->app->getRequest();
+        $this->renderController = $this->app->getRenderController();
 
-        $this->db = $app->getDb();
+        $this->db = $this->app->getDb();
     }
 
     protected function render(): string
     {
         $this->calledParentInRender = true;
 
-        $app = App::getInstance();
-
-        $state = $app->getState();
-        $app->setState($state->setUi($state->getUi()->setTitle($this->title())));
+        $state = $this->app->getState();
+        $this->app->setState($state->setUi($state->getUi()->setTitle($this->title())));
 
         return '';
     }
@@ -50,6 +52,11 @@ class PageComponent extends AbstractPageComponent
      */
     public function __toString(): string
     {
+        if (!$this->checkPermission($this->permission())) {
+            $this->req->redirectTo(Url::api('/auth/logout.php'));
+            return '';
+        }
+
         $out = $this->render();
 
         if (!$this->calledParentInRender) {
@@ -57,11 +64,6 @@ class PageComponent extends AbstractPageComponent
         }
 
         return $out;
-    }
-
-    public static function endPoint(): Url
-    {
-        return new Url('/');
     }
 
     public function title(): string
@@ -73,6 +75,15 @@ class PageComponent extends AbstractPageComponent
     {
         $appName = Settings::getInstance()->get(AppNameSetting::dbKey())->getValue();
         return (empty($title) ? $appName : $title . ' | ' . $appName);
+    }
+
+    abstract public static function endPoint(): Url;
+
+    abstract public function permission(): Permission;
+
+    private function checkPermission(Permission $permission): bool
+    {
+        return $permission->check($this->req->getUser());
     }
 
 }

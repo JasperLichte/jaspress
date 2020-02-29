@@ -3,6 +3,8 @@
 namespace render\components\pages;
 
 use content\Blog;
+use permissions\AlwaysAllowedPermission;
+use permissions\Permission;
 use render\components\PageComponent;
 use request\Url;
 
@@ -29,6 +31,11 @@ class StartPage extends PageComponent
     public static function endPoint(): Url
     {
         return Url::to('/');
+    }
+
+    public function permission(): Permission
+    {
+        return new AlwaysAllowedPermission();
     }
 
 }

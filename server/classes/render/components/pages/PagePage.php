@@ -2,8 +2,9 @@
 
 namespace render\components\pages;
 
-use application\App;
 use content\models\Page;
+use permissions\AlwaysAllowedPermission;
+use permissions\Permission;
 use render\components\PageComponent;
 use request\Url;
 
@@ -49,6 +50,11 @@ class PagePage extends PageComponent
     public static function endPoint(): Url
     {
         return new Url('/_/page.php');
+    }
+
+    public function permission(): Permission
+    {
+        return new AlwaysAllowedPermission();
     }
 
 }

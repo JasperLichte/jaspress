@@ -2,11 +2,9 @@
 
 namespace render\components\pages\auth;
 
-
-use render\components\PageComponent;
 use request\Url;
 
-class LoginPage extends PageComponent
+class LoginPage extends AuthPage
 {
 
     protected function render(): string

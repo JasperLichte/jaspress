@@ -2,10 +2,9 @@
 
 namespace render\components\pages\admin;
 
-use render\components\PageComponent;
 use request\Url;
 
-class SettingsPage extends PageComponent
+class SettingsPage extends AdminPage
 {
 
     protected function render(): string

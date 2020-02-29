@@ -2,10 +2,10 @@
 
 namespace render\components\pages\admin\page;
 
+use render\components\pages\admin\AdminPage;
+use request\Url;
 
-use render\components\PageComponent;
-
-class NewPagePage extends PageComponent
+class NewPagePage extends AdminPage
 {
 
     protected function render(): string
@@ -13,6 +13,11 @@ class NewPagePage extends PageComponent
         parent::render();
 
         return $this->renderController->render('@pages/admin/page/new');
+    }
+
+    public static function endPoint(): Url
+    {
+        return Url::to('/admin/page/new.php');
     }
 
 }

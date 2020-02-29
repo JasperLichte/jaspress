@@ -7,7 +7,7 @@ use application\App;
 use database\Connection;
 use request\Request;
 
-class Action
+abstract class Action
 {
 
     /** @var Request */
@@ -27,14 +27,12 @@ class Action
         $this->res = new ApiResponse();
     }
 
-    public function run(): ApiResponse
-    {
-        return $this->res;
-    }
-
     public function __invoke()
     {
         return $this->run();
     }
+
+    abstract public function run(): ApiResponse;
+
 
 }

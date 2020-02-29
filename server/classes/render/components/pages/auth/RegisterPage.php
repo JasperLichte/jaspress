@@ -2,10 +2,9 @@
 
 namespace render\components\pages\auth;
 
+use request\Url;
 
-use render\components\PageComponent;
-
-class RegisterPage extends PageComponent
+class RegisterPage extends AuthPage
 {
 
     protected function render(): string
@@ -18,6 +17,11 @@ class RegisterPage extends PageComponent
     public function title(): string
     {
         return $this->buildTitle('Register');
+    }
+
+    public static function endPoint(): Url
+    {
+        return Url::to('/auth/register.php');
     }
 
 }

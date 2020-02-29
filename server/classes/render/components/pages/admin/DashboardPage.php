@@ -2,11 +2,9 @@
 
 namespace render\components\pages\admin;
 
-
-use render\components\PageComponent;
 use request\Url;
 
-class DashboardPage extends PageComponent
+class DashboardPage extends AdminPage
 {
 
     public function render(): string
