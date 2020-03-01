@@ -9,7 +9,9 @@ use auth\exceptions\UnknownUserException;
 use auth\exceptions\WrongPasswordException;
 use auth\Login;
 use auth\models\User;
+use render\components\pages\admin\DashboardPage;
 use render\components\pages\StartPage;
+use util\exceptions\LogicException;
 
 class LoginAction extends AuthAction
 {
@@ -23,12 +25,12 @@ class LoginAction extends AuthAction
 
         try {
             $login = new Login($this->db, $user);
-            $login->perform();
-        } catch(UnknownUserException | WrongPasswordException $e) {
+            $user = $login->perform();
+        } catch(UnknownUserException | WrongPasswordException | LogicException $e) {
             return $this->res->exception($e)->status(401);
         }
 
-        $this->req->redirectTo(StartPage::endPoint());
+        $this->req->redirectTo($user->isAdmin() ? DashboardPage::endPoint() : StartPage::endPoint());
         return $this->res->setSuccessMessage('Successfully logged in');
     }
 

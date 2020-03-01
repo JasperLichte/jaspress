@@ -37,7 +37,7 @@ class User implements Serializable
             $this->password = (string)$input['password'];
         }
         if (isset($input['is_admin'])) {
-            $this->isAdmin = (bool)$input['is_admin'];
+            $this->isAdmin = (bool)(int)$input['is_admin'];
         }
 
         return $this;
@@ -58,14 +58,29 @@ class User implements Serializable
         return $this->email;
     }
 
+    public function setEmail(string $email): void
+    {
+        $this->email = $email;
+    }
+
     public function getPassword(): string
     {
         return $this->password;
     }
 
+    public function setPassword(string $password): void
+    {
+        $this->password = $password;
+    }
+
     public function isAdmin(): bool
     {
         return $this->isAdmin;
+    }
+
+    public function setIsAdmin(bool $isAdmin): void
+    {
+        $this->isAdmin = $isAdmin;
     }
 
     public function logout(): void
@@ -109,8 +124,17 @@ class User implements Serializable
     public static function storeNew(Connection $db, User $user)
     {
         $db()
-            ->prepare('INSERT INTO users (email, password) VALUES (?, ?)')
-            ->execute([$user->getEmail(), password_hash($user->getPassword(), PASSWORD_DEFAULT)]);
+            ->prepare('INSERT INTO users (email, password, is_admin) VALUES (?, ?, ?)')
+            ->execute([
+                $user->getEmail(),
+                password_hash($user->getPassword(), PASSWORD_DEFAULT),
+                $user->isAdmin() ? '1' : '0,'
+            ]);
+    }
+
+    public function save(Connection $db)
+    {
+        return self::storeNew($db, $this);
     }
 
 }

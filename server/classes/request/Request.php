@@ -96,7 +96,7 @@ class Request
             return;
         }
 
-        $db
+        $db()
             ->prepare('INSERT INTO requests (ip, path, time) VALUES (?, ?, NOW())')
             ->execute([$this->getIp(), $this->getRequestedPath()]);
     }

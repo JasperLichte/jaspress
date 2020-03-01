@@ -8,7 +8,9 @@ use auth\exceptions\UnknownUserException;
 use auth\exceptions\WrongPasswordException;
 use auth\Login;
 use auth\models\User;
+use render\components\pages\admin\DashboardPage;
 use render\components\pages\StartPage;
+use util\exceptions\LogicException;
 
 class RegisterAction extends AuthAction
 {
@@ -21,17 +23,17 @@ class RegisterAction extends AuthAction
         }
 
         if (User::loadByEmail($this->db, $user->getEmail()) != null) {
-            return $this->res->setErrorMessage('User exists')->asJson();
+            return $this->res->setErrorMessage('User ' . $user->getEmail() . ' exists')->asJson();
         }
 
         try {
             User::storeNew($this->db, $user);
-            (new Login($this->db, $user))->perform();
-        } catch(UnknownUserException | WrongPasswordException $e) {
-            return $this->res->exception($e)->asJson();
+            $user = (new Login($this->db, $user))->perform();
+        } catch(UnknownUserException | WrongPasswordException | LogicException $e) {
+            return $this->res->exception($e)->status(401);
         }
 
-        $this->req->redirectTo(StartPage::endPoint());
+        $this->req->redirectTo($user->isAdmin() ? DashboardPage::endPoint() : StartPage::endPoint());
         return $this->res->setSuccessMessage('Successfully registered');
     }
 
