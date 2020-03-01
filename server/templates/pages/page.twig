@@ -1,12 +1,22 @@
 {% include 'document.twig' %}
-
 {% include '@common/header.twig' %}
 
 {% if page is null %}
     {% include '@errors/404.twig' with {'description': 'Page not found'} %}
 {% else %}
-    <h1>{{ page.title }}</h1>
-    <p>{{ page.markdown.content }}</p>
+    <div>
+        {{ page.markdown.htmlContent | raw }}
+    </div>
+
+    {% include '@components/inputs/floating-button.twig' with {
+        target: url.to('/admin/page/edit.php?p=' ~ page.slug),
+        child: 'Edit'
+    } only %}
+    {% include '@components/inputs/floating-button.twig' with {
+        target: url.api('/admin/page/delete.php?p=' ~ page.slug),
+        child: 'Delete'
+    } only %}
+
 {% endif %}
 
 {% include 'html-end.twig' %}

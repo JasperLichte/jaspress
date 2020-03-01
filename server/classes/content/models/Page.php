@@ -19,7 +19,13 @@ class Page extends Content implements Serializable
         $stmt = $db()->prepare('SELECT * FROM pages WHERE slug = ?');
         $stmt->execute([$slug]);
 
-        $page = (new Page())->deserialize($stmt->fetch());
+        $res = $stmt->fetch();
+
+        if (!$res) {
+            return null;
+        }
+
+        $page = (new Page())->deserialize($res);
 
         return ($page->isEmpty() ? null : $page);
     }
@@ -71,6 +77,11 @@ VALUES(?, ?, ?, NOW(), NOW(), "0")')->execute([
     public function endpoint()
     {
         return Url::to('/page.php?' . PagePage::GET_PAGE_KEY . '=' . $this->getSlug());
+    }
+
+    public static function delete(Connection $db, string $slug)
+    {
+        $db()->prepare('DELETE FROM pages WHERE slug = ?')->execute([$slug]);
     }
 
 }
