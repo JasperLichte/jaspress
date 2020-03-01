@@ -20,18 +20,18 @@ class RegisterAction extends AuthAction
     {
         $user = (new User())->deserialize($this->req->getAllPost());
         if ($user->isEmpty()) {
-            $this->req->redirectWithError(RegisterPage::endPoint(), 'User cannot be empty');
+            $this->req->reload('User cannot be empty');
         }
 
         if (User::loadByEmail($this->db, $user->getEmail()) != null) {
-            $this->req->redirectWithError(RegisterPage::endPoint(), "User '" . $user->getEmail() . "' exists already");
+            $this->req->reload("User '" . $user->getEmail() . "' exists already");
         }
 
         try {
             User::storeNew($this->db, $user);
             $user = (new Login($this->db, $user))->perform();
         } catch(UnknownUserException | WrongPasswordException | LogicException $e) {
-            $this->req->redirectWithError(RegisterPage::endPoint(), $e);
+            $this->req->reload($e);
         }
 
         $this->req->redirectTo($user->isAdmin() ? DashboardPage::endPoint() : StartPage::endPoint());

@@ -82,6 +82,19 @@ class Request
         $this->redirectTo($url);
     }
 
+    public function reload($error = null)
+    {
+        $this->redirectWithError($this->getHttpReferer(), $error);
+    }
+
+    public function getHttpReferer(): Url
+    {
+        if (!isset($_SERVER['HTTP_REFERER']) || empty($_SERVER['HTTP_REFERER'])) {
+            return Url::to('/');
+        }
+        return new Url($_SERVER['HTTP_REFERER']);
+    }
+
     public function getIp(): string
     {
         if (isset($_SERVER['REMOTE_ADDR']) && !empty($_SERVER['REMOTE_ADDR'])) {
