@@ -55,6 +55,13 @@ class ComposerStaticInit748ea78c063c98d86ef6bd479c186a3d
                 1 => __DIR__ . '/..' . '/josegonzalez/dotenv/tests',
             ),
         ),
+        'P' => 
+        array (
+            'Parsedown' => 
+            array (
+                0 => __DIR__ . '/..' . '/erusev/parsedown',
+            ),
+        ),
     );
 
     public static function getInitializer(ClassLoader $loader)
