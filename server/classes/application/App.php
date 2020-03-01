@@ -77,4 +77,9 @@ class App
         return (isset($_SESSION['error']) ? (string)$_SESSION['error'] : null);
     }
 
+    public function dispose()
+    {
+        unset($_SESSION['error']);
+    }
+
 }
