@@ -5,6 +5,9 @@ namespace settings;
 use database\Connection;
 use settings\settings\AppNameSetting;
 use settings\settings\LanguageSetting;
+use settings\settings\ui\BackgroundColorSetting;
+use settings\settings\ui\HeaderBackgroundColorSetting;
+use settings\settings\ui\UiSetting;
 
 class Settings
 {
@@ -41,6 +44,8 @@ class Settings
         $this->settings = [
             new AppNameSetting(),
             new LanguageSetting(),
+            new BackgroundColorSetting(),
+            new HeaderBackgroundColorSetting(),
         ];
     }
 
@@ -68,6 +73,21 @@ class Settings
     public function getSettings(): array
     {
         return $this->settings;
+    }
+
+    /**
+     * @return UiSetting[]
+     */
+    public function getUiSettings(): array
+    {
+        $uiSettings = [];
+        foreach ($this->settings as $setting) {
+            if ($setting instanceof UiSetting) {
+                $uiSettings[] = $setting;
+            }
+        }
+
+        return $uiSettings;
     }
 
 }

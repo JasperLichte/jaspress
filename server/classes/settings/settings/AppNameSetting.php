@@ -14,4 +14,9 @@ class AppNameSetting extends BaseSetting
         return 'APP_NAME';
     }
 
+    public function description(): string
+    {
+        return 'Name of the application';
+    }
+
 }

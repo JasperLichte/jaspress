@@ -6,7 +6,7 @@ namespace settings;
 use database\Connection;
 use settings\types\options\OptionsSetting;
 
-class BaseSetting
+abstract class BaseSetting
 {
 
     /** @var null|string */
@@ -14,7 +14,6 @@ class BaseSetting
 
     /** @var string */
     protected $defaultValue = '';
-
 
     public function setValue(string $value): void
     {
@@ -29,11 +28,6 @@ class BaseSetting
     public function getDefaultValue(): string
     {
         return $this->defaultValue;
-    }
-
-    public static function dbKey(): string
-    {
-        return '';
     }
 
     public static function save(Connection $db, string $dbKey, string $value)
@@ -51,5 +45,9 @@ class BaseSetting
     {
         return $this->getValue();
     }
+
+    abstract public static function dbKey(): string;
+
+    abstract public function description(): string;
 
 }

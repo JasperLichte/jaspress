@@ -11,6 +11,7 @@
         <thead>
         <tr>
             <th>Name</th>
+            <th>Description</th>
             <th>Value</th>
         </tr>
         </thead>
@@ -18,6 +19,7 @@
         {% for setting in settings.settings %}
             <tr>
                 <td>{{ setting.dbKey }}</td>
+                <td>{{ setting.description }}</td>
                 <td>
                     {% if setting.isOptionSetting %}
                         <select name="{{ setting.dbKey }}" title="{{ setting.dbKey }}">

@@ -1,5 +1,5 @@
 header, footer {
-    background-color: #222;
+    background-color: var(--header-bg-color);
     color: #eeeeee;
     padding: 1rem;
 }

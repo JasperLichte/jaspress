@@ -23,4 +23,9 @@ class LanguageSetting extends OptionsSetting
         ];
     }
 
+    public function description(): string
+    {
+        return 'Main language';
+    }
+
 }
