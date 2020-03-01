@@ -42,6 +42,9 @@
                         />
                     {% endif %}
                 </td>
+                <td>
+                    <a href="{{ url.api('/admin/settings/reset.php?key=' ~ setting.dbKey) }}">Reset</a>
+                </td>
             </tr>
         {% endfor %}
         </tbody>

@@ -37,6 +37,11 @@ abstract class BaseSetting
         $statement->execute([$dbKey, $value]);
     }
 
+    public static function delete(Connection $db, string $dbKey)
+    {
+        $db()->prepare('DELETE FROM settings WHERE id = ?')->execute([$dbKey]);
+    }
+
     public function __toString()
     {
         return $this->getValue();
