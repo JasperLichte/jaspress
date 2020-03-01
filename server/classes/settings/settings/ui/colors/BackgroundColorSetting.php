@@ -1,8 +1,8 @@
 <?php
 
-namespace settings\settings\ui;
+namespace settings\settings\ui\colors;
 
-class BackgroundColorSetting extends UiSetting
+class BackgroundColorSetting extends ColorSetting
 {
 
     public static function dbKey(): string
@@ -10,7 +10,7 @@ class BackgroundColorSetting extends UiSetting
         return 'BG_COLOR';
     }
 
-    protected $defaultValue = '#fff';
+    protected $defaultValue = '#ffffff';
 
     public function cssProperty(): string
     {

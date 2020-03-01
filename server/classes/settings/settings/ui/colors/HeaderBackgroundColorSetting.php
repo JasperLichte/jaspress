@@ -1,8 +1,8 @@
 <?php
 
-namespace settings\settings\ui;
+namespace settings\settings\ui\colors;
 
-class HeaderBackgroundColorSetting extends UiSetting
+class HeaderBackgroundColorSetting extends ColorSetting
 {
 
     public static function dbKey(): string
@@ -10,7 +10,7 @@ class HeaderBackgroundColorSetting extends UiSetting
         return 'HEADER_BG_COLOR';
     }
 
-    protected $defaultValue = '#222';
+    protected $defaultValue = '#222222';
 
     public function cssProperty(): string
     {

@@ -32,6 +32,8 @@
                                 >{{ option.name }}</option>
                             {% endfor %}
                         </select>
+                    {% elseif setting.isColorSetting %}
+                        <input type="color" value="{{ setting.value }}" name="{{ setting.dbKey }}" />
                     {% else %}
                         <input
                             type="text"

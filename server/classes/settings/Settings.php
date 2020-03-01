@@ -5,8 +5,8 @@ namespace settings;
 use database\Connection;
 use settings\settings\AppNameSetting;
 use settings\settings\LanguageSetting;
-use settings\settings\ui\BackgroundColorSetting;
-use settings\settings\ui\HeaderBackgroundColorSetting;
+use settings\settings\ui\colors\BackgroundColorSetting;
+use settings\settings\ui\colors\HeaderBackgroundColorSetting;
 use settings\settings\ui\UiSetting;
 
 class Settings

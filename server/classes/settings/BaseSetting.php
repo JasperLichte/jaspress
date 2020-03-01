@@ -4,6 +4,7 @@ namespace settings;
 
 
 use database\Connection;
+use settings\settings\ui\colors\ColorSetting;
 use settings\types\options\OptionsSetting;
 
 abstract class BaseSetting
@@ -36,11 +37,6 @@ abstract class BaseSetting
         $statement->execute([$dbKey, $value]);
     }
 
-    public function isOptionSetting(): bool
-    {
-        return ($this instanceof OptionsSetting);
-    }
-
     public function __toString()
     {
         return $this->getValue();
@@ -49,5 +45,15 @@ abstract class BaseSetting
     abstract public static function dbKey(): string;
 
     abstract public function description(): string;
+
+    public function isOptionSetting(): bool
+    {
+        return ($this instanceof OptionsSetting);
+    }
+
+    public function isColorSetting(): bool
+    {
+        return ($this instanceof ColorSetting);
+    }
 
 }
