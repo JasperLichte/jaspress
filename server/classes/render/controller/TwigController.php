@@ -36,9 +36,11 @@ class TwigController implements RenderController
     public function render(string $template, array $arguments = [], bool $withoutDefaultArgs = false): string
     {
         try {
+            $state = App::getInstance()->getState();
             if (!$withoutDefaultArgs) {
                 $arguments = array_merge($arguments, [
-                    'state'      => App::getInstance()->getState(),
+                    'state'      => $state,
+                    'user'       => $state->getUser(),
                     'settings'   => Settings::getInstance(),
                     'url'        => new Url(),
                 ]);

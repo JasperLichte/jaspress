@@ -1,0 +1,8 @@
+<footer>
+    <hr>
+    <p>Jasper Lichte</p>
+
+    {% if user.isAdmin %}
+        <a href="{{ url.to('/admin') }}">Dashboard</a>
+    {% endif %}
+</footer>
