@@ -68,6 +68,20 @@ class Request
         }
     }
 
+    public function redirectWithError($url, $error): void
+    {
+        $message = '';
+        if (is_string($error)) {
+            $message = $error;
+        } elseif ($error instanceof \Exception) {
+            $message = $error->getMessage();
+        }
+
+        $_SESSION['error'] = $message;
+
+        $this->redirectTo($url);
+    }
+
     public function getIp(): string
     {
         if (isset($_SERVER['REMOTE_ADDR']) && !empty($_SERVER['REMOTE_ADDR'])) {

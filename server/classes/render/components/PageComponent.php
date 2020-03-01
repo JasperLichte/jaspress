@@ -63,6 +63,8 @@ abstract class PageComponent extends AbstractPageComponent
             throw new LogicException('PageComponents have to call parent::render() in their `render` method!');
         }
 
+        unset($_SESSION['error']);
+
         return $out;
     }
 

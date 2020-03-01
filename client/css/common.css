@@ -42,3 +42,7 @@ main {
 .floating-button:hover {
     transform: scale(1.05) rotate(10deg);
 }
+
+.error {
+    color: red;
+}

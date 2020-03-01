@@ -72,4 +72,9 @@ class App
         return $this->db;
     }
 
+    public function getError(): ?string
+    {
+        return (isset($_SESSION['error']) ? (string)$_SESSION['error'] : null);
+    }
+
 }

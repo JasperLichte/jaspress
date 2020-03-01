@@ -15,7 +15,7 @@ class UnknownUserException extends Exception
     public function __construct(User $user)
     {
         $this->user = $user;
-        parent::__construct('Unknown user ' . $this->user->getId());
+        parent::__construct('Unknown user ' . $this->user->getEmail());
     }
 
 }

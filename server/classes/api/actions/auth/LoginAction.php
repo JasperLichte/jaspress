@@ -10,6 +10,7 @@ use auth\exceptions\WrongPasswordException;
 use auth\Login;
 use auth\models\User;
 use render\components\pages\admin\DashboardPage;
+use render\components\pages\auth\LoginPage;
 use render\components\pages\StartPage;
 use util\exceptions\LogicException;
 
@@ -20,14 +21,14 @@ class LoginAction extends AuthAction
     {
         $user = (new User())->deserialize($this->req->getAllPost());
         if ($user->isEmpty()) {
-            return $this->res->setErrorMessage('Empty user passed')->status(401);
+            $this->req->redirectWithError(LoginPage::endPoint(), 'User cannot be empty');
         }
 
         try {
             $login = new Login($this->db, $user);
             $user = $login->perform();
         } catch(UnknownUserException | WrongPasswordException | LogicException $e) {
-            return $this->res->exception($e)->status(401);
+            $this->req->redirectWithError(LoginPage::endPoint(), $e);
         }
 
         $this->req->redirectTo($user->isAdmin() ? DashboardPage::endPoint() : StartPage::endPoint());
