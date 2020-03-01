@@ -37,7 +37,7 @@ abstract class PageAction extends AdminAction
             $this->content = $this->req->getPost('content');
         }
 
-        if (!empty($this->title) && !empty($this->slug)) {
+        if (!empty($this->title) && !empty($this->title)) {
             $this->page = new Page();
             $this->page->setTitle($this->title);
             $this->page->setMarkdown(new Markdown($this->content));

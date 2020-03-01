@@ -11,6 +11,10 @@ class NewPageAction extends PageAction
 
     public function run(): ApiResponse
     {
+        if ($this->page === null || $this->page->isEmpty()) {
+            return $this->res->setErrorMessage('Page cannot be empty!');
+        }
+
         try {
             $this->page->save($this->db);
         } catch (EmptyMemberException | LogicException $e) {
