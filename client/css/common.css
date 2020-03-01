@@ -2,4 +2,43 @@ header, footer {
     background-color: var(--header-bg-color);
     color: var(--header-font-color);
     padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+}
+
+header > h1 > a {
+    color: currentColor;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+main {
+    position: relative;
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+.floating-buttons-wrapper {
+    position: fixed;
+    bottom: 54px;
+    right: 14px;
+}
+
+.floating-button {
+    background-color: cadetblue;
+    color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+    transition: transform .05s;
+    text-decoration: none;
+    margin: 8px;
+}
+
+.floating-button:hover {
+    transform: scale(1.05) rotate(10deg);
 }

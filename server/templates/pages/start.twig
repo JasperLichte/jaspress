@@ -9,6 +9,15 @@
     </a>
 {% endfor %}
 
+{% if user.isAdmin %}
+    <div class="floating-buttons-wrapper">
+        {% include '@components/inputs/floating-button.twig' with {
+            target: url.to('/admin/page/new.php'),
+            child: 'New'
+        } only %}
+    </div>
+{% endif %}
+
 </main>
 {% include '@common/footer.twig' %}
 {% include 'html-end.twig' %}

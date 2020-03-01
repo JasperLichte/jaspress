@@ -12,11 +12,3 @@ body {
     flex-direction: column;
     background-color: var(--body-bg-color);
 }
-
-main {
-    flex-grow: 1;
-}
-
-a, a:link, a:visited, a:active, a:hover {
-    color: currentColor;
-}

@@ -1,11 +1,3 @@
 <header>
-    <div>
-        <a href="{{ url.to('/') }}">{{ settings.get('APP_NAME') }}</a>
-    </div>
-    {% if user is null %}
-        <a href="{{ url.to('/auth/login.php') }}">Login</a>
-    {% else %}
-        {{ user.email }}
-        <a href="{{ url.api('/auth/logout.php') }}">Logout</a>
-    {% endif %}
+    <h1><a href="{{ url.to('/') }}">{{ settings.get('APP_NAME') }}</a></h1>
 </header>

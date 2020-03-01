@@ -9,14 +9,18 @@
         {{ page.markdown.htmlContent | raw }}
     </div>
 
-    {% include '@components/inputs/floating-button.twig' with {
-        target: url.to('/admin/page/edit.php?p=' ~ page.slug),
-        child: 'Edit'
-    } only %}
-    {% include '@components/inputs/floating-button.twig' with {
-        target: url.api('/admin/page/delete.php?p=' ~ page.slug),
-        child: 'Delete'
-    } only %}
+    {% if user.isAdmin %}
+        <div class="floating-buttons-wrapper">
+            {% include '@components/inputs/floating-button.twig' with {
+                target: url.to('/admin/page/edit.php?p=' ~ page.slug),
+                child: 'Edit'
+            } only %}
+            {% include '@components/inputs/floating-button.twig' with {
+                target: url.api('/admin/page/delete.php?p=' ~ page.slug),
+                child: 'Delete'
+            } only %}
+        </div>
+    {% endif %}
 
 {% endif %}
 

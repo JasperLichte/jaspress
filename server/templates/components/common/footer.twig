@@ -1,6 +1,13 @@
 <footer>
     <p>Jasper Lichte</p>
 
+    {% if user is null %}
+        <a href="{{ url.to('/auth/login.php') }}">Login</a>
+    {% else %}
+        {{ user.email }}
+        <a href="{{ url.api('/auth/logout.php') }}">Logout</a>
+    {% endif %}
+
     {% if user.isAdmin %}
         <a href="{{ url.to('/admin') }}">Dashboard</a>
     {% endif %}
