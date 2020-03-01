@@ -1,6 +1,6 @@
 {% include 'document.twig' %}
-
 {% include '@common/header.twig' %}
+<main>
 
 <h1>Login</h1>
 <form action="{{ url.api('/auth/login.php') }}" method="post">
@@ -10,5 +10,6 @@
 </form>
 <a href="{{ url.to('/auth/register.php') }}">Register instead</a>
 
-{% include 'html-end.twig' %}
+</main>
 {% include '@common/footer.twig' %}
+{% include 'html-end.twig' %}

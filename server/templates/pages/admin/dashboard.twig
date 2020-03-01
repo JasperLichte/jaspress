@@ -1,6 +1,6 @@
 {% include 'document.twig' %}
-
 {% include '@common/header.twig' %}
+<main>
 
 <div>
     <a href="{{ url.to('/admin/settings.php') }}">Settings</a>
@@ -9,5 +9,6 @@
     <a href="{{ url.to('/admin/page/new.php') }}">New page</a>
 </div>
 
-{% include 'html-end.twig' %}
+</main>
 {% include '@common/footer.twig' %}
+{% include 'html-end.twig' %}

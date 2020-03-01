@@ -1,6 +1,6 @@
 {% include 'document.twig' %}
-
 {% include '@common/header.twig' %}
+<main>
 
 <form action="{{ url.api('/admin/page/new.php') }}" method="post">
     <input type="text" name="title" title="Title" />
@@ -10,5 +10,6 @@
     <input type="submit" value="Save" />
 </form>
 
-{% include 'html-end.twig' %}
+</main>
 {% include '@common/footer.twig' %}
+{% include 'html-end.twig' %}

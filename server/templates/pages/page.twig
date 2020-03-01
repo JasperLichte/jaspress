@@ -1,5 +1,6 @@
 {% include 'document.twig' %}
 {% include '@common/header.twig' %}
+<main>
 
 {% if page is null %}
     {% include '@errors/404.twig' with {'description': 'Page not found'} %}
@@ -19,5 +20,6 @@
 
 {% endif %}
 
-{% include 'html-end.twig' %}
+</main>
 {% include '@common/footer.twig' %}
+{% include 'html-end.twig' %}

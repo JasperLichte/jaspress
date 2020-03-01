@@ -2,13 +2,18 @@
 
 *, *::before, *::after {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    outline: 0 none;
 }
 
 body {
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
 }
 
 a, a:link, a:visited, a:active, a:hover {

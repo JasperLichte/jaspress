@@ -43,24 +43,6 @@ class Url
         return $this;
     }
 
-    public static function to(string $path, bool $subPage = true): Url
-    {
-        if ($path === '/') {
-            $subPage = false;
-        }
-
-        $url = new Url($path);
-        $url->prepend(Config::ROOT_URL() . ($subPage ? '/_' : ''));
-        return $url;
-    }
-
-    public static function api(string $path): Url
-    {
-        $url = new Url($path);
-        $url->prepend(Config::ROOT_URL() . '/api');
-        return $url;
-    }
-
     public function prepend($path): Url
     {
         $this->setPath($path . $this->path);
@@ -83,6 +65,31 @@ class Url
     public function __toString()
     {
         return $this->getPath();
+    }
+
+    public static function to(string $path, bool $subPage = true): Url
+    {
+        if ($path === '/') {
+            $subPage = false;
+        }
+
+        $url = new Url($path);
+        $url->prepend(Config::ROOT_URL() . ($subPage ? '/_' : ''));
+        return $url;
+    }
+
+    public static function api(string $path): Url
+    {
+        $url = new Url($path);
+        $url->prepend(Config::ROOT_URL() . '/api');
+        return $url;
+    }
+
+    public static function css(string $path): Url
+    {
+        $url = new Url($path);
+        $url->prepend(Config::ROOT_URL() . '/client/css');
+        return $url;
     }
 
 }
