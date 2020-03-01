@@ -1,5 +1,5 @@
 header, footer {
     background-color: var(--header-bg-color);
-    color: #eeeeee;
+    color: var(--header-font-color);
     padding: 1rem;
 }
