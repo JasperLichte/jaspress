@@ -13,8 +13,10 @@ class DeletePageAction extends PageAction
     {
         Page::delete($this->db, $this->slug);
 
-        $this->req->redirectTo(StartPage::endPoint());
-        return $this->res->setSuccessMessage('Page deleted');
+        return $this->req->redirectWith(
+            $this->res->setSuccessMessage('Page deleted'),
+            StartPage::endPoint()
+        );
     }
 
 }

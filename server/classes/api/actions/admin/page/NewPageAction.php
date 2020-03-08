@@ -12,17 +12,23 @@ class NewPageAction extends PageAction
     public function run(): ApiResponse
     {
         if ($this->page === null || $this->page->isEmpty()) {
-            return $this->res->setErrorMessage('Page cannot be empty!');
+            return $this->req->reloadWith(
+                $this->res->setErrorMessage('Page cannot be empty!')
+            );
         }
 
         try {
             $this->page->save($this->db);
         } catch (EmptyMemberException | LogicException $e) {
-            return $this->res->setErrorMessage($e->getMessage());
+            return $this->req->reloadWith(
+                $this->res->exception($e)
+            );
         }
 
-        $this->req->redirectTo($this->page->endpoint());
-        return $this->res->setSuccessMessage('Page saved');
+        return $this->req->redirectWith(
+            $this->res->setSuccessMessage('Page saved'),
+            $this->page->endpoint()
+        );
     }
 
 }

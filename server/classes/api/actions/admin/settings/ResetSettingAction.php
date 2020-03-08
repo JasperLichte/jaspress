@@ -14,18 +14,20 @@ class ResetSettingAction extends AdminAction
     {
         $key = ($this->req->issetGet('key') ? $this->req->getGet('key') : '');
         if (empty($key)) {
-            return $this->res->setErrorMessage('Paramater "key" cannot be empty');
+            return $this->req->reloadWith($this->res->setErrorMessage('Paramater "key" cannot be empty'));
         }
 
         $setting = Settings::getInstance()->get($key);
         if ($setting === null) {
-            return $this->res->setErrorMessage('Invalid key');
+            return $this->req->reloadWith($this->res->setErrorMessage('Invalid key'));
         }
 
         $setting::delete($this->db, $key);
 
-        $this->req->redirectTo(SettingsPage::endPoint());
-        return $this->res->setSuccessMessage('Setting ' . $key . ' removed');
+        return $this->req->redirectWith(
+            $this->res->setSuccessMessage('Setting ' . $key . ' removed'),
+            SettingsPage::endPoint()
+        );
     }
 
 }

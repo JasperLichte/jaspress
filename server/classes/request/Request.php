@@ -2,9 +2,9 @@
 
 namespace request;
 
+use api\ApiResponse;
 use application\App;
 use auth\models\User;
-use config\Config;
 use database\Connection;
 
 class Request
@@ -126,6 +126,26 @@ class Request
         $db()
             ->prepare('INSERT INTO requests (ip, path, time) VALUES (?, ?, NOW())')
             ->execute([$this->getIp(), $this->getRequestedPath()]);
+    }
+
+    public function reloadWith(ApiResponse $res): ApiResponse
+    {
+        return $this->redirectWith($res, $this->getHttpReferer());
+    }
+
+    public function redirectWith(ApiResponse $res, $url): ApiResponse
+    {
+        if ($this->issetGet('no-rld')) {
+            return $res;
+        }
+
+        if ($res->isSuccess() === false && !empty($res->getMessage())) {
+            $this->redirectWithError($url, $res->getMessage());
+        }
+
+        $this->redirectTo($url);
+
+        return $res;
     }
 
 }

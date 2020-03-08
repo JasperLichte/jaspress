@@ -18,8 +18,7 @@ class LogoutAction extends Action
             $this->req->getUser()->logout();
         }
 
-        $this->req->redirectTo(LoginPage::endPoint());
-        return $this->res->setSuccessMessage('Logged out');
+        return $this->req->redirectWith($this->res->setSuccessMessage('Logged out'), LoginPage::endPoint());
     }
 
     public function permission(): Permission

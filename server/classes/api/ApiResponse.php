@@ -123,4 +123,14 @@ class ApiResponse
         return '';
     }
 
+    public function getMessage(): string
+    {
+        return $this->message;
+    }
+
+    public function isSuccess(): ?bool
+    {
+        return $this->success;
+    }
+
 }

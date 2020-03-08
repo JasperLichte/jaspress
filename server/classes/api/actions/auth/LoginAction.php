@@ -21,18 +21,23 @@ class LoginAction extends AuthAction
     {
         $user = (new User())->deserialize($this->req->getAllPost());
         if ($user->isEmpty()) {
-            $this->req->reload('User cannot be empty');
+            return $this->req->reloadWith(
+                $this->res->setErrorMessage('User cannot be empty')->status(401)
+            );
         }
 
         try {
             $login = new Login($this->db, $user);
             $user = $login->perform();
         } catch(UnknownUserException | WrongPasswordException | LogicException $e) {
-            $this->req->reload($e);
+            $this->res->exception($e)->status(401);
+            return $this->req->reloadWith($this->res);
         }
 
-        $this->req->redirectTo($user->isAdmin() ? DashboardPage::endPoint() : StartPage::endPoint());
-        return $this->res->setSuccessMessage('Successfully logged in');
+        return $this->req->redirectWith(
+            $this->res->setSuccessMessage('Successfully logged in'),
+            $user->isAdmin() ? DashboardPage::endPoint() : StartPage::endPoint()
+        );
     }
 
 }

@@ -24,8 +24,10 @@ class SaveSettingsAction extends AdminAction
     {
         $this->saveSettings();
 
-        $this->req->redirectTo(SettingsPage::endPoint());
-        return $this->res->setSuccessMessage('All entries saved');
+        return $this->req->redirectWith(
+            $this->res->setSuccessMessage('All entries saved'),
+            SettingsPage::endPoint()
+        );
     }
 
     private function saveSettings()
