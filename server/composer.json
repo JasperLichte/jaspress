@@ -4,6 +4,7 @@
         "josegonzalez/dotenv": "dev-master",
         "erusev/parsedown": "dev-master",
       "ext-pdo": "*",
-      "ext-iconv": "*"
+      "ext-iconv": "*",
+      "ext-json": "*"
     }
 }

@@ -1,0 +1,16 @@
+.footer {
+    color: #222;
+    border-top: 1px solid currentColor;
+    padding: 1.5rem 1rem;
+    text-align: center;
+
+    &[data-theme="dark"] {
+        background-color: #222;
+        color: #fff;
+    }
+
+    & .content-wrapper {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}

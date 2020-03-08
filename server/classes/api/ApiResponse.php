@@ -2,8 +2,11 @@
 
 namespace api;
 
+use application\Environment;
 use Exception;
 use render\controller\TwigController;
+use util\exceptions\InvalidArgumentsException;
+use util\exceptions\LogicException;
 
 class ApiResponse
 {
@@ -108,11 +111,17 @@ class ApiResponse
             $retVals['data'] = $this->data;
         }
 
-        http_response_code($this->statusCode);
+        $env = Environment::getInstance();
+        try {
+            header('Access-Control-Allow-Origin: ' . $env->get('CLIENT_ROOT_URL'));
+        } catch(InvalidArgumentsException $e) {}
 
+        header('Access-Control-Allow-Credentials: true');
+        header('Access-Control-Allow-Headers: content-type');
         if (ResponseFormat::isValidValue($this->format)) {
             header('Content-Type: ' . $this->format);
         }
+        http_response_code($this->statusCode);
 
         switch ($this->format) {
             case ResponseFormat::JSON:

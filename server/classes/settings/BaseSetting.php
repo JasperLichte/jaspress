@@ -6,8 +6,9 @@ namespace settings;
 use database\Connection;
 use settings\settings\ui\colors\ColorSetting;
 use settings\types\options\OptionsSetting;
+use util\interfaces\Jsonable;
 
-abstract class BaseSetting
+abstract class BaseSetting extends Jsonable
 {
 
     /** @var null|string */

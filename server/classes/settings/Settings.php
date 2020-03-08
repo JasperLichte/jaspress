@@ -92,4 +92,13 @@ class Settings
         return $uiSettings;
     }
 
+    public function asIndexedArray(): array
+    {
+        $out = [];
+        foreach ($this->settings as $setting) {
+            $out[$setting::dbKey()] = $setting;
+        }
+        return $out;
+    }
+
 }

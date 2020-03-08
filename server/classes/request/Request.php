@@ -135,7 +135,7 @@ class Request
 
     public function redirectWith(ApiResponse $res, $url): ApiResponse
     {
-        if ($this->issetGet('no-rld')) {
+        if (!$this->issetGet('rld')) {
             return $res;
         }
 
