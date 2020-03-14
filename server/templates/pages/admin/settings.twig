@@ -1,57 +1,11 @@
 {% include 'document.twig' %}
 {% include '@common/header.twig' %}
 <main>
-
-<form
-    action="{{ url.api('/admin/settings/save.php') }}"
-    method="post"
-    class="settings-form"
->
-    <table>
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Value</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for setting in settings.settings %}
-            <tr>
-                <td>{{ setting.dbKey }}</td>
-                <td>{{ setting.description }}</td>
-                <td>
-                    {% if setting.isOptionSetting %}
-                        <select name="{{ setting.dbKey }}" title="{{ setting.dbKey }}">
-                            {% for option in setting.options %}
-                                <option
-                                    value="{{ option.value }}"
-                                    {% if setting.value == option.value %}
-                                        selected="selected"
-                                    {% endif %}
-                                >{{ option.name }}</option>
-                            {% endfor %}
-                        </select>
-                    {% elseif setting.isColorSetting %}
-                        <input type="color" value="{{ setting.value }}" name="{{ setting.dbKey }}" />
-                    {% else %}
-                        <input
-                            type="text"
-                            value="{{ setting.value }}"
-                            name="{{ setting.dbKey }}"
-                        />
-                    {% endif %}
-                </td>
-                <td>
-                    <a href="{{ url.api('/admin/settings/reset.php?key=' ~ setting.dbKey) }}">Reset</a>
-                </td>
-            </tr>
+        {% for category in categories %}
+            {% include '@components/admin/settings-categories-inputs-card.twig' with {
+                category: category
+            } %}
         {% endfor %}
-        </tbody>
-    </table>
-    <input type="submit" value="Save" />
-</form>
-
 </main>
 {% include '@common/footer.twig' %}
 {% include 'html-end.twig' %}

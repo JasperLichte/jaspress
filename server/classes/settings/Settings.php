@@ -3,6 +3,7 @@
 namespace settings;
 
 use database\Connection;
+use settings\categories\SettingsCategory;
 use settings\settings\AppNameSetting;
 use settings\settings\LanguageSetting;
 use settings\settings\ui\colors\BackgroundColorSetting;
@@ -99,6 +100,22 @@ class Settings
             $out[$setting::dbKey()] = $setting;
         }
         return $out;
+    }
+
+    /**
+     * @param SettingsCategory $category
+     * @return BaseSetting[]
+     */
+    public function getSettingsByCategory(SettingsCategory $category): array
+    {
+        $settings = [];
+        foreach ($this->settings as $setting) {
+            if ($setting->getCategory()->getId() === $category->getId()) {
+                $settings[] = $setting;
+            }
+        }
+
+        return $settings;
     }
 
 }

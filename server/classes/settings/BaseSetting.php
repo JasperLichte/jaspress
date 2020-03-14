@@ -4,6 +4,7 @@ namespace settings;
 
 
 use database\Connection;
+use settings\categories\SettingsCategory;
 use settings\settings\ui\colors\ColorSetting;
 use settings\types\options\OptionsSetting;
 use util\interfaces\Jsonable;
@@ -47,6 +48,8 @@ abstract class BaseSetting extends Jsonable
     {
         return $this->getValue();
     }
+
+    abstract public function getCategory(): SettingsCategory;
 
     abstract public static function dbKey(): string;
 

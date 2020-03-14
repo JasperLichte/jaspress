@@ -3,6 +3,8 @@
 namespace settings\settings;
 
 use settings\BaseSetting;
+use settings\categories\GeneralSettingCategory;
+use settings\categories\SettingsCategory;
 
 class AppNameSetting extends BaseSetting
 {
@@ -19,4 +21,8 @@ class AppNameSetting extends BaseSetting
         return 'Name of the application';
     }
 
+    public function getCategory(): SettingsCategory
+    {
+        return new GeneralSettingCategory();
+    }
 }

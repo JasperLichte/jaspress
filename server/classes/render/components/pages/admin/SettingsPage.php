@@ -3,6 +3,8 @@
 namespace render\components\pages\admin;
 
 use request\Url;
+use settings\categories\ColorSettingCategory;
+use settings\categories\GeneralSettingCategory;
 
 class SettingsPage extends AdminPage
 {
@@ -11,7 +13,15 @@ class SettingsPage extends AdminPage
     {
         parent::render();
 
-        return $this->renderController->render('@pages/admin/settings');
+        return $this->renderController->render(
+            '@pages/admin/settings',
+            [
+                'categories' => [
+                    new GeneralSettingCategory(),
+                    new ColorSettingCategory(),
+                ],
+            ]
+        );
     }
 
     public function title(): string

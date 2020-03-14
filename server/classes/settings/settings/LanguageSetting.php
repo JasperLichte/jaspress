@@ -2,6 +2,8 @@
 
 namespace settings\settings;
 
+use settings\categories\GeneralSettingCategory;
+use settings\categories\SettingsCategory;
 use settings\types\options\Option;
 use settings\types\options\OptionsSetting;
 
@@ -26,6 +28,11 @@ class LanguageSetting extends OptionsSetting
     public function description(): string
     {
         return 'Main language';
+    }
+
+    public function getCategory(): SettingsCategory
+    {
+        return new GeneralSettingCategory();
     }
 
 }

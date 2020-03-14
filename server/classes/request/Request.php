@@ -135,10 +135,6 @@ class Request
 
     public function redirectWith(ApiResponse $res, $url): ApiResponse
     {
-        if (!$this->issetGet('rld')) {
-            return $res;
-        }
-
         if ($res->isSuccess() === false && !empty($res->getMessage())) {
             $this->redirectWithError($url, $res->getMessage());
         }
