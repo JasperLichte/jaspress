@@ -7,6 +7,7 @@ use settings\categories\SettingsCategory;
 use settings\settings\AppNameSetting;
 use settings\settings\LanguageSetting;
 use settings\settings\ui\colors\BackgroundColorSetting;
+use settings\settings\ui\colors\FontColorSetting;
 use settings\settings\ui\colors\HeaderBackgroundColorSetting;
 use settings\settings\ui\colors\HeaderFontColorSetting;
 use settings\settings\ui\UiSetting;
@@ -49,6 +50,7 @@ class Settings
             new BackgroundColorSetting(),
             new HeaderBackgroundColorSetting(),
             new HeaderFontColorSetting(),
+            new FontColorSetting(),
         ];
     }
 
