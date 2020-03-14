@@ -29,5 +29,9 @@ class FontColorSetting extends ColorSetting
         return '--font-color';
     }
 
-    protected $defaultValue = '#222222';
+    public function getDefaultValue(): string
+    {
+        return '#222222';
+    }
+
 }

@@ -10,7 +10,10 @@ use settings\types\options\OptionsSetting;
 class LanguageSetting extends OptionsSetting
 {
 
-    protected $defaultValue = 'en';
+    public function getDefaultValue(): string
+    {
+        return 'en';
+    }
 
     public static function dbKey(): string
     {

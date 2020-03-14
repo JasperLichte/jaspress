@@ -9,7 +9,10 @@ use settings\categories\SettingsCategory;
 class AppNameSetting extends BaseSetting
 {
 
-    protected $defaultValue = 'APP_NAME';
+    public function getDefaultValue(): string
+    {
+        return 'APP_NAME';
+    }
 
     public static function dbKey(): string
     {
@@ -25,4 +28,5 @@ class AppNameSetting extends BaseSetting
     {
         return new GeneralSettingCategory();
     }
+
 }

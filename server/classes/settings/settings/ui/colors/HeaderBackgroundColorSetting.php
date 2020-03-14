@@ -10,8 +10,6 @@ class HeaderBackgroundColorSetting extends ColorSetting
         return 'HEADER_BG_COLOR';
     }
 
-    protected $defaultValue = '#222222';
-
     public function cssProperty(): string
     {
         return '--header-bg-color';
@@ -22,4 +20,8 @@ class HeaderBackgroundColorSetting extends ColorSetting
         return 'Header background color';
     }
 
+    public function getDefaultValue(): string
+    {
+        return '#222222';
+    }
 }

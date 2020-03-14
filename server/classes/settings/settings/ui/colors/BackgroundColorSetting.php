@@ -10,7 +10,10 @@ class BackgroundColorSetting extends ColorSetting
         return 'BG_COLOR';
     }
 
-    protected $defaultValue = '#ffffff';
+    public function getDefaultValue(): string
+    {
+        return '#ffffff';
+    }
 
     public function cssProperty(): string
     {

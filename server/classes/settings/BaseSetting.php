@@ -15,23 +15,17 @@ abstract class BaseSetting extends Jsonable
     /** @var null|string */
     protected $value = null;
 
-    /** @var string */
-    protected $defaultValue = '';
-
     public function setValue(string $value): void
     {
         $this->value = $value;
     }
 
     public function getValue(): string
-    {
-        return $this->value !== null ? $this->value : $this->defaultValue;
+        {
+        return $this->value !== null ? $this->value : $this->getDefaultValue();
     }
 
-    public function getDefaultValue(): string
-    {
-        return $this->defaultValue;
-    }
+    abstract public function getDefaultValue(): string;
 
     public static function save(Connection $db, string $dbKey, string $value)
     {

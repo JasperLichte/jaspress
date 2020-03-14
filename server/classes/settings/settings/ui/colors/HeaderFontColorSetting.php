@@ -10,8 +10,6 @@ class HeaderFontColorSetting extends ColorSetting
         return 'HEADER_FONT_COLOR';
     }
 
-    protected $defaultValue = '#eeeeee';
-
     public function cssProperty(): string
     {
         return '--header-font-color';
@@ -22,4 +20,8 @@ class HeaderFontColorSetting extends ColorSetting
         return 'Header font color';
     }
 
+    public function getDefaultValue(): string
+    {
+        return '#eeeeee';
+    }
 }
