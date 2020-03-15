@@ -6,7 +6,7 @@ use application\Environment;
 use Exception;
 use render\controller\TwigController;
 use util\exceptions\InvalidArgumentsException;
-use util\exceptions\LogicException;
+use util\models\File;
 
 class ApiResponse
 {
@@ -28,6 +28,9 @@ class ApiResponse
 
     /** @var array */
     private $data = [];
+
+    /** @var File */
+    private $file = null;
 
     public function setSuccess(bool $success): ApiResponse
     {
@@ -96,6 +99,18 @@ class ApiResponse
         return $this;
     }
 
+    /**
+     * @param File $file
+     * @return ApiResponse
+     */
+    public function asFile(File $file): ApiResponse
+    {
+        $this->file = $file;
+        $this->format = ResponseFormat::FILE;
+
+        return $this;
+    }
+
     public function __toString(): string
     {
         $retVals = [
@@ -118,9 +133,7 @@ class ApiResponse
 
         header('Access-Control-Allow-Credentials: true');
         header('Access-Control-Allow-Headers: content-type');
-        if (ResponseFormat::isValidValue($this->format)) {
-            header('Content-Type: ' . $this->format);
-        }
+        header('Content-Type: ' . $this->format);
         http_response_code($this->statusCode);
 
         switch ($this->format) {
@@ -128,6 +141,11 @@ class ApiResponse
                 return json_encode($retVals);
             case ResponseFormat::HTML:
                 return (new TwigController())->render('@api/response', $retVals, true);
+            case ResponseFormat::FILE:
+                if ($this->file !== null) {
+                    header('Content-Type: ' . $this->file->getType());
+                    return $this->file->getData();
+                }
         }
         return '';
     }

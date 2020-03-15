@@ -6,6 +6,7 @@ use api\ApiResponse;
 use application\App;
 use auth\models\User;
 use database\Connection;
+use util\models\File;
 
 class Request
 {
@@ -15,10 +16,14 @@ class Request
     /** @var array */
     private $post;
 
+    /** @var array */
+    private $files;
+
     public function __construct()
     {
         $this->get = $_GET;
         $this->post = $_POST;
+        $this->files = $_FILES;
     }
 
     public function getAllPost(): array
@@ -31,6 +36,17 @@ class Request
         return $this->get;
     }
 
+    /** @return File[] */
+    public function getAllFiles(): array
+    {
+        $files = [];
+        foreach ($this->files as $file) {
+            $files[] = (new File())->deserialize($file);
+        }
+
+        return $files;
+    }
+
     public function issetPost(string $key): bool
     {
         return isset($this->post[$key]);
@@ -41,6 +57,11 @@ class Request
         return isset($this->get[$key]);
     }
 
+    public function issetFile(string $key): bool
+    {
+        return isset($this->files[$key]);
+    }
+
     public function getPost(string $key): string
     {
         return $this->post[$key];
@@ -49,6 +70,11 @@ class Request
     public function getGet(string $key): string
     {
         return $this->get[$key];
+    }
+
+    public function getFile(string $key): File
+    {
+        return (new File())->deserialize($this->files[$key]);
     }
 
     public function getUser(): ?User
@@ -127,7 +153,6 @@ class Request
             ->prepare('INSERT INTO requests (ip, path, time) VALUES (?, ?, NOW())')
             ->execute([$this->getIp(), $this->getRequestedPath()]);
     }
-
     public function reloadWith(ApiResponse $res): ApiResponse
     {
         return $this->redirectWith($res, $this->getHttpReferer());
