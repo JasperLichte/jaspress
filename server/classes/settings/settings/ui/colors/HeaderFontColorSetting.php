@@ -2,6 +2,8 @@
 
 namespace settings\settings\ui\colors;
 
+use settings\Settings;
+
 class HeaderFontColorSetting extends ColorSetting
 {
 
@@ -22,6 +24,6 @@ class HeaderFontColorSetting extends ColorSetting
 
     public function getDefaultValue(): string
     {
-        return '#eeeeee';
+        return Settings::getInstance()->get(FontColorSetting::dbKey());
     }
 }
