@@ -1,0 +1,11 @@
+body {
+  background-color: var(--body-bg-color);
+  color: var(--font-color);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  @import './modules/header.scss';
+  @import './modules/main.scss';
+  @import './modules/footer.scss';
+}

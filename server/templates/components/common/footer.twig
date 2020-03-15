@@ -1,6 +1,4 @@
 <footer>
-    <p>Content management system delievered by <span>Jasper Lichte</span></p>
-
     {% if user is null %}
         <a href="{{ url.to('/auth/login.php') }}">Login</a>
     {% else %}
@@ -11,4 +9,6 @@
     {% if user.isAdmin %}
         <a href="{{ url.to('/admin') }}">Dashboard</a>
     {% endif %}
+
+    <p>Content management system delievered by <strong>Jasper Lichte</strong></p>
 </footer>

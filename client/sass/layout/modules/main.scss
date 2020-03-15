@@ -1,0 +1,31 @@
+main {
+  flex-grow: 1;
+  padding: 1rem;
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &[data-x-align=left] {
+    justify-content: flex-start;
+  }
+  &[data-x-align=center] {
+    justify-content: center;
+  }
+  &[data-x-align=right] {
+    justify-content: flex-end;
+  }
+
+  &[data-y-align=top] {
+    align-items: flex-start;
+  }
+
+  &[data-y-align=center] {
+    align-items: center;
+  }
+
+  &[data-y-align=bottom] {
+    align-items: flex-end;
+  }
+
+}

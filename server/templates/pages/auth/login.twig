@@ -1,16 +1,20 @@
 {% include 'document.twig' %}
 {% include '@common/header.twig' %}
-<main>
+<main data-x-align="center" data-y-align="center">
 
-<h1>Login</h1>
-<form action="{{ url.api('/auth/login.php') }}" method="post">
+<form
+    action="{{ url.api('/auth/login.php') }}"
+    method="post"
+    class="auth-form"
+>
+    <h2 class="h1">Login</h2>
     <input type="text" name="email" />
     <input type="password" name="password" />
     <input type="submit" value="Login">
 
     {% include '@errors/error.twig' %}
+    <a href="{{ url.to('/auth/register.php') }}">Register instead</a>
 </form>
-<a href="{{ url.to('/auth/register.php') }}">Register instead</a>
 
 </main>
 {% include '@common/footer.twig' %}
