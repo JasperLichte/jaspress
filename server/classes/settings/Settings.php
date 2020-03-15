@@ -8,6 +8,8 @@ use settings\settings\AppNameSetting;
 use settings\settings\LanguageSetting;
 use settings\settings\ui\colors\BackgroundColorSetting;
 use settings\settings\ui\colors\FontColorSetting;
+use settings\settings\ui\colors\FooterBackgroundColorSetting;
+use settings\settings\ui\colors\FooterFontColorSetting;
 use settings\settings\ui\colors\HeaderBackgroundColorSetting;
 use settings\settings\ui\colors\HeaderFontColorSetting;
 use settings\settings\ui\UiSetting;
@@ -48,9 +50,11 @@ class Settings
             new AppNameSetting(),
             new LanguageSetting(),
             new BackgroundColorSetting(),
+            new FontColorSetting(),
             new HeaderBackgroundColorSetting(),
             new HeaderFontColorSetting(),
-            new FontColorSetting(),
+            new FooterBackgroundColorSetting(),
+            new FooterFontColorSetting(),
         ];
     }
 
