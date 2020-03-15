@@ -11,4 +11,8 @@ class ColorSettingCategory extends SettingsCategory
         parent::__construct('COLOR');
     }
 
+    public function title(): string
+    {
+        return 'Colors';
+    }
 }

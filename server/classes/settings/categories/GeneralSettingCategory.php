@@ -11,4 +11,9 @@ class GeneralSettingCategory extends SettingsCategory
         parent::__construct('GENERAL');
     }
 
+    public function title(): string
+    {
+        return 'General';
+    }
+
 }

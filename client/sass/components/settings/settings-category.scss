@@ -1,0 +1,16 @@
+.settings-category {
+  border: 1px solid var(--accent-color);
+  padding: .5rem;
+  margin: .5rem;
+
+  h2 {
+    margin-bottom: .7rem;
+  }
+
+  table {
+    td {
+      padding: .2rem .5rem;
+    }
+    overflow-x: scroll;
+  }
+}

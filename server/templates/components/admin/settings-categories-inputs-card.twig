@@ -1,3 +1,6 @@
 <div class="settings-category" data-category="{{ category.id }}">
-    {% include '@components/admin/settings-form.twig' with {category: category} %}
+    <h2>{{ category.title }}</h2>
+    <div>
+        {% include '@components/admin/settings-form.twig' with {category: category} %}
+    </div>
 </div>

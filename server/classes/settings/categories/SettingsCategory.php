@@ -3,7 +3,7 @@
 namespace settings\categories;
 
 
-class SettingsCategory
+abstract class SettingsCategory
 {
 
     private $id = '';
@@ -17,5 +17,7 @@ class SettingsCategory
     {
         return $this->id;
     }
+
+    abstract public function title(): string;
 
 }
