@@ -3,4 +3,5 @@ header {
   color: var(--header-font-color);
   padding: 1rem;
   box-shadow: 0 0 5px rgba(40, 40, 40, .4);
+  border-bottom: 3px solid var(--accent-color);
 }
