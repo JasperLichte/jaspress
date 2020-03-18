@@ -29,7 +29,6 @@ CREATE TABLE `pages` (
 
 CREATE TABLE `requests` (
   `id` int(11) NOT NULL,
-  `ip` varchar(127) NOT NULL,
   `path` varchar(255) NOT NULL,
   `time` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

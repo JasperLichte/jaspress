@@ -145,14 +145,15 @@ class Request
 
     public function save(Connection $db)
     {
-        if ($this->isLocal()) {
+        if ($this->isLocal() || ($this->getUser() != null && $this->getUser()->isAdmin())) {
             return;
         }
 
         $db()
-            ->prepare('INSERT INTO requests (ip, path, time) VALUES (?, ?, NOW())')
-            ->execute([$this->getIp(), $this->getRequestedPath()]);
+            ->prepare('INSERT INTO requests (path, time) VALUES (?, NOW())')
+            ->execute([$this->getRequestedPath()]);
     }
+
     public function reloadWith(ApiResponse $res): ApiResponse
     {
         return $this->redirectWith($res, $this->getHttpReferer());
