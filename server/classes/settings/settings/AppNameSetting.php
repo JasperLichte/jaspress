@@ -11,7 +11,7 @@ class AppNameSetting extends BaseSetting
 
     public function getDefaultValue(): string
     {
-        return 'APP_NAME';
+        return 'My website';
     }
 
     public static function dbKey(): string
