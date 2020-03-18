@@ -41,11 +41,12 @@ class Page extends Content implements Serializable
 
     /**
      * @param Connection $db
+     * @param bool $update
      * @return Page
      * @throws EmptyMemberException
      * @throws LogicException
      */
-    public function save(Connection $db): Page
+    public function save(Connection $db, bool $update = false): Page
     {
         if (empty($this->slug)) {
             throw new EmptyMemberException('Slug cannot be empty');
@@ -59,12 +60,12 @@ class Page extends Content implements Serializable
         if (empty($this->markdown->getContent())) {
             throw new EmptyMemberException('Markdown content cannot be empty');
         }
-        if (self::exists($db, $this->slug)) {
+        if (!$update && self::exists($db, $this->slug)) {
             throw new LogicException('Page with same title/slug already exists');
         }
 
         $db()->prepare('
-INSERT INTO pages (slug, title, markdown, creation_date, last_edited_date, deleted) 
+REPLACE INTO pages (slug, title, markdown, creation_date, last_edited_date, deleted) 
 VALUES(?, ?, ?, NOW(), NOW(), "0")')->execute([
             $this->slug,
             $this->title,

@@ -2,24 +2,10 @@
 
 namespace render\components\pages\admin\page;
 
-use render\components\pages\admin\AdminPage;
-use render\components\pages\PagePage;
 use request\Url;
 
-class NewPagePage extends AdminPage
+class NewPagePage extends PageAdminPage
 {
-
-    /** @var bool */
-    private $slug;
-
-    public function __construct()
-    {
-        parent::__construct();
-
-        if ($this->req->issetGet(PagePage::GET_PAGE_KEY)) {
-            $this->slug = $this->req->getGet(PagePage::GET_PAGE_KEY);
-        }
-    }
 
     protected function render(): string
     {
@@ -34,6 +20,11 @@ class NewPagePage extends AdminPage
     public static function endPoint(): Url
     {
         return Url::to('/admin/page/new.php');
+    }
+
+    public function title(): string
+    {
+        return $this->buildTitle('New page');
     }
 
 }

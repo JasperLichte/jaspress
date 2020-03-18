@@ -1,0 +1,26 @@
+{% include 'document.twig' %}
+{% include '@common/header.twig' %}
+<main>
+
+    {% if page is null %}
+        {% include '@errors/404.twig' with {
+            description: 'Page not found',
+            createEndpoint: url.to('/admin/page/new.php?p=' ~ slug)
+        } %}
+    {% else %}
+        <form action="{{ url.api('/admin/page/edit.php') }}" method="post">
+            {% include '@errors/error.twig' %}
+
+            <textarea name="content" title="Content">{{ page.markdown.content }}</textarea>
+
+            <input type="hidden" name="title" value="{{ page.title }}" />
+            <input type="hidden" name="p" value="{{ page.slug }}" />
+
+            <input type="submit" value="Save" />
+            <a href="{{ page.endpoint }}">Discard</a>
+        </form>
+    {% endif %}
+
+</main>
+{% include '@common/footer.twig' %}
+{% include 'html-end.twig' %}
