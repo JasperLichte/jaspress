@@ -28,6 +28,8 @@ abstract class PageAction extends AdminAction
 
         if ($this->req->issetGet(PagePage::GET_PAGE_KEY)) {
             $this->slug = $this->req->getGet(PagePage::GET_PAGE_KEY);
+        } elseif ($this->req->issetPost(PagePage::GET_PAGE_KEY)) {
+            $this->slug = $this->req->getPost(PagePage::GET_PAGE_KEY);
         }
 
         if ($this->req->issetPost('title')) {
@@ -39,6 +41,7 @@ abstract class PageAction extends AdminAction
 
         if (!empty($this->title) && !empty($this->title)) {
             $this->page = new Page();
+            $this->page->setSlug((string)$this->slug);
             $this->page->setTitle($this->title);
             $this->page->setMarkdown(new Markdown($this->content));
         }

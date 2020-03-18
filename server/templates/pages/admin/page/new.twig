@@ -7,6 +7,9 @@
 
     <textarea name="content" title="Content"></textarea>
 
+    {% if slug is not null %}
+        <input type="hidden" name="p" value="{{ slug }}" />
+    {% endif %}
     <input type="submit" value="Save" />
 </form>
 

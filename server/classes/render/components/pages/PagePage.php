@@ -16,12 +16,16 @@ class PagePage extends PageComponent
     /** @var Page */
     private $page;
 
+    /** @var string */
+    private $slug;
+
     public function __construct()
     {
         parent::__construct();
 
         if ($this->req->issetGet(self::GET_PAGE_KEY)) {
-            $this->page = Page::load($this->db, $this->req->getGet(self::GET_PAGE_KEY));
+            $this->slug = $this->req->getGet(self::GET_PAGE_KEY);
+            $this->page = Page::load($this->db, $this->slug);
         }
     }
 
@@ -32,6 +36,7 @@ class PagePage extends PageComponent
         return $this->renderController->render(
             '@pages/page',
             [
+                'slug' => (string)$this->slug,
                 'page' => $this->page,
             ]
         );

@@ -20,6 +20,11 @@ class Content implements Serializable
     /** @var null|Markdown */
     protected $markdown;
 
+    public function setSlug(string $slug): void
+    {
+        $this->slug = $slug;
+    }
+
     public function getCreationDate(): ?\DateTime
     {
         return $this->creationDate;
@@ -37,7 +42,9 @@ class Content implements Serializable
 
     public function setTitle(string $title): void
     {
-        $this->slug = self::createSlug($title);
+        if ($this->slug == '') {
+            $this->slug = self::createSlug($title);
+        }
 
         $this->title = $title;
     }

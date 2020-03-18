@@ -3,7 +3,10 @@
 <main>
 
 {% if page is null %}
-    {% include '@errors/404.twig' with {'description': 'Page not found'} %}
+    {% include '@errors/404.twig' with {
+        description: 'Page not found',
+        createEndpoint: url.to('/admin/page/new.php?p=' ~ slug)
+    } %}
 {% else %}
     <div>
         {{ page.markdown.htmlContent | raw }}
