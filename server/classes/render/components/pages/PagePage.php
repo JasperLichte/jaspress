@@ -49,7 +49,7 @@ class PagePage extends PageComponent
 
     public static function endPoint(): Url
     {
-        return new Url('/_/page.php');
+        return Url::to('/page.php');
     }
 
     public function permission(): Permission

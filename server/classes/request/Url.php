@@ -74,7 +74,7 @@ class Url
         }
 
         $url = new Url($path);
-        $url->prepend(Config::ROOT_URL() . ($subPage ? '/_' : ''));
+        $url->prepend(Config::ROOT_URL() . ($subPage ? '/-' : ''));
         return $url;
     }
 
