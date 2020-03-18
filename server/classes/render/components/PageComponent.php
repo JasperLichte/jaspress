@@ -47,9 +47,7 @@ abstract class PageComponent extends AbstractPageComponent
         return '';
     }
 
-    /**
-     * @throws LogicException
-     */
+    /** @throws LogicException */
     public function __toString(): string
     {
         if (!$this->checkPermission($this->permission())) {
@@ -77,10 +75,6 @@ abstract class PageComponent extends AbstractPageComponent
         $appName = Settings::getInstance()->get(AppNameSetting::dbKey())->getValue();
         return (empty($title) ? $appName : $title . ' | ' . $appName);
     }
-
-    abstract public static function endPoint(): Url;
-
-    abstract public function permission(): Permission;
 
     private function checkPermission(Permission $permission): bool
     {
