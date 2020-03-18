@@ -13,4 +13,8 @@
         }
     </style>
 </head>
-<body>
+<body
+    {% if settings.get('PAGE_LOAD_ANIMATION') == 'yes' %}
+        data-animation-enabled="1"
+    {% endif %}
+>

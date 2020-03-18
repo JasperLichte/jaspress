@@ -6,6 +6,7 @@ use database\Connection;
 use settings\categories\SettingsCategory;
 use settings\settings\AppNameSetting;
 use settings\settings\LanguageSetting;
+use settings\settings\ui\animations\PageLoadAnimationSetting;
 use settings\settings\ui\colors\AccentColorSetting;
 use settings\settings\ui\colors\BackgroundColorSetting;
 use settings\settings\ui\colors\FontColorSetting;
@@ -57,6 +58,7 @@ class Settings
             new FooterBackgroundColorSetting(),
             new FooterFontColorSetting(),
             new AccentColorSetting(),
+            new PageLoadAnimationSetting(),
         ];
     }
 

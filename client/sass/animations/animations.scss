@@ -1,0 +1,14 @@
+@import './fade.scss';
+@import './slide.scss';
+
+body[data-animation-enabled="1"] {
+  main {
+    animation:
+      fadeIn .8s ease-in,
+      slideInLeft ease-in .4s;
+
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+}
+
