@@ -19,13 +19,14 @@ main {
   &[data-y-align=top] {
     align-items: flex-start;
   }
-
   &[data-y-align=center] {
     align-items: center;
   }
-
   &[data-y-align=bottom] {
     align-items: flex-end;
+  }
+  &[data-y-align=unset] {
+    align-items: unset;
   }
 
 }
