@@ -8,7 +8,11 @@
     <style>
         html {
             {% for setting in settings.uiSettings %}
-                {{ setting.cssProperty }}: {{ setting.value }};
+                {% if setting.isNumberSetting %}
+                    {{ setting.cssProperty }}: {{ setting.value ~ 'px' }};
+                {% else %}
+                    {{ setting.cssProperty }}: {{ setting.value }};
+                {% endif %}
             {% endfor %}
         }
     </style>

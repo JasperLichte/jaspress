@@ -5,6 +5,7 @@ namespace settings;
 use database\Connection;
 use settings\categories\SettingsCategory;
 use settings\settings\AppNameSetting;
+use settings\settings\HeaderImageBannerPosition;
 use settings\settings\LanguageSetting;
 use settings\settings\ShowHeaderSetting;
 use settings\settings\ui\animations\PageLoadAnimationSetting;
@@ -15,6 +16,8 @@ use settings\settings\ui\colors\FooterBackgroundColorSetting;
 use settings\settings\ui\colors\FooterFontColorSetting;
 use settings\settings\ui\colors\HeaderBackgroundColorSetting;
 use settings\settings\ui\colors\HeaderFontColorSetting;
+use settings\settings\ui\HeaderBannerImageWidth;
+use settings\settings\ui\images\HeaderBannerImageUrlSetting;
 use settings\settings\ui\UiSetting;
 
 class Settings
@@ -61,6 +64,9 @@ class Settings
             new AccentColorSetting(),
             new PageLoadAnimationSetting(),
             new ShowHeaderSetting(),
+            new HeaderBannerImageUrlSetting(),
+            new HeaderBannerImageWidth(),
+            new HeaderImageBannerPosition(),
         ];
     }
 
@@ -90,8 +96,7 @@ class Settings
         return $this->settings;
     }
 
-    /**
-     * @return UiSetting[]
+    /** @return UiSetting[]
      */
     public function getUiSettings(): array
     {

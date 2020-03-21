@@ -2,9 +2,10 @@
 {% include '@common/header.twig' %}
 <main>
 
-<div>
-    <a href="{{ url.to('/admin/settings.php') }}">Settings</a>
-</div>
+    <ul>
+        <li><a href="{{ url.to('/admin/settings.php') }}">Settings</a></li>
+        <li><a href="{{ url.to('/admin/file/upload.php') }}">Upload file</a></li>
+    </ul>
 
 </main>
 {% include '@common/footer.twig' %}

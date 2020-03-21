@@ -3,4 +3,26 @@ header {
   color: var(--header-font-color);
   padding: 1rem;
   border-bottom: 1px solid var(--accent-color);
+
+  &.banner-image {
+    padding: 0;
+    display: flex;
+
+
+    &[data-pos=left] {
+      justify-content: flex-start;
+    }
+    &[data-pos=center] {
+      justify-content: center;
+    }
+    &[data-pos=right] {
+      justify-content: flex-end;
+    }
+
+    & img {
+      width: 100%;
+      max-width: var(--header-banner-image-width);
+      height: auto;
+    }
+  }
 }

@@ -1,7 +1,13 @@
 {% if settings.get('SHOW_HEADER') == 'yes' %}
 
-<header class="fade-in">
-    <h1><a href="{{ url.to('/') }}">{{ settings.get('APP_NAME') }}</a></h1>
-</header>
+    {% if settings.get('HEADER_BANNER_URL') == '' %}
+        <header>
+            <h1><a href="{{ url.to('/') }}">{{ settings.get('APP_NAME') }}</a></h1>
+        </header>
+    {% else %}
+        <header class="banner-image" data-pos="{{ settings.get('HEADER_IMG_BANNER_POS') }}">
+            <img src="{{ settings.get('HEADER_BANNER_URL') }}" alt="">
+        </header>
+    {% endif %}
 
 {% endif %}

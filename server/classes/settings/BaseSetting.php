@@ -87,4 +87,9 @@ abstract class BaseSetting extends Jsonable
         return ($this instanceof BooleanSetting);
     }
 
+    public function isNumberSetting(): bool
+    {
+        return false;
+    }
+
 }
