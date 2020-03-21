@@ -4,12 +4,11 @@ namespace settings\settings;
 
 use settings\categories\SettingsCategory;
 use settings\categories\UiSettingCategory;
-use settings\types\options\Option;
-use settings\types\options\OptionsSetting;
+use settings\types\options\BooleanSetting;
 use settings\validator\BooleanValidator;
 use settings\validator\Validator;
 
-class ShowHeaderSetting extends OptionsSetting
+class ShowHeaderSetting extends BooleanSetting
 {
 
     public function getDefaultValue(): string
@@ -30,15 +29,6 @@ class ShowHeaderSetting extends OptionsSetting
     public function description(): string
     {
         return 'Header visible';
-    }
-
-    /** @return Option[] */
-    public function options()
-    {
-        return [
-            new Option('Yes', 'yes'),
-            new Option('No', 'no'),
-        ];
     }
 
     public function getValidator(): Validator

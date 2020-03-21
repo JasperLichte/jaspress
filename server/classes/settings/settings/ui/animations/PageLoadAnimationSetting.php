@@ -2,11 +2,13 @@
 
 namespace settings\settings\ui\animations;
 
-use settings\types\options\Option;
+use settings\categories\SettingsCategory;
+use settings\categories\UiSettingCategory;
+use settings\types\options\BooleanSetting;
 use settings\validator\BooleanValidator;
 use settings\validator\Validator;
 
-class PageLoadAnimationSetting extends AnimationSetting
+class PageLoadAnimationSetting extends BooleanSetting
 {
 
     public function getDefaultValue(): string
@@ -24,18 +26,14 @@ class PageLoadAnimationSetting extends AnimationSetting
         return 'Animation on page load?';
     }
 
-    /** @return Option[] */
-    public function options()
-    {
-        return [
-            new Option('Yes', 'yes'),
-            new Option('No', 'no'),
-        ];
-    }
-
     public function getValidator(): Validator
     {
         return new BooleanValidator();
+    }
+
+    public function getCategory(): SettingsCategory
+    {
+        return new UiSettingCategory();
     }
 
 }

@@ -17,19 +17,40 @@
                 <td>{{ setting.dbKey }}</td>
                 <td>{{ setting.description }}</td>
                 <td>
-                    {% if setting.isOptionSetting %}
+                    {% if setting.isColorSetting %}
+                        <input
+                            type="color"
+                            value="{{ setting.value }}"
+                            name="{{ setting.dbKey }}"
+                        />
+                    {% elseif setting.isBooleanSetting %}
+                        Yes <input
+                            type="radio"
+                            name="{{ setting.dbKey }}"
+                            value="yes"
+                            {% if setting.value == 'yes' %}
+                                checked="checked"
+                            {% endif %}
+                        />
+                        No <input
+                            type="radio"
+                            name="{{ setting.dbKey }}"
+                            value="no"
+                            {% if setting.value == 'no' %}
+                                checked="checked"
+                            {% endif %}
+                        />
+                    {% elseif setting.isOptionSetting %}
                         <select name="{{ setting.dbKey }}" title="{{ setting.dbKey }}">
                             {% for option in setting.options %}
                                 <option
-                                        value="{{ option.value }}"
-                                        {% if setting.value == option.value %}
-                                            selected="selected"
-                                        {% endif %}
+                                    value="{{ option.value }}"
+                                    {% if setting.value == option.value %}
+                                        selected="selected"
+                                    {% endif %}
                                 >{{ option.name }}</option>
                             {% endfor %}
                         </select>
-                    {% elseif setting.isColorSetting %}
-                        <input type="color" value="{{ setting.value }}" name="{{ setting.dbKey }}" />
                     {% else %}
                         <input
                                 type="text"
