@@ -1,11 +1,13 @@
 @import './fade.scss';
 @import './slide.scss';
+@import './blur.scss';
 
 body[data-animation-enabled="1"] {
   main {
     animation:
-      fadeIn .8s ease-in,
-      slideInLeft ease-in .4s;
+      fadeIn ease-in .8s,
+      slideInLeft ease-in .6s,
+      blurOut ease-in 1.2s;
 
     animation-fill-mode: forwards;
     animation-iteration-count: 1;

@@ -1,0 +1,7 @@
+@keyframes blurOut {
+  from {
+    filter: blur(4px);
+  } to {
+    filter: blur(0);
+  }
+}
