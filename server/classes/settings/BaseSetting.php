@@ -6,6 +6,8 @@ namespace settings;
 use database\Connection;
 use settings\categories\SettingsCategory;
 use settings\settings\ui\colors\ColorSetting;
+use settings\strategies\DefaultStrategy;
+use settings\strategies\SavingStrategy;
 use settings\types\options\OptionsSetting;
 use util\interfaces\Jsonable;
 
@@ -14,6 +16,14 @@ abstract class BaseSetting extends Jsonable
 
     /** @var null|string */
     protected $value = null;
+
+    /** @var SavingStrategy */
+    protected static $savingStrategy = null;
+
+    public function __construct()
+    {
+        self::$savingStrategy = new DefaultStrategy();
+    }
 
     public function setValue(string $value): void
     {
@@ -29,13 +39,17 @@ abstract class BaseSetting extends Jsonable
 
     public static function save(Connection $db, string $dbKey, string $value)
     {
-        $statement = $db()->prepare('REPLACE INTO settings (id, value) VALUES(?, ?)');
-        $statement->execute([$dbKey, $value]);
+        self::$savingStrategy->setDbKey($dbKey);
+        self::$savingStrategy->setValue($value);
+
+        self::$savingStrategy->save($db);
     }
 
     public static function delete(Connection $db, string $dbKey)
     {
-        $db()->prepare('DELETE FROM settings WHERE id = ?')->execute([$dbKey]);
+        self::$savingStrategy->setDbKey($dbKey);
+
+        self::$savingStrategy->delete($db);
     }
 
     public function __toString()
