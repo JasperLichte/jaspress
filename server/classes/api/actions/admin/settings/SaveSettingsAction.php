@@ -38,7 +38,9 @@ class SaveSettingsAction extends AdminAction
                 continue;
             }
 
-            if ($value !== $setting->getValue()) {
+            if ($value !== $setting->getValue()
+                && $setting->validate($value)
+            ) {
                 $setting->save($this->db, $setting::dbKey(), (string)$value);
             }
         }

@@ -2,13 +2,13 @@
 
 namespace settings;
 
-
 use database\Connection;
 use settings\categories\SettingsCategory;
 use settings\settings\ui\colors\ColorSetting;
 use settings\strategies\DefaultStrategy;
 use settings\strategies\SavingStrategy;
 use settings\types\options\OptionsSetting;
+use settings\validator\Validator;
 use util\interfaces\Jsonable;
 
 abstract class BaseSetting extends Jsonable
@@ -31,13 +31,12 @@ abstract class BaseSetting extends Jsonable
     }
 
     public function getValue(): string
-        {
-        return $this->value !== null ? $this->value : $this->getDefaultValue();
+    {
+        $value = $this->value !== null ? $this->value : $this->getDefaultValue();
+        return ($this->validate($value) ? $value : $this->getDefaultValue());
     }
 
-    abstract public function getDefaultValue(): string;
-
-    public static function save(Connection $db, string $dbKey, string $value)
+    public function save(Connection $db, string $dbKey, string $value)
     {
         self::$savingStrategy->setDbKey($dbKey);
         self::$savingStrategy->setValue($value);
@@ -52,16 +51,15 @@ abstract class BaseSetting extends Jsonable
         self::$savingStrategy->delete($db);
     }
 
+    public function validate(string $value): bool
+    {
+        return $this->getValidator()->validate($value);
+    }
+
     public function __toString()
     {
         return $this->getValue();
     }
-
-    abstract public function getCategory(): SettingsCategory;
-
-    abstract public static function dbKey(): string;
-
-    abstract public function description(): string;
 
     public function isOptionSetting(): bool
     {
@@ -72,5 +70,15 @@ abstract class BaseSetting extends Jsonable
     {
         return ($this instanceof ColorSetting);
     }
+
+    abstract public function getDefaultValue(): string;
+
+    abstract public function getCategory(): SettingsCategory;
+
+    abstract public static function dbKey(): string;
+
+    abstract public function description(): string;
+
+    abstract public function getValidator(): Validator;
 
 }

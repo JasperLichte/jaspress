@@ -1,3 +1,7 @@
+{% if settings.get('SHOW_HEADER') == 'yes' %}
+
 <header class="fade-in">
     <h1><a href="{{ url.to('/') }}">{{ settings.get('APP_NAME') }}</a></h1>
 </header>
+
+{% endif %}

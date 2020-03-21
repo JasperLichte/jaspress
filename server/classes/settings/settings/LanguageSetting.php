@@ -6,6 +6,8 @@ use settings\categories\GeneralSettingCategory;
 use settings\categories\SettingsCategory;
 use settings\types\options\Option;
 use settings\types\options\OptionsSetting;
+use settings\validator\OptionsValidator;
+use settings\validator\Validator;
 
 class LanguageSetting extends OptionsSetting
 {
@@ -36,6 +38,11 @@ class LanguageSetting extends OptionsSetting
     public function getCategory(): SettingsCategory
     {
         return new GeneralSettingCategory();
+    }
+
+    public function getValidator(): Validator
+    {
+        return new OptionsValidator($this->options());
     }
 
 }
