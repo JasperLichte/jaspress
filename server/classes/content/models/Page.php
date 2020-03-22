@@ -32,7 +32,7 @@ class Page extends Content implements Serializable
 
     public static function exists(Connection $db, string $slug): bool
     {
-        $stmt = $db()->prepare('SELECT slug FROM pages WHERE slug = ? AND deleted = "0"');
+        $stmt = $db()->prepare('SELECT slug FROM pages WHERE slug = ?');
         $stmt->execute([$slug]);
         $res = $stmt->fetch();
 
