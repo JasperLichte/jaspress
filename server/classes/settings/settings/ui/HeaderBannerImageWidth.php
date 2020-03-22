@@ -2,8 +2,8 @@
 
 namespace settings\settings\ui;
 
+use settings\categories\HeaderSettingCategory;
 use settings\categories\SettingsCategory;
-use settings\categories\UiSettingCategory;
 use settings\Settings;
 use settings\validator\NumberValidator;
 use settings\validator\Validator;
@@ -18,7 +18,7 @@ class HeaderBannerImageWidth extends UiSetting
 
     public function getCategory(): SettingsCategory
     {
-        return new UiSettingCategory();
+        return new HeaderSettingCategory();
     }
 
     public static function dbKey(): string

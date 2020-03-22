@@ -2,8 +2,8 @@
 
 namespace settings\settings\ui\images;
 
+use settings\categories\HeaderSettingCategory;
 use settings\categories\SettingsCategory;
-use settings\categories\UiSettingCategory;
 
 class HeaderBannerImageUrlSetting extends ImageUrlSetting
 {
@@ -15,7 +15,7 @@ class HeaderBannerImageUrlSetting extends ImageUrlSetting
 
     public function getCategory(): SettingsCategory
     {
-        return new UiSettingCategory();
+        return new HeaderSettingCategory();
     }
 
     public static function dbKey(): string

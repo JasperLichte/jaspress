@@ -2,8 +2,8 @@
 
 namespace settings\settings;
 
+use settings\categories\HeaderSettingCategory;
 use settings\categories\SettingsCategory;
-use settings\categories\UiSettingCategory;
 use settings\types\options\BooleanSetting;
 use settings\validator\BooleanValidator;
 use settings\validator\Validator;
@@ -18,7 +18,7 @@ class ShowHeaderSetting extends BooleanSetting
 
     public function getCategory(): SettingsCategory
     {
-        return new UiSettingCategory();
+        return new HeaderSettingCategory();
     }
 
     public static function dbKey(): string

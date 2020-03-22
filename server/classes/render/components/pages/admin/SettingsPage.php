@@ -5,6 +5,7 @@ namespace render\components\pages\admin;
 use request\Url;
 use settings\categories\ColorSettingCategory;
 use settings\categories\GeneralSettingCategory;
+use settings\categories\HeaderSettingCategory;
 use settings\categories\UiSettingCategory;
 
 class SettingsPage extends AdminPage
@@ -21,6 +22,7 @@ class SettingsPage extends AdminPage
                     new GeneralSettingCategory(),
                     new ColorSettingCategory(),
                     new UiSettingCategory(),
+                    new HeaderSettingCategory(),
                 ],
             ]
         );

@@ -2,8 +2,8 @@
 
 namespace settings\settings;
 
+use settings\categories\HeaderSettingCategory;
 use settings\categories\SettingsCategory;
-use settings\categories\UiSettingCategory;
 use settings\types\options\Option;
 use settings\types\options\OptionsSetting;
 
@@ -17,7 +17,7 @@ class HeaderImageBannerPosition extends OptionsSetting
 
     public function getCategory(): SettingsCategory
     {
-        return new UiSettingCategory();
+        return new HeaderSettingCategory();
     }
 
     public static function dbKey(): string
