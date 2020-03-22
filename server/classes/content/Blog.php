@@ -24,7 +24,7 @@ class Blog
     private function loadPosts()
     {
         $this->posts = [];
-        foreach ($this->db->getPdo()->query('SELECT * FROM pages') as $item) {
+        foreach ($this->db->getPdo()->query('SELECT * FROM pages WHERE deleted = "0"') as $item) {
             $this->posts[] = (new Page())->deserialize($item);
         }
     }
