@@ -8,6 +8,7 @@ input[type=submit],
   cursor: pointer;
   transition: .5s ease;
   filter: grayscale(70%);
+  font-size: 1rem;
 
   &:hover {
     filter: grayscale(0%);

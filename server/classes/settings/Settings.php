@@ -18,6 +18,7 @@ use settings\settings\ui\colors\HeaderBackgroundColorSetting;
 use settings\settings\ui\colors\HeaderFontColorSetting;
 use settings\settings\ui\HeaderBannerImageWidth;
 use settings\settings\ui\images\HeaderBannerImageUrlSetting;
+use settings\settings\ui\UiScaleSetting;
 use settings\settings\ui\UiSetting;
 
 class Settings
@@ -67,6 +68,7 @@ class Settings
             new HeaderBannerImageUrlSetting(),
             new HeaderBannerImageWidth(),
             new HeaderImageBannerPosition(),
+            new UiScaleSetting(),
         ];
     }
 

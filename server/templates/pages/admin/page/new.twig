@@ -1,6 +1,6 @@
 {% include 'document.twig' %}
 {% include '@common/header.twig' %}
-<main data-page="admin/page/new" data-x-align="center">
+<main data-page="/admin/page/new" data-x-align="center">
 
 <form action="{{ url.api('/admin/page/new.php') }}" method="post">
     {% include '@errors/error.twig' %}

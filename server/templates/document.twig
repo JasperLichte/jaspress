@@ -8,6 +8,8 @@
 
     <style>
         html {
+            font-size: calc(16px * {{ settings.get('UI_SCALE') }});
+
             {% for setting in settings.uiSettings %}
                 {% if setting.isNumberSetting %}
                     {{ setting.cssProperty }}: {{ setting.value ~ 'px' }};

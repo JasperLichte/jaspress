@@ -1,11 +1,12 @@
 {% include 'document.twig' %}
 {% include '@common/header.twig' %}
-<main>
+<main data-x-align="center">
 
     <ul>
         <li><a href="{{ url.to('/admin/settings.php') }}">Settings</a></li>
         <li><a href="{{ url.to('/admin/page/new.php') }}">New page</a></li>
         <li><a href="{{ url.to('/admin/file/upload.php') }}">Upload file</a></li>
+        <li><a href="{{ url.to('/admin/statistics.php') }}">Statistics</a></li>
     </ul>
 
 </main>

@@ -1,5 +1,5 @@
-main[data-page="admin/page/new"],
-main[data-page="admin/page/edit"]{
+main[data-page="/admin/page/new"],
+main[data-page="/admin/page/edit"] {
   form {
     display: flex;
     flex-direction: column;
@@ -24,4 +24,8 @@ main[data-page="admin/page/edit"]{
     }
 
   }
+}
+
+main[data-page="/admin/settings"] {
+  flex-direction: row;
 }
