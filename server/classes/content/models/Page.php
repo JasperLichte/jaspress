@@ -16,7 +16,7 @@ class Page extends Content implements Serializable
 
     public static function load(Connection $db, string $slug): ?Page
     {
-        $stmt = $db()->prepare('SELECT * FROM pages WHERE slug = ?');
+        $stmt = $db()->prepare('SELECT * FROM pages WHERE slug = ? AND deleted = "0"');
         $stmt->execute([$slug]);
 
         $res = $stmt->fetch();
@@ -32,7 +32,7 @@ class Page extends Content implements Serializable
 
     public static function exists(Connection $db, string $slug): bool
     {
-        $stmt = $db()->prepare('SELECT slug FROM pages WHERE slug = ?');
+        $stmt = $db()->prepare('SELECT slug FROM pages WHERE slug = ? AND deleted = "0"');
         $stmt->execute([$slug]);
         $res = $stmt->fetch();
 
@@ -82,7 +82,7 @@ VALUES(?, ?, ?, NOW(), NOW(), "0")')->execute([
 
     public static function delete(Connection $db, string $slug)
     {
-        $db()->prepare('DELETE FROM pages WHERE slug = ?')->execute([$slug]);
+        $db()->prepare('UPDATE pages SET deleted = "1" WHERE slug = ?')->execute([$slug]);
     }
 
 }
