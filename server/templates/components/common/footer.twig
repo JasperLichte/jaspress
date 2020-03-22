@@ -1,21 +1,23 @@
 <footer>
-    {% if user is null %}
-        <a href="{{ url.to('/auth/login.php') }}">Login</a>
-    {% else %}
-        {{ user.email }}
-        <a href="{{ url.api('/auth/logout.php') }}">Logout</a>
-    {% endif %}
+    <div id="links">
+        {% if user is null %}
+            <a href="{{ url.to('/auth/login.php') }}">Login</a>
+        {% else %}
+            {{ user.email }}
+            <a href="{{ url.api('/auth/logout.php') }}">Logout</a>
+        {% endif %}
 
-    {% if user.isAdmin %}
-        <a href="{{ url.to('/admin') }}">Dashboard</a>
-    {% endif %}
+        {% if user.isAdmin %}
+            <a href="{{ url.to('/admin') }}">Dashboard</a>
+        {% endif %}
 
-    <div>
-        <a href="{{ url.to('/page.php?p=impressum') }}">Impressum</a>
+        <div>
+            <a href="{{ url.to('/page.php?p=impressum') }}">Impressum</a>
+        </div>
     </div>
 
-    <p>
+    <div id="about-jasper-lichte">
         Content management system delievered by
         <a href="http://wwww.jasper.lichte.info"><strong>Jasper Lichte</strong></a>
-    </p>
+    </div>
 </footer>

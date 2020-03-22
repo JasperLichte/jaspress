@@ -1,6 +1,7 @@
 @import './fade.scss';
 @import './slide.scss';
 @import './blur.scss';
+@import './hue-rotate.scss';
 
 body[data-animation-enabled="1"] {
   main {
@@ -11,6 +12,12 @@ body[data-animation-enabled="1"] {
 
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
+  }
+
+  footer {
+    #about-jasper-lichte {
+      animation: hueRotate 4s infinite;
+    }
   }
 }
 

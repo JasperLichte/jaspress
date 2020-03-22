@@ -28,5 +28,6 @@ main {
   &[data-y-align=unset] {
     align-items: unset;
   }
-
 }
+
+@import './pages/pages.scss';

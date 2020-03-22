@@ -1,10 +1,12 @@
 {% include 'document.twig' %}
 {% include '@common/header.twig' %}
-<main>
+<main data-page="admin/page/new" data-x-align="center">
 
 <form action="{{ url.api('/admin/page/new.php') }}" method="post">
+    <h3 data-required="1">Title</h3>
     <input type="text" name="title" title="Title" />
 
+    <h3 data-required="1">Markdown</h3>
     <textarea name="content" title="Content"></textarea>
 
     {% if slug is not null %}

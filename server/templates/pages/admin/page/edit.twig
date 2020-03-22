@@ -1,6 +1,6 @@
 {% include 'document.twig' %}
 {% include '@common/header.twig' %}
-<main>
+<main data-page="admin/page/new" data-x-align="center">
 
     {% if page is null %}
         {% include '@errors/404.twig' with {
@@ -11,6 +11,7 @@
         <form action="{{ url.api('/admin/page/edit.php') }}" method="post">
             {% include '@errors/error.twig' %}
 
+            <h3 data-required="1">Markdown</h3>
             <textarea name="content" title="Content">{{ page.markdown.content }}</textarea>
 
             <input type="hidden" name="title" value="{{ page.title }}" />

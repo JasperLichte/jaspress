@@ -1,0 +1,22 @@
+main[data-page="admin/page/new"],
+main[data-page="admin/page/edit"]{
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+
+    h3 {
+      padding: .5rem 0 0 0;
+    }
+
+    textarea, input[type=text] {
+      padding: .5rem;
+    }
+
+    textarea {
+      height: 400px;
+    }
+
+  }
+}

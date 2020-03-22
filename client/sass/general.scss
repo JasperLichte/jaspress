@@ -6,4 +6,12 @@ html {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+[data-required="1"] {
+  &::before {
+    content: '* ';
+    color: red;
+  }
 }
