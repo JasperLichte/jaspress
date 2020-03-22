@@ -8,6 +8,10 @@ main[data-page="admin/page/edit"]{
 
     h3 {
       padding: .5rem 0 0 0;
+      
+      a {
+        font-size: .7em;
+      }
     }
 
     textarea, input[type=text] {
@@ -16,6 +20,7 @@ main[data-page="admin/page/edit"]{
 
     textarea {
       height: 400px;
+      resize: none;
     }
 
   }

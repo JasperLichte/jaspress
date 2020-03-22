@@ -40,6 +40,12 @@
                                 checked="checked"
                             {% endif %}
                         />
+                    {% elseif setting.isNumberSetting %}
+                        <input
+                                type="number"
+                                value="{{ setting.value }}"
+                                name="{{ setting.dbKey }}"
+                        />
                     {% elseif setting.isOptionSetting %}
                         <select name="{{ setting.dbKey }}" title="{{ setting.dbKey }}">
                             {% for option in setting.options %}

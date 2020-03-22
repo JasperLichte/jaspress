@@ -5,28 +5,29 @@ main {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-direction: column;
 
   &[data-x-align=left] {
-    justify-content: flex-start;
+    align-items: flex-start;
   }
   &[data-x-align=center] {
-    justify-content: center;
+    align-items: center;
   }
   &[data-x-align=right] {
-    justify-content: flex-end;
+    align-items: flex-end;
   }
 
   &[data-y-align=top] {
-    align-items: flex-start;
+    justify-content: flex-start;
   }
   &[data-y-align=center] {
-    align-items: center;
+    justify-content: center;
   }
   &[data-y-align=bottom] {
-    align-items: flex-end;
+    justify-content: flex-end;
   }
   &[data-y-align=unset] {
-    align-items: unset;
+    justify-content: unset;
   }
 }
 

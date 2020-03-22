@@ -2,4 +2,14 @@
   color: red;
   font-size: 1.2rem;
   margin: .5rem 0;
+
+  &.err404 {
+    color: var(--font-color);
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
