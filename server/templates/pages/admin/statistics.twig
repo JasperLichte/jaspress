@@ -1,0 +1,20 @@
+{% include 'document.twig' %}
+{% include '@common/header.twig' %}
+<main data-page="/admin/statistics" data-x-align="center" data-y-align="center">
+
+<p>Total number of accesses: <h2 class="h1">{{ statistics.totalRequests }}</h2></p>
+
+<table>
+    <thead>
+        <tr><th>Path</th><th>Accesses</th></tr>
+    </thead>
+    <tbody>
+        {% for item in statistics.requestsByPath %}
+            <tr><td>{{ item.path }}</td><td>{{ item.count }}</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</main>
+{% include '@common/footer.twig' %}
+{% include 'html-end.twig' %}
