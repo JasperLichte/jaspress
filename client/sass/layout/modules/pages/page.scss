@@ -57,7 +57,8 @@ main[data-page="/page"] {
       pre {
         margin-left: -1rem;
         margin-right: -1rem;
-        width: calc(100% + 2rem);
+        width: 100vw;
+        max-width: unset;
       }
 
       p {
