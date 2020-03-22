@@ -1,6 +1,6 @@
 {% include 'document.twig' %}
 {% include '@common/header.twig' %}
-<main>
+<main data-page="/">
 
 {% for post in blog.posts %}
     <a href="{{ post.endpoint }}" class="post">

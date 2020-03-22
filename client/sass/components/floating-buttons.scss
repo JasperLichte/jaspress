@@ -1,8 +1,9 @@
 .floating-buttons-wrapper {
   position: fixed;
-  bottom: 12px;
-  right: 12px;
+  top: 0;
+  right: 0;
   z-index: 99999;
+  padding: 12px;
 
   .floating-button {
     background-color: var(--accent-color);
@@ -15,6 +16,7 @@
     align-items: center;
     box-shadow: 0 0 5px rgba(40, 40, 40, .4);
     margin-bottom: 12px;
+    text-decoration: none;
 
     &:last-of-type {
       margin-bottom: 0;

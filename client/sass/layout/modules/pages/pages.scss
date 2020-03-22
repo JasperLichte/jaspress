@@ -1,3 +1,5 @@
+@import './page.scss';
+
 main[data-page="/admin/page/new"],
 main[data-page="/admin/page/edit"] {
   form {
@@ -5,6 +7,7 @@ main[data-page="/admin/page/edit"] {
     flex-direction: column;
     width: 100%;
     max-width: 700px;
+    height: calc(100vh - 120px);
 
     h3 {
       padding: .5rem 0 0 0;
@@ -21,6 +24,7 @@ main[data-page="/admin/page/edit"] {
     textarea {
       height: 400px;
       resize: none;
+      flex-grow: 1;
     }
 
   }
@@ -28,4 +32,27 @@ main[data-page="/admin/page/edit"] {
 
 main[data-page="/admin/settings"] {
   flex-direction: row;
+}
+
+main[data-page="/"] {
+  .post {
+    border: 1px solid var(--accent-color);
+    border-radius: 6px;
+    padding: .5rem;
+    text-decoration: none;
+    transition: .4s ease;
+
+    h3 {
+      margin-bottom: .4rem;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    &:hover {
+      filter: hue-rotate(180deg);
+      transform: translateX(12px);
+    }
+  }
 }

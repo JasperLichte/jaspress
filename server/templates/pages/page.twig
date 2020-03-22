@@ -1,6 +1,6 @@
 {% include 'document.twig' %}
 {% include '@common/header.twig' %}
-<main>
+<main data-page="/page" data-x-align="center">
 
 {% if page is null %}
     {% include '@errors/404.twig' with {
@@ -8,7 +8,7 @@
         createEndpoint: url.to('/admin/page/new.php?p=' ~ slug)
     } %}
 {% else %}
-    <div>
+    <div id="html-content">
         {{ page.markdown.htmlContent | raw }}
     </div>
 

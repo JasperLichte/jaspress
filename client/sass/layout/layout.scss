@@ -6,6 +6,13 @@ body {
   flex-direction: column;
   font-size: 1rem;
 
+  &[data-sticky-header="enabled"] {
+    max-height: 100vh;
+    main {
+      overflow-y: scroll;
+    }
+  }
+
   @import './modules/header.scss';
   @import './modules/main.scss';
   @import './modules/footer.scss';
