@@ -1,6 +1,7 @@
 <html lang="{{ state.ui.language }}">
 <head>
     <title>{{ state.ui.title }}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ settings.get('FAVICON_URL') }}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ url.css('/style.css') }}">
@@ -25,6 +26,9 @@
             }
         }
     </style>
+    {% if settings.get('EXTRA_CSS_URL') != '' %}
+        <link rel="stylesheet" href="{{ settings.get('EXTRA_CSS_URL') }}">
+    {% endif %}
 </head>
 <body
     {% if settings.get('PAGE_LOAD_ANIMATION') == 'yes' %}

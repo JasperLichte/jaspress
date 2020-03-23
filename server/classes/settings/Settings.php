@@ -18,7 +18,9 @@ use settings\settings\ui\colors\FooterFontColorSetting;
 use settings\settings\ui\colors\HeaderBackgroundColorSetting;
 use settings\settings\ui\colors\HeaderFontColorSetting;
 use settings\settings\ui\ContentWidthSetting;
+use settings\settings\ui\ExtraCssUrlSetting;
 use settings\settings\ui\HeaderBannerImageWidthSetting;
+use settings\settings\ui\images\FaviconUrlSetting;
 use settings\settings\ui\images\HeaderBannerImageUrlSetting;
 use settings\settings\ui\UiScaleSetting;
 use settings\settings\ui\UiSetting;
@@ -73,6 +75,8 @@ class Settings
             new HeaderImageBannerPosition(),
             new UiScaleSetting(),
             new ContentWidthSetting(),
+            new FaviconUrlSetting(),
+            new ExtraCssUrlSetting(),
         ];
     }
 
