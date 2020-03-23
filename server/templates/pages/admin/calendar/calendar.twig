@@ -1,0 +1,29 @@
+{% include 'document.twig' %}
+{% include '@common/header.twig' %}
+<main data-page="/admin/calendar">
+
+    {% for item in calendar.getItems %}
+        <a
+            class="calendar-item"
+            href="{{ item.url }}"
+        >
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.description }}</p>
+
+            <div class="actions">
+                <a href="{{ url.to('/admin/calendar/edit.php?i=' ~ item.id) }}">Edit</a>
+                <a href="{{ url.api('/admin/calendar/delete.php?i=' ~ item.id) }}">Delete</a>
+            </div>
+        </a>
+    {% endfor %}
+
+    <div class="floating-buttons-wrapper">
+        {% include '@components/inputs/floating-button.twig' with {
+            target: url.to('/admin/calendar/new.php'),
+            child: 'New'
+        } only %}
+    </div>
+
+</main>
+{% include '@common/footer.twig' %}
+{% include 'html-end.twig' %}
