@@ -22,6 +22,6 @@ class HeaderBackgroundColorSetting extends ColorSetting
 
     public function getDefaultValue(): string
     {
-        return '#ffffff';
+        return '#8dcbd6';
     }
 }

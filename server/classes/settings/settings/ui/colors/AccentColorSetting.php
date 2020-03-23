@@ -8,7 +8,7 @@ class AccentColorSetting extends ColorSetting
 
     public function getDefaultValue(): string
     {
-        return '#666666';
+        return '#0f62bd';
     }
 
     public static function dbKey(): string
