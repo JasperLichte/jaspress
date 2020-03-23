@@ -1,11 +1,13 @@
 main {
   flex-grow: 1;
   padding: 1rem;
+  margin: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+  background-color: var(--content-bg-color);
 
   &[data-x-align=left] {
     align-items: flex-start;

@@ -11,12 +11,14 @@ use settings\settings\ShowHeaderSetting;
 use settings\settings\ui\animations\PageLoadAnimationSetting;
 use settings\settings\ui\colors\AccentColorSetting;
 use settings\settings\ui\colors\BackgroundColorSetting;
+use settings\settings\ui\colors\ContentBackgroundColorSetting;
 use settings\settings\ui\colors\FontColorSetting;
 use settings\settings\ui\colors\FooterBackgroundColorSetting;
 use settings\settings\ui\colors\FooterFontColorSetting;
 use settings\settings\ui\colors\HeaderBackgroundColorSetting;
 use settings\settings\ui\colors\HeaderFontColorSetting;
-use settings\settings\ui\HeaderBannerImageWidth;
+use settings\settings\ui\ContentWidthSetting;
+use settings\settings\ui\HeaderBannerImageWidthSetting;
 use settings\settings\ui\images\HeaderBannerImageUrlSetting;
 use settings\settings\ui\UiScaleSetting;
 use settings\settings\ui\UiSetting;
@@ -57,6 +59,7 @@ class Settings
             new AppNameSetting(),
             new LanguageSetting(),
             new BackgroundColorSetting(),
+            new ContentBackgroundColorSetting(),
             new FontColorSetting(),
             new HeaderBackgroundColorSetting(),
             new HeaderFontColorSetting(),
@@ -66,9 +69,10 @@ class Settings
             new PageLoadAnimationSetting(),
             new ShowHeaderSetting(),
             new HeaderBannerImageUrlSetting(),
-            new HeaderBannerImageWidth(),
+            new HeaderBannerImageWidthSetting(),
             new HeaderImageBannerPosition(),
             new UiScaleSetting(),
+            new ContentWidthSetting(),
         ];
     }
 

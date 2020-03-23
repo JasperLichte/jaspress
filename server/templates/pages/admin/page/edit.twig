@@ -11,7 +11,7 @@
         <form action="{{ url.api('/admin/page/edit.php') }}" method="post">
             {% include '@errors/error.twig' %}
 
-            <h3 data-required="1">Markdown <a href="{{ url.to('/guides/markdown.php') }}">(Guide)</a></h3>
+            <h3 data-required="1">Markdown <a href="{{ url.to('/guides/markdown.php') }}" target="_blank">(Guide)</a></h3>
             <textarea name="content" title="Content">{{ page.markdown.content }}</textarea>
 
             <input type="hidden" name="title" value="{{ page.title }}" />

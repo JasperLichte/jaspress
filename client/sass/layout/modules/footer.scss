@@ -2,7 +2,9 @@ footer {
   background-color: var(--footer-bg-color);
   color: var(--footer-font-color);
   text-align: center;
-  border-top: 1px solid var(--accent-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
   #links {
     padding: .4em 1em;
@@ -16,6 +18,7 @@ footer {
     text-shadow: 0 0 5px rgba(0, 0, 0, .4);
     font-size: .8rem;
     color: #aaaaaa;
+    width: 100vw;
 
     a {
       font-size: 1.4em;

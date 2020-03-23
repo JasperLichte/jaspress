@@ -1,13 +1,11 @@
 header {
   background-color: var(--header-bg-color);
   color: var(--header-font-color);
-  padding: 1rem;
-  border-bottom: 1px solid var(--accent-color);
+  display: flex;
+  justify-content: center;
 
   &.banner-image {
     padding: 0;
-    display: flex;
-
 
     &[data-pos=left] {
       justify-content: flex-start;

@@ -4,7 +4,18 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  align-items: center;
   font-size: 1rem;
+
+  main, header .content, footer .content {
+    max-width: var(--content-width);
+    width: 100%;
+    padding: 1rem;
+  }
+
+  > * {
+    width: 100%;
+  }
 
   &[data-sticky-header="enabled"] {
     max-height: 100vh;

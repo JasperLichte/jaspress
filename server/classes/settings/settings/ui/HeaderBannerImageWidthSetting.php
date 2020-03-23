@@ -8,7 +8,7 @@ use settings\Settings;
 use settings\validator\NumberValidator;
 use settings\validator\Validator;
 
-class HeaderBannerImageWidth extends UiSetting
+class HeaderBannerImageWidthSetting extends UiSetting
 {
 
     public function getDefaultValue(): string
@@ -28,7 +28,7 @@ class HeaderBannerImageWidth extends UiSetting
 
     public function description(): string
     {
-        return 'Width of banner';
+        return 'Width of banner [px]';
     }
 
     public function getValidator(): Validator
