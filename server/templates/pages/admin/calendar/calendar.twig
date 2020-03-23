@@ -1,26 +1,27 @@
 {% include 'document.twig' %}
 {% include '@common/header.twig' %}
-<main data-page="/admin/calendar" data-x-align="center" data-y-align="center">
+<main data-page="/admin/calendar">
+    <h2 class="h1">Upcoming Events:</h2>
+    <div id="calender-wrapper">
+        {% for item in calendar.getItems %}
+            <div class="calendar-item">
+                <h4 class="h1">{{ item.title }}</h4>
+                {% if item.description != '' %}
+                    <p class="description">{{ item.description }}</p>
+                {% endif %}
 
-    {% if item|length == 0 %}
-        <h3>No Items yet.</h3>
-        <a href="{{ url.to('/admin/calendar/new.php') }}">Create</a>
-    {% endif %}
+                {% if item.url != '' %}
+                    <a href="{{ item.url }}">More...</a>
+                {% endif %}
+                <p class="date">{{ item.dueDate.format('F jS, Y H:m') }}</p>
 
-    {% for item in calendar.getItems %}
-        <a
-            class="calendar-item"
-            href="{{ item.url }}"
-        >
-            <h4>{{ item.title }}</h4>
-            <p>{{ item.description }}</p>
-
-            <div class="actions">
-                <a href="{{ url.to('/admin/calendar/edit.php?i=' ~ item.id) }}">Edit</a>
-                <a href="{{ url.api('/admin/calendar/delete.php?i=' ~ item.id) }}">Delete</a>
+                <div class="actions">
+                    <a class="button" href="{{ url.to('/admin/calendar/edit.php?i=' ~ item.id) }}">Edit</a>
+                    <a class="button" href="{{ url.api('/admin/calendar/delete.php?i=' ~ item.id) }}">Delete</a>
+                </div>
             </div>
-        </a>
-    {% endfor %}
+        {% endfor %}
+    </div>
 
     <div class="floating-buttons-wrapper">
         {% include '@components/inputs/floating-button.twig' with {

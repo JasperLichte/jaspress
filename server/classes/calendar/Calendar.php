@@ -20,7 +20,12 @@ class Calendar
 
     public function load()
     {
-        $stmt = $this->db->getPdo()->prepare('');
+        $stmt = $this->db->getPdo()->prepare('
+          SELECT *
+          FROM calendar_entries
+          WHERE due_date > NOW()
+          ORDER BY due_date
+        ');
         $stmt->execute();
 
         $items = [];
