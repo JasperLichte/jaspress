@@ -49,7 +49,7 @@ class TwigController implements RenderController
             }
             return $this->twig->render($template . '.twig', $arguments);
         } catch (\Exception $e) {}
-        return '';
+        return $this->render('@pages/404');
     }
 
 }

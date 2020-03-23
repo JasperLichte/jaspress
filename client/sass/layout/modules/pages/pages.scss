@@ -1,35 +1,6 @@
 @import './page.scss';
 @import './admin/admin.scss';
 
-main[data-page="/admin/page/new"],
-main[data-page="/admin/page/edit"] {
-  form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 700px;
-
-    h3 {
-      padding: .5rem 0 0 0;
-      
-      a {
-        font-size: .7em;
-      }
-    }
-
-    textarea, input[type=text] {
-      padding: .5rem;
-    }
-
-    textarea {
-      height: 400px;
-      resize: none;
-      flex-grow: 1;
-    }
-
-  }
-}
-
 main[data-page="/admin/settings"] {
   flex-direction: row;
 }

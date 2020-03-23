@@ -1,0 +1,12 @@
+{% include 'document.twig' %}
+{% include '@common/header.twig' %}
+<main data-page="/404" data-x-align="center" data-y-align="center">
+
+    {% include '@errors/404.twig' with {
+        description: 'Page not found',
+        showFloatingButton: false
+    } %}
+
+</main>
+{% include '@common/footer.twig' %}
+{% include 'html-end.twig' %}

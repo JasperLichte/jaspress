@@ -1,0 +1,19 @@
+{% include 'document.twig' %}
+{% include '@common/header.twig' %}
+<main data-page="/admin/calendar/new" data-x-align="center">
+
+    <form action="{{ url.api('/admin/calendar/new.php') }}" method="post">
+        {% include '@errors/error.twig' %}
+
+        <h3 data-required="1">Title</h3>
+        <input type="text" name="title" title="Title" />
+
+        <h3 data-required="1">Description</h3>
+        <textarea type="text" name="description" title="Description"></textarea>
+
+        <input type="submit" value="Save" />
+    </form>
+
+</main>
+{% include '@common/footer.twig' %}
+{% include 'html-end.twig' %}

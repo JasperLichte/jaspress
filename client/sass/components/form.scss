@@ -1,0 +1,30 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  flex-grow: 1;
+
+  h3 {
+    padding: .5rem 0 0 0;
+
+    a {
+      font-size: .7em;
+    }
+  }
+
+  textarea, input[type=text] {
+    padding: .5rem;
+  }
+
+  textarea {
+    height: 400px;
+    resize: none;
+    flex-grow: 1;
+  }
+
+  input[type=submit] {
+    margin-top: .5rem;
+  }
+
+}

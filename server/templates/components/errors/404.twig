@@ -5,7 +5,7 @@
         <p>{{ description }}</p>
     {% endif %}
 
-    {% if user.isAdmin %}
+    {% if user.isAdmin and showFloatingButton != false %}
         <div class="floating-buttons-wrapper">
             {% include '@components/inputs/floating-button.twig' with {
                 target: createEndpoint,

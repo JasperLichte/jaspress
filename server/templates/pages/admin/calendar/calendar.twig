@@ -1,6 +1,11 @@
 {% include 'document.twig' %}
 {% include '@common/header.twig' %}
-<main data-page="/admin/calendar">
+<main data-page="/admin/calendar" data-x-align="center" data-y-align="center">
+
+    {% if item|length == 0 %}
+        <h3>No Items yet.</h3>
+        <a href="{{ url.to('/admin/calendar/new.php') }}">Create</a>
+    {% endif %}
 
     {% for item in calendar.getItems %}
         <a
