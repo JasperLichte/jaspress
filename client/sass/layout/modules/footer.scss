@@ -13,12 +13,19 @@ footer {
 
   #about-jasper-lichte {
     background-color: rgb(60, 10, 10);
-    padding: .4rem 1rem;
+    padding: .4rem 0;
     text-align: right;
     text-shadow: 0 0 5px rgba(0, 0, 0, .4);
     font-size: .8rem;
     color: #aaaaaa;
-    width: 100vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .content {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
 
     a {
       font-size: 1.4em;

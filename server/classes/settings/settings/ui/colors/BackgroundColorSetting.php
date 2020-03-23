@@ -12,7 +12,7 @@ class BackgroundColorSetting extends ColorSetting
 
     public function getDefaultValue(): string
     {
-        return '#ffffff';
+        return '#e4e4e4';
     }
 
     public function cssProperty(): string

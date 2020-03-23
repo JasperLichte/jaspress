@@ -10,7 +10,7 @@ body {
   main, header .content, footer .content {
     max-width: var(--content-width);
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 0;
   }
 
   > * {

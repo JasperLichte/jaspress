@@ -18,6 +18,12 @@
                 {% endif %}
             {% endfor %}
         }
+
+        @media screen and (max-width: {{ settings.get('CONTENT_WIDTH') }}px) {
+            html body main, html body header .content, html body footer .content {
+                padding: 1rem;
+            }
+        }
     </style>
 </head>
 <body
