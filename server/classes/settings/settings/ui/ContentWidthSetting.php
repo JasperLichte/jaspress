@@ -39,4 +39,9 @@ class ContentWidthSetting extends UiSetting
     {
         return '--content-width';
     }
+
+    public function isNumberSetting(): bool
+    {
+        return true;
+    }
 }
