@@ -2,7 +2,7 @@
 
 namespace application;
 
-require_once __DIR__ . './../../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 use josegonzalez\Dotenv\Loader;
 use util\exceptions\InvalidArgumentsException;
@@ -14,7 +14,7 @@ class Environment
 
     private function __construct()
     {
-        (new Loader(__DIR__ . './../../../.env'))->parse()->toEnv();
+        (new Loader(__DIR__ . '/../../../.env'))->parse()->toEnv();
     }
 
     /** @throws InvalidArgumentsException */

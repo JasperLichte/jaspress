@@ -2,7 +2,7 @@
 
 namespace render\controller;
 
-require_once __DIR__ . './../../../vendor/autoload.php';
+require_once __DIR__ . '/../../../vendor/autoload.php';
 
 use application\App;
 use request\Url;
@@ -20,7 +20,7 @@ class TwigController implements RenderController
 
     public function __construct()
     {
-        $basePath = realpath(__DIR__ . './../../../../');
+        $basePath = realpath(__DIR__ . '/../../../../');
 
         $loader = new FilesystemLoader('/', $basePath . '/');
         $loader->addPath($basePath . '/server/templates', '__main__');
