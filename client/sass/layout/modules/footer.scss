@@ -7,8 +7,39 @@ footer {
   flex-direction: column;
 
   #links {
-    padding: 1.2em 1em;
-    font-size: .9rem;
+    padding: .4rem 0 .5rem 0;
+
+    #hyperlinks {
+      margin-bottom: 1.05rem;
+      display: flex;
+      justify-content: space-around;
+      font-size: 1rem;
+      flex-wrap: wrap;
+
+      .copyright {
+        text-transform: uppercase;
+      }
+
+      > * {
+        padding: .5rem;
+
+       @media screen and (max-width: 700px) {
+         display: block;
+         width: 100%;
+       }
+      }
+    }
+
+    #user-actions {
+      font-size: .8rem;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 1rem;
+
+      > * {
+        margin-left: .5rem;
+      }
+    }
   }
 
   #about-jasper-lichte {

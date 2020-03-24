@@ -40,11 +40,12 @@ class TwigController implements RenderController
             $state = $app->getState();
             if (!$withoutDefaultArgs) {
                 $arguments = array_merge($arguments, [
-                    'state'      => $state,
-                    'user'       => $state->getUser(),
-                    'settings'   => Settings::getInstance(),
-                    'error'      => $app->getError(),
-                    'url'        => new Url(),
+                    'state'       => $state,
+                    'user'        => $state->getUser(),
+                    'settings'    => Settings::getInstance(),
+                    'error'       => $app->getError(),
+                    'url'         => new Url(),
+                    'currentYear' => date('Y'),
                 ]);
             }
             return $this->twig->render($template . '.twig', $arguments);

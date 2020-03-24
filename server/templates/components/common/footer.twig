@@ -1,18 +1,23 @@
 <footer>
     <div id="links" class="content">
-        {% if user is null %}
-            <a href="{{ url.to('/auth/login.php') }}">Login</a>
-        {% else %}
-            {{ user.email }}
-            <a href="{{ url.api('/auth/logout.php') }}">Logout</a>
-        {% endif %}
+        <div id="hyperlinks">
+            <span class="copyright">
+                &copy; {{ currentYear }} {{ settings.get('APP_NAME') }}
+            </span>
+            <a href="{{ url.to('/page.php?p=impressum') }}">Impressum - Datenschutz</a>
+            <a href="{{ url.to('/page.php?p=contact') }}">Kontakt</a>
+        </div>
+        <div id="user-actions">
+            {% if user is null %}
+                <a href="{{ url.to('/auth/login.php') }}">Login</a>
+            {% else %}
+                {{ user.email }}
+                <a href="{{ url.api('/auth/logout.php') }}">Logout</a>
+            {% endif %}
 
-        {% if user.isAdmin %}
-            <a href="{{ url.to('/admin') }}">Dashboard</a>
-        {% endif %}
-
-        <div>
-            <a href="{{ url.to('/page.php?p=impressum') }}">Impressum</a>
+            {% if user.isAdmin %}
+                <a href="{{ url.to('/admin') }}">Dashboard</a>
+            {% endif %}
         </div>
     </div>
 

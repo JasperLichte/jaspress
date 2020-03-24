@@ -2,6 +2,7 @@
 
 namespace render\components\pages;
 
+use calendar\Calendar;
 use content\Blog;
 use permissions\AlwaysAllowedPermission;
 use permissions\Permission;
@@ -19,6 +20,7 @@ class StartPage extends PageComponent
             '@pages/start',
             [
                 'blog' => new Blog($this->db),
+                'calendar' => (new Calendar($this->db))->load(),
             ]
         );
     }

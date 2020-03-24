@@ -18,7 +18,7 @@ class Calendar
         $this->db = $db;
     }
 
-    public function load()
+    public function load(): Calendar
     {
         $stmt = $this->db->getPdo()->prepare('
           SELECT *
@@ -33,6 +33,8 @@ class Calendar
             $items[] = (new Item())->deserialize($item);
         }
         $this->items = $items;
+
+        return $this;
     }
 
     /** @return Item[] */
