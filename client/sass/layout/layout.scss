@@ -20,7 +20,7 @@ body {
   &[data-sticky-header="yes"] {
     max-height: 100vh;
     main {
-      overflow-y: scroll;
+      overflow-y: auto;
     }
   }
 

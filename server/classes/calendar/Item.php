@@ -87,11 +87,40 @@ class Item implements Serializable
         $db()
             ->prepare('INSERT INTO calendar_entries (title, description, url, due_date) VALUES (?, ?, ?, ?)')
             ->execute([$this->title, $this->description, $url, $this->dueDate->format('Y-m-d H:i:s')]);
+
+        $this->id = $db()->lastInsertId();
+    }
+
+    public function replace(Connection $db)
+    {
+        $url = ($this->url == null ? '' : $this->url->getPath());
+
+        $db()
+            ->prepare('REPLACE INTO calendar_entries (id, title, description, url, due_date) VALUES (?, ?, ?, ?, ?)')
+            ->execute([$this->id, $this->title, $this->description, $url, $this->dueDate->format('Y-m-d H:i:s')]);
     }
 
     public static function delete(Connection $db, int $id)
     {
         $db()->prepare('DELETE FROM calendar_entries WHERE id = ?')->execute([$id]);
+    }
+
+    public static function load(Connection $db, int $id): ?Item
+    {
+        $stmt = $db()->prepare('SELECT * FROM calendar_entries WHERE id = ?');
+        $stmt->execute([$id]);
+        $data = $stmt->fetch();
+
+        if (!$data) {
+            return null;
+        }
+
+        $item = (new Item())->deserialize($data);
+
+        if ($item->isEmpty()) {
+            return null;
+        }
+        return $item;
     }
 
 }

@@ -1,0 +1,27 @@
+{% include 'document.twig' %}
+{% include '@common/header.twig' %}
+<main data-page="/admin/calendar/new" data-x-align="center">
+
+    <form action="{{ url.api('/admin/calendar/edit.php') }}" method="post">
+        {% include '@errors/error.twig' %}
+
+        <h3 data-required="1">Title</h3>
+        <input type="text" name="title" title="Title" value="{{ item.title }}" />
+
+        <h3>Description</h3>
+        <textarea name="description" title="Description">{{ item.description }}</textarea>
+
+        <h3 data-required="1">Date</h3>
+        <input type="datetime-local" name="due_date" title="Date" value="{{ dateValue }}" />
+
+        <h3>Url</h3>
+        <input type="text" name="url" title="Url" value="{{ item.url }}" />
+
+        <input type="hidden" name="id" value="{{ item.id }}" />
+
+        <input type="submit" value="Save" />
+    </form>
+
+</main>
+{% include '@common/footer.twig' %}
+{% include 'html-end.twig' %}
