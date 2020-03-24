@@ -1,0 +1,1236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/server/classes/content/models/Content.php" line="23" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="299940d3-f5fd-488b-89f0-ae98e7a94a2f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/client/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/vendor/josegonzalez/dotenv" beforeDir="false" afterPath="$PROJECT_DIR$/server/vendor/josegonzalez/dotenv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/vendor/josegonzalez/dotenv/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/server/vendor/josegonzalez/dotenv/.gitignore" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/server/composer.json</pharConfigPath>
+    <executablePath>composer</executablePath>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="796682499">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.15" value="3" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="13" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="11" />
+          <entry key="env" value="11" />
+          <entry key="gitignore" value="10" />
+          <entry key="json" value="8" />
+          <entry key="lock" value="1" />
+          <entry key="md" value="1" />
+          <entry key="php" value="918" />
+          <entry key="scss" value="168" />
+          <entry key="sql" value="5" />
+          <entry key="twig" value="242" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="11" />
+          <entry key="JSON" value="8" />
+          <entry key="Markdown" value="1" />
+          <entry key="PHP" value="918" />
+          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="SCSS" value="168" />
+          <entry key="SQL" value="5" />
+          <entry key="Twig" value="242" />
+          <entry key="yarn.lock" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="714" />
+          <entry key="dummy" value="37" />
+          <entry key="env" value="223" />
+          <entry key="gitignore" value="57" />
+          <entry key="json" value="19" />
+          <entry key="md" value="53" />
+          <entry key="php" value="34375" />
+          <entry key="scss" value="7711" />
+          <entry key="twig" value="8977" />
+          <entry key="txt" value="3676" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="714" />
+          <entry key="JSON" value="19" />
+          <entry key="Markdown" value="53" />
+          <entry key="PHP" value="34333" />
+          <entry key="PLAIN_TEXT" value="3993" />
+          <entry key="SCSS" value="7711" />
+          <entry key="SQL" value="42" />
+          <entry key="Twig" value="8977" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.php.new.class">
+        <counts>
+          <entry key="PHP Class.type" value="107" />
+          <entry key="PHP Interface.type" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.php.composer.actions">
+        <counts>
+          <entry key="install_from_ComposerEditorNotificationPanel" value="2" />
+          <entry key="updateAll_from_ComposerEditorNotificationPanel" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="TypeScriptServerServiceImpl" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/vendor/josegonzalez/dotenv/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>pages.</find>
+      <find>pages.scs</find>
+      <find>error</find>
+      <find>main</find>
+      <find>/new</find>
+      <find>error.tw</find>
+      <find>settings-form</find>
+      <find>table</find>
+      <find>render</find>
+      <find>table {</find>
+      <find>.floating-buttons-wrapper</find>
+      <find>floating-buttons-wrapper</find>
+      <find>preview</find>
+      <find>deleted</find>
+      <find>Guide</find>
+      <find>calender</find>
+      <find>deserialize</find>
+      <find>form</find>
+      <find>STICK</find>
+      <find>textare</find>
+      <find>scroll</find>
+      <find>insert</find>
+      <find>htmlcon</find>
+      <find>floating</find>
+      <find>/new'</find>
+      <find>hr {</find>
+      <find>tings-fo</find>
+      <find>biggest</find>
+      <find>#html</find>
+      <find>920px</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>{% include '@common/header.twig' %} &lt;main&gt;</replace>
+      <replace>largest</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\Projects\github\PHP-CMS\server\classes\render</dir>
+      <dir>C:\Projects\github\PHP-CMS\/_</dir>
+      <dir>C:\Projects\github\PHP-CMS\api</dir>
+      <dir>C:\Projects\github\PHP-CMS\server\classes</dir>
+      <dir>C:\Projects\github\PHP-CMS\</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/server/vendor/josegonzalez/dotenv" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/api/admin/calendar/new.php" />
+        <option value="$PROJECT_DIR$/server/classes/api/actions/admin/calendar/NewCalendarEntryAction.php" />
+        <option value="$PROJECT_DIR$/api/admin/calendar/delete.php" />
+        <option value="$PROJECT_DIR$/server/classes/api/actions/admin/calendar/DeleteCalenderEntryAction.php" />
+        <option value="$PROJECT_DIR$/server/db.sql" />
+        <option value="$PROJECT_DIR$/client/sass/components/inputs.scss" />
+        <option value="$PROJECT_DIR$/server/templates/pages/auth/login.twig" />
+        <option value="$PROJECT_DIR$/server/templates/pages/auth/register.twig" />
+        <option value="$PROJECT_DIR$/client/sass/components/auth/auth-form.scss" />
+        <option value="$PROJECT_DIR$/server/templates/components/common/header.twig" />
+        <option value="$PROJECT_DIR$/server/classes/settings/settings/ui/HeaderImageFullscreenSetting.php" />
+        <option value="$PROJECT_DIR$/client/sass/layout/modules/header.scss" />
+        <option value="$PROJECT_DIR$/server/classes/settings/settings/ui/HeaderStickySetting.php" />
+        <option value="$PROJECT_DIR$/server/classes/settings/Settings.php" />
+        <option value="$PROJECT_DIR$/server/templates/document.twig" />
+        <option value="$PROJECT_DIR$/client/sass/layout/layout.scss" />
+        <option value="$PROJECT_DIR$/-/admin/calendar/edit.php" />
+        <option value="$PROJECT_DIR$/client/sass/components/form.scss" />
+        <option value="$PROJECT_DIR$/server/classes/render/components/pages/admin/calendar/EditItemPage.php" />
+        <option value="$PROJECT_DIR$/server/templates/pages/admin/calendar/edit.twig" />
+        <option value="$PROJECT_DIR$/api/admin/calendar/edit.php" />
+        <option value="$PROJECT_DIR$/server/classes/api/actions/admin/calendar/EditCalendarEntryAction.php" />
+        <option value="$PROJECT_DIR$/server/classes/calendar/Item.php" />
+        <option value="$PROJECT_DIR$/server/classes/calendar/Calendar.php" />
+        <option value="$PROJECT_DIR$/server/classes/render/controller/TwigController.php" />
+        <option value="$PROJECT_DIR$/server/templates/components/common/footer.twig" />
+        <option value="$PROJECT_DIR$/client/sass/layout/modules/pages/pages.scss" />
+        <option value="$PROJECT_DIR$/server/templates/components/calendar/calendar.twig" />
+        <option value="$PROJECT_DIR$/server/templates/pages/admin/calendar/calendar.twig" />
+        <option value="$PROJECT_DIR$/client/sass/layout/modules/pages/admin/calendar/calendar.scss" />
+        <option value="$PROJECT_DIR$/server/classes/render/components/pages/StartPage.php" />
+        <option value="$PROJECT_DIR$/server/templates/pages/admin/calendar/new.twig" />
+        <option value="$PROJECT_DIR$/server/classes/render/components/pages/admin/page/EditPagePage.php" />
+        <option value="$PROJECT_DIR$/server/classes/render/components/pages/admin/page/NewPagePage.php" />
+        <option value="$PROJECT_DIR$/server/templates/pages/start.twig" />
+        <option value="$PROJECT_DIR$/client/sass/layout/modules/pages/page.scss" />
+        <option value="$PROJECT_DIR$/client/sass/components/components.scss" />
+        <option value="$PROJECT_DIR$/server/templates/pages/admin/page/new.twig" />
+        <option value="$PROJECT_DIR$/server/classes/api/actions/admin/page/EditPageAction.php" />
+        <option value="$PROJECT_DIR$/server/classes/api/actions/admin/page/NewPageAction.php" />
+        <option value="$PROJECT_DIR$/server/templates/components/admin/settings-form.twig" />
+        <option value="$PROJECT_DIR$/-/guides/markddown.php" />
+        <option value="$PROJECT_DIR$/server/classes/render/components/pages/guides/MarkdownGuidePage.php" />
+        <option value="$PROJECT_DIR$/-/guides/markdown.php" />
+        <option value="$PROJECT_DIR$/client/sass/general.scss" />
+        <option value="$PROJECT_DIR$/server/templates/pages/guides/markdown.twig" />
+        <option value="$PROJECT_DIR$/client/sass/components/markdown.scss" />
+        <option value="$PROJECT_DIR$/client/sass/layout/modules/pages/start.scss" />
+        <option value="$PROJECT_DIR$/client/sass/layout/modules/footer.scss" />
+        <option value="$PROJECT_DIR$/client/.gitignore" />
+        <option value="$PROJECT_DIR$/server/vendor/josegonzalez/dotenv/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/client/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/client/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/server/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/server/vendor/composer" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/server/vendor/josegonzalez/dotenv" />
+      <path value="$PROJECT_DIR$/server/vendor/m1/env" />
+      <path value="$PROJECT_DIR$/server/vendor/erusev/parsedown" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1357" />
+    <option name="y" value="-395" />
+    <option name="width" value="1382" />
+    <option name="height" value="736" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PHP-CMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP-CMS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PHP-CMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP-CMS" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PHP-CMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP-CMS" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PHP-CMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP-CMS" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PHP-CMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP-CMS" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PHP-CMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP-CMS" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="josegonzalez" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PHP-CMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP-CMS" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="josegonzalez" type="462c0819:PsiDirectoryNode" />
+              <item name="dotenv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PHP-CMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP-CMS" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="josegonzalez" type="462c0819:PsiDirectoryNode" />
+              <item name="dotenv" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PHP-CMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP-CMS" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="josegonzalez" type="462c0819:PsiDirectoryNode" />
+              <item name="dotenv" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="josegonzalez" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PHP-CMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP-CMS" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="josegonzalez" type="462c0819:PsiDirectoryNode" />
+              <item name="dotenv" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="josegonzalez" type="462c0819:PsiDirectoryNode" />
+              <item name="Dotenv" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="giti&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/vendor/twig/twig/.gitignore&#10;copyr&#9;null&#9;null&#10;startsc&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/client/sass/layout/modules/pages/start.scss&#10;gener&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/client/sass/general.scss&#10;settings&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/components/admin/settings-form.twig&#10;editpage&#9;null&#9;null&#10;new&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/pages/admin/page/new.twig&#10;editpa&#9;null&#9;null&#10;newtw&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/pages/admin/page/new.twig&#10;startpa&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/classes/render/components/pages/StartPage.php&#10;calendar.tw&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/components/calendar/calendar.twig&#10;calend&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/pages/admin/calendar/calendar.twig&#10;start&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/pages/start.twig&#10;foo&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/components/common/footer.twig&#10;footer&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/components/common/footer.twig&#10;ite&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/classes/calendar/Item.php&#10;header&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/client/sass/layout/modules/header.scss&#10;head&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/components/common/header.twig&#10;auth-form&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/client/sass/components/auth/auth-form.scss&#10;db&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/db.sql&#10;404.tw&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/components/errors/404.twig&#10;/404.tw&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/components/errors/404.twig&#10;twigc&#9;null&#9;null&#10;pagetw&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/pages/page.twig&#10;dash&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/pages/admin/dashboard.twig&#10;acc&#9;null&#9;null&#10;headerba&#9;null&#9;null&#10;conten&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/classes/settings/settings/ui/ContentWidthSetting.php&#10;reque&#9;null&#9;null&#10;edit&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/pages/admin/page/edit.twig&#10;docu&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/document.twig&#10;ings-for&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/components/admin/settings-form.twig&#10;SettingsP&#9;null&#9;null&#10;ngs-fo&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/components/admin/settings-form.twig&#10;ttings-form&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/components/admin/settings-form.twig&#10;ings-categ&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/components/admin/settings-categories-inputs-card.twig&#10;foot&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/client/sass/layout/modules/footer.scss&#10;ed&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/pages/admin/page/edit.twig&#10;404&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/components/errors/404.twig&#10;login&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/pages/auth/login.twig&#10;regist&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/pages/auth/register.twig&#10;doc&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/document.twig&#10;vars&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/client/sass/vars/vars.scss&#10;headertw&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/components/common/header.twig&#10;dashb&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/pages/admin/dashboard.twig&#10;sett&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/classes/settings/Settings.php&#10;ettings-cate&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/components/admin/settings-categories-inputs-card.twig&#10;sass&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/client/sass&#10;pagecom&#9;null&#9;null&#10;error&#9;FILE&#9;file://C:/Projects/github/PHP-CMS/server/templates/components/errors/error.twig" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="ts.external.directory.path" value="C:\Projects\github\PHP-CMS\client\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projects\github\PHP-CMS\server\classes\settings\settings\ui\images" />
+      <recent name="C:\Projects\github\PHP-CMS\client\sass\components" />
+      <recent name="C:\Projects\github\PHP-CMS\server\classes\settings\categories" />
+      <recent name="C:\Projects\github\PHP-CMS\server\classes\api\actions" />
+      <recent name="C:\Projects\github\PHP-CMS\server\classes\settings\settings\ui\colors" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="299940d3-f5fd-488b-89f0-ae98e7a94a2f" name="Default Changelist" comment="" />
+      <created>1580588325691</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580588325691</updated>
+      <workItem from="1580588327707" duration="5827000" />
+      <workItem from="1580637014674" duration="17670000" />
+      <workItem from="1581159760479" duration="8077000" />
+      <workItem from="1581167963981" duration="1329000" />
+      <workItem from="1581188911391" duration="9056000" />
+      <workItem from="1582539262152" duration="1902000" />
+      <workItem from="1582967297542" duration="21543000" />
+      <workItem from="1583052047342" duration="26319000" />
+      <workItem from="1584203588008" duration="29423000" />
+      <workItem from="1584807416119" duration="20555000" />
+      <workItem from="1584956052050" duration="18965000" />
+      <workItem from="1585043150538" duration="12522000" />
+      <workItem from="1585060505903" duration="119000" />
+    </task>
+    <task id="LOCAL-00062" summary="Initialize styles">
+      <created>1584271892120</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1584271892120</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Add own styles for footer bg and font colors">
+      <created>1584272553633</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1584272553633</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Add titles to setting categories">
+      <created>1584273151215</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1584273151215</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Add accent color setting">
+      <created>1584273597222</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1584273597222</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Style floating buttons">
+      <created>1584274191671</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1584274191672</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Make settingspage responsive">
+      <created>1584274667584</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1584274667585</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Make header and footer font color depend from body font color">
+      <created>1584274972204</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1584274972204</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Round borders in settings categories">
+      <created>1584275044587</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1584275044587</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Add missing dependencies">
+      <created>1584544076089</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1584544076090</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Move page endpoints">
+      <created>1584544124761</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1584544124761</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Change default for settings">
+      <created>1584544837878</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1584544837878</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Do not store ip addresses">
+      <created>1584544863180</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1584544863180</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Create non existing pages on the fly (admin only)">
+      <created>1584546774573</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1584546774573</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Add functionality to edit existing pages">
+      <created>1584549741989</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1584549741989</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Refactor page components">
+      <created>1584550073195</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1584550073195</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Add animations on page load">
+      <created>1584552268985</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1584552268985</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Add concept of saving strategies to settings">
+      <created>1584807486881</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1584807486882</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Add blur animation">
+      <created>1584807783509</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1584807783510</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Add possibility to unset y-align">
+      <created>1584808183449</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1584808183449</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Validate settings values">
+      <created>1584810337985</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1584810337985</updated>
+    </task>
+    <task id="LOCAL-00082" summary="Refactor boolean settings">
+      <created>1584811174932</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1584811174932</updated>
+    </task>
+    <task id="LOCAL-00083" summary="Add banner to header">
+      <created>1584813974296</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1584813974296</updated>
+    </task>
+    <task id="LOCAL-00084" summary="Work on styles">
+      <created>1584863874412</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1584863874412</updated>
+    </task>
+    <task id="LOCAL-00085" summary="Add missing html title attribute on input">
+      <created>1584863927992</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1584863927992</updated>
+    </task>
+    <task id="LOCAL-00086" summary="Adjust UI">
+      <created>1584869845652</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1584869845652</updated>
+    </task>
+    <task id="LOCAL-00087" summary="New setting category 'Header'">
+      <created>1584870165987</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1584870165987</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Adjust user interface, new setting for scaling">
+      <created>1584871434012</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1584871434012</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Add statistics page">
+      <created>1584872755939</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1584872755939</updated>
+    </task>
+    <task id="LOCAL-00090" summary="Adjust styles">
+      <created>1584877054599</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1584877054599</updated>
+    </task>
+    <task id="LOCAL-00091" summary="Delete pages only temporarily">
+      <created>1584877311729</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1584877311729</updated>
+    </task>
+    <task id="LOCAL-00092" summary="Delete pages only temporarily #2">
+      <created>1584877438405</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1584877438405</updated>
+    </task>
+    <task id="LOCAL-00093" summary="Fix styles">
+      <created>1584878492612</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1584878492612</updated>
+    </task>
+    <task id="LOCAL-00094" summary="Fix issue with deleted pages">
+      <created>1584879014780</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1584879014780</updated>
+    </task>
+    <task id="LOCAL-00095" summary="Tweak UI">
+      <created>1584957755534</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1584957755535</updated>
+    </task>
+    <task id="LOCAL-00096" summary="Fix styles">
+      <created>1584958813697</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1584958813697</updated>
+    </task>
+    <task id="LOCAL-00097" summary="Fix input type for content width setting">
+      <created>1584958930815</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1584958930815</updated>
+    </task>
+    <task id="LOCAL-00098" summary="Tweak some default values in color settings">
+      <created>1584959157499</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1584959157499</updated>
+    </task>
+    <task id="LOCAL-00099" summary="Add favicon setting, extra css file setting">
+      <created>1584959958164</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1584959958164</updated>
+    </task>
+    <task id="LOCAL-00100" summary="Add calendar landing page">
+      <created>1584961969288</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1584961969288</updated>
+    </task>
+    <task id="LOCAL-00101" summary="Add page for creating new calendar entries">
+      <created>1584963311624</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1584963311624</updated>
+    </task>
+    <task id="LOCAL-00102" summary="Fix markup">
+      <created>1584964016323</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1584964016323</updated>
+    </task>
+    <task id="LOCAL-00103" summary="Add calendar functionality">
+      <created>1584973601615</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1584973601615</updated>
+    </task>
+    <task id="LOCAL-00104" summary="Tweak header">
+      <created>1585039644588</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1585039644588</updated>
+    </task>
+    <task id="LOCAL-00105" summary="Add functionality to edit calendar items">
+      <created>1585042305783</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1585042305783</updated>
+    </task>
+    <task id="LOCAL-00106" summary="Tweak footer markup according to the docs">
+      <created>1585044498257</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1585044498258</updated>
+    </task>
+    <task id="LOCAL-00107" summary="Adjust start page functionality">
+      <created>1585053865759</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1585053865759</updated>
+    </task>
+    <task id="LOCAL-00108" summary="Tweak UI/UX">
+      <created>1585055857429</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1585055857429</updated>
+    </task>
+    <task id="LOCAL-00109" summary="Add markdown guide">
+      <created>1585059593275</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1585059593275</updated>
+    </task>
+    <task id="LOCAL-00110" summary="Fix styles">
+      <created>1585060228413</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1585060228413</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="173307000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1088" y="-395" width="1096" height="1896" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49860725" visible="true" weight="0.33055556" />
+      <window_info id="Structure" order="1" sideWeight="0.5013928" side_tool="true" weight="0.24963397" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32903588" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" x="0" y="0" width="1386" height="788" id="Version Control" order="9" type="WINDOWED" visible="true" weight="0.32944915" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.7339833" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="TypeScript" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49860725" visible="true" weight="0.24963397" />
+      <window_info id="Structure" order="1" sideWeight="0.5013928" side_tool="true" weight="0.24963397" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32944915" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" x="0" y="23" width="1366" height="705" id="Version Control" order="9" type="WINDOWED" weight="0.32944915" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.7339833" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="TypeScript" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+    <MESSAGE value="Work on styles" />
+    <MESSAGE value="Add missing html title attribute on input" />
+    <MESSAGE value="Adjust UI" />
+    <MESSAGE value="New setting category 'Header'" />
+    <MESSAGE value="Adjust user interface, new setting for scaling" />
+    <MESSAGE value="Add statistics page" />
+    <MESSAGE value="Adjust styles" />
+    <MESSAGE value="Delete pages only temporarily" />
+    <MESSAGE value="Delete pages only temporarily #2" />
+    <MESSAGE value="Fix issue with deleted pages" />
+    <MESSAGE value="Tweak UI" />
+    <MESSAGE value="Fix input type for content width setting" />
+    <MESSAGE value="Tweak some default values in color settings" />
+    <MESSAGE value="Add favicon setting, extra css file setting" />
+    <MESSAGE value="Add calendar landing page" />
+    <MESSAGE value="Add page for creating new calendar entries" />
+    <MESSAGE value="Fix markup" />
+    <MESSAGE value="Add calendar functionality" />
+    <MESSAGE value="Tweak header" />
+    <MESSAGE value="Add functionality to edit calendar items" />
+    <MESSAGE value="Tweak footer markup according to the docs" />
+    <MESSAGE value="Adjust start page functionality" />
+    <MESSAGE value="Tweak UI/UX" />
+    <MESSAGE value="Add markdown guide" />
+    <MESSAGE value="Fix styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix styles" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/client/sass/components/auth/auth-form.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/templates/pages/auth/register.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/templates/pages/auth/login.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="15" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/templates/components/common/header.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="63" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/classes/settings/settings/ui/HeaderImageFullscreenSetting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/classes/settings/settings/ui/HeaderStickySetting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/classes/settings/Settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="940">
+          <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/templates/document.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/sass/layout/modules/header.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/-/admin/calendar/new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" lean-forward="true" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/admin/calendar/delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" lean-forward="true" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/-/admin/calendar/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="63" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/admin/calendar/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/classes/api/actions/admin/calendar/EditCalendarEntryAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/classes/render/components/pages/admin/calendar/EditItemPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/sass/components/form.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/classes/calendar/Item.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/sass/layout/layout.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/templates/pages/admin/calendar/edit.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/classes/render/controller/RenderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/classes/render/controller/TwigController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/templates/components/common/footer.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/classes/calendar/Calendar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/sass/layout/modules/pages/pages.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/templates/components/calendar/calendar.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/templates/pages/admin/calendar/calendar.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/sass/layout/modules/pages/admin/calendar/calendar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="69" column="3" selection-start-line="69" selection-start-column="3" selection-end-line="69" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/classes/render/components/pages/StartPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/templates/pages/admin/calendar/new.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/classes/render/components/pages/admin/page/PageAdminPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/classes/render/components/pages/admin/page/NewPagePage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/classes/render/components/pages/admin/page/EditPagePage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/templates/pages/start.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/sass/layout/modules/pages/page.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/sass/components/components.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/templates/pages/admin/page/new.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/classes/api/actions/admin/page/NewPageAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/classes/api/actions/admin/page/EditPageAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/templates/components/admin/settings-form.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/-/auth/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" lean-forward="true" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/templates/pages/404.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" lean-forward="true" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/templates/pages/guides/markdown.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="962">
+          <caret line="199" column="28" lean-forward="true" selection-start-line="199" selection-start-column="28" selection-end-line="199" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/classes/render/components/pages/guides/MarkdownGuidePage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/sass/components/markdown.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/sass/layout/modules/pages/start.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/sass/general.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="15" lean-forward="true" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/-/guides/markdown.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="60" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/sass/layout/modules/footer.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/vendor/josegonzalez/dotenv/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+</project>
