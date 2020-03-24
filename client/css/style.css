@@ -1,0 +1,483 @@
+html {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif; }
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+[data-required="1"]::before {
+  content: '* ';
+  color: red; }
+
+html {
+  --body-bg-color: #ffffff;
+  --content-bg-color: #ffffff;
+  --header-bg-color: #ffffff;
+  --footer-bg-color: #ffffff;
+  --accent-color: #992216;
+  --font-color: #222222;
+  --header-font-color: #222222;
+  --footer-font-color: #222222; }
+
+html {
+  --header-banner-image-width: 1920px;
+  --content-width: 1280px; }
+
+body {
+  background-color: var(--body-bg-color);
+  color: var(--font-color);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem; }
+  body main, body header .content, body footer .content {
+    max-width: var(--content-width);
+    width: 100%;
+    padding: 1rem 0; }
+  body > * {
+    width: 100%; }
+  body[data-sticky-header="yes"] {
+    max-height: 100vh; }
+    body[data-sticky-header="yes"] main {
+      overflow-y: auto; }
+  body header {
+    background-color: var(--header-bg-color);
+    color: var(--header-font-color);
+    display: flex;
+    justify-content: center; }
+    body header.banner-image {
+      padding: 0; }
+      body header.banner-image .content {
+        padding: 0;
+        display: flex;
+        justify-content: center; }
+        body header.banner-image .content[data-pos=left] {
+          justify-content: flex-start; }
+        body header.banner-image .content[data-pos=center] {
+          justify-content: center; }
+        body header.banner-image .content[data-pos=right] {
+          justify-content: flex-end; }
+        body header.banner-image .content img {
+          width: 100%;
+          max-width: var(--header-banner-image-width);
+          height: auto; }
+      body header.banner-image[data-fullscreen="yes"] .content {
+        max-width: none;
+        width: 100vw;
+        height: 100vh; }
+        body header.banner-image[data-fullscreen="yes"] .content img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          max-width: none; }
+  body main {
+    flex-grow: 1;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: var(--content-bg-color); }
+    body main[data-x-align=left] {
+      align-items: flex-start; }
+    body main[data-x-align=center] {
+      align-items: center; }
+    body main[data-x-align=right] {
+      align-items: flex-end; }
+    body main[data-y-align=top] {
+      justify-content: flex-start; }
+    body main[data-y-align=center] {
+      justify-content: center; }
+    body main[data-y-align=bottom] {
+      justify-content: flex-end; }
+    body main[data-y-align=unset] {
+      justify-content: unset; }
+  body main[data-page="/"] {
+    flex-direction: row;
+    padding: 0;
+    align-items: stretch; }
+    body main[data-page="/"] #main-content {
+      flex-grow: 1;
+      padding: 0;
+      width: 0; }
+    body main[data-page="/"] aside {
+      padding: .5rem;
+      flex-grow: 0; }
+      body main[data-page="/"] aside h2 {
+        font-weight: 100;
+        margin-bottom: 1rem; }
+      body main[data-page="/"] aside #calender-wrapper {
+        margin-bottom: -4px; }
+        body main[data-page="/"] aside #calender-wrapper .calendar-item {
+          width: 320px;
+          background-color: var(--accent-color);
+          color: #ffffff;
+          filter: grayscale(60%);
+          padding: .5rem;
+          font-size: .85rem;
+          margin-bottom: 4px; }
+          body main[data-page="/"] aside #calender-wrapper .calendar-item h4 {
+            font-size: 1.3em;
+            margin-bottom: .5rem; }
+          body main[data-page="/"] aside #calender-wrapper .calendar-item .description {
+            margin: 1rem 0; }
+          body main[data-page="/"] aside #calender-wrapper .calendar-item .date {
+            text-align: right; }
+          body main[data-page="/"] aside #calender-wrapper .calendar-item .actions {
+            display: none; }
+    @media screen and (max-width: 900px) {
+      body main[data-page="/"] {
+        flex-direction: row; }
+        body main[data-page="/"] aside {
+          padding: .5rem; }
+        body main[data-page="/"] #main-content, body main[data-page="/"] aside {
+          width: 100%; }
+        body main[data-page="/"] aside {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end; }
+        body main[data-page="/"] aside #calender-wrapper {
+          margin-bottom: 0;
+          display: flex;
+          max-width: 100%;
+          overflow-x: auto; }
+          body main[data-page="/"] aside #calender-wrapper .calendar-item {
+            width: 320px;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            filter: grayscale(60%);
+            padding: .5rem;
+            font-size: .85rem;
+            margin-right: 4px;
+            flex-shrink: 0; }
+            body main[data-page="/"] aside #calender-wrapper .calendar-item h4 {
+              font-size: 1.3em;
+              margin-bottom: .5rem; }
+            body main[data-page="/"] aside #calender-wrapper .calendar-item .description {
+              margin: 1rem 0; }
+            body main[data-page="/"] aside #calender-wrapper .calendar-item .date {
+              text-align: right; }
+            body main[data-page="/"] aside #calender-wrapper .calendar-item .actions {
+              display: none; } }
+  body main[data-page="/page"] {
+    padding: 0; }
+  body main[data-page="/admin/calendar"] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: hidden; }
+    body main[data-page="/admin/calendar"] h2 {
+      font-weight: 100;
+      margin-bottom: 1rem; }
+    body main[data-page="/admin/calendar"] #calender-wrapper {
+      width: 100%;
+      display: grid;
+      grid-column-gap: 8px;
+      grid-row-gap: 8px; }
+      @media screen and (min-width: 801px) {
+        body main[data-page="/admin/calendar"] #calender-wrapper {
+          grid-template-columns: 1fr 1fr 1fr; } }
+      @media screen and (max-width: 800px) {
+        body main[data-page="/admin/calendar"] #calender-wrapper {
+          grid-template-columns: 1fr 1fr; } }
+      @media screen and (max-width: 520px) {
+        body main[data-page="/admin/calendar"] #calender-wrapper {
+          grid-template-columns: 1fr; } }
+      body main[data-page="/admin/calendar"] #calender-wrapper .calendar-item {
+        background-color: var(--accent-color);
+        box-shadow: 0 0 5px rgba(40, 40, 40, 0.4);
+        color: #ffffff;
+        padding: 1rem .5rem .5rem 1rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        filter: grayscale(60%); }
+        body main[data-page="/admin/calendar"] #calender-wrapper .calendar-item h4 {
+          font-weight: 100;
+          margin-bottom: .5rem; }
+        body main[data-page="/admin/calendar"] #calender-wrapper .calendar-item .description {
+          padding: 1rem .5rem 1rem 0; }
+        body main[data-page="/admin/calendar"] #calender-wrapper .calendar-item .date {
+          padding: 1rem 0; }
+        body main[data-page="/admin/calendar"] #calender-wrapper .calendar-item .actions {
+          margin-top: 2rem;
+          flex-grow: 1;
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end; }
+          body main[data-page="/admin/calendar"] #calender-wrapper .calendar-item .actions a {
+            margin-left: 4px; }
+            body main[data-page="/admin/calendar"] #calender-wrapper .calendar-item .actions a:hover {
+              filter: grayscale(70%); }
+  body main[data-page="/admin/settings"] {
+    flex-direction: row; }
+  body footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-font-color);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    body footer #links {
+      padding: .4rem 0 .5rem 0; }
+      body footer #links #hyperlinks {
+        margin-bottom: 1.05rem;
+        display: flex;
+        justify-content: space-around;
+        font-size: 1rem;
+        flex-wrap: wrap; }
+        body footer #links #hyperlinks > * {
+          padding: .5rem; }
+          @media screen and (max-width: 700px) {
+            body footer #links #hyperlinks > * {
+              display: block;
+              width: 100%; } }
+      body footer #links #user-actions {
+        font-size: .8rem;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 1rem; }
+        body footer #links #user-actions > * {
+          margin-left: .5rem; }
+    body footer #about-jasper-lichte {
+      background-color: #3c0a0a;
+      padding: .4rem 0;
+      text-align: right;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+      font-size: .8rem;
+      color: #aaaaaa;
+      width: 100%;
+      display: flex;
+      justify-content: center; }
+      body footer #about-jasper-lichte .content {
+        padding-top: 0;
+        padding-bottom: 0; }
+      body footer #about-jasper-lichte a {
+        font-size: 1.4em;
+        margin: 0 .25em;
+        color: #ffffff;
+        text-decoration: none; }
+      @media screen and (max-width: 480px) {
+        body footer #about-jasper-lichte {
+          text-align: center; } }
+
+a,
+a:link,
+a:visited,
+a:active,
+a:any-link {
+  color: currentColor;
+  text-decoration: underline; }
+
+.error {
+  color: red;
+  font-size: 1.2rem;
+  margin: .5rem 0; }
+  .error.err404 {
+    color: var(--font-color);
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+
+form.auth-form {
+  border: 1px solid var(--accent-color);
+  padding: 1rem;
+  max-width: 600px;
+  width: 100%;
+  flex-grow: 0; }
+  form.auth-form .h1 {
+    margin-bottom: 2rem; }
+  form.auth-form input {
+    display: block;
+    width: 100%;
+    padding: .25rem;
+    font-size: 1.1rem;
+    margin-bottom: .5rem; }
+  form.auth-form a {
+    float: right; }
+
+h1, .h1 {
+  font-size: 2rem; }
+
+h2, .h2 {
+  font-size: 1.5rem; }
+
+h3, .h3 {
+  font-size: 1.25rem; }
+
+h4, .h4 {
+  font-size: 1.125rem; }
+
+h5, .h5 {
+  font-size: 1rem; }
+
+h6, .h6 {
+  font-size: .9rem; }
+
+.settings-category {
+  border: 1px solid var(--accent-color);
+  border-radius: 6px;
+  padding: .5rem;
+  margin: .5rem; }
+  .settings-category h2 {
+    margin-bottom: .7rem; }
+  .settings-category table {
+    overflow-x: scroll; }
+
+.floating-buttons-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  padding: 12px; }
+  .floating-buttons-wrapper .floating-button {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    height: 5rem;
+    width: 5rem;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(40, 40, 40, 0.4);
+    margin-bottom: 12px;
+    text-decoration: none; }
+    .floating-buttons-wrapper .floating-button:last-of-type {
+      margin-bottom: 0; }
+
+button,
+input[type=submit],
+.button {
+  padding: .4rem .7rem;
+  background-color: var(--accent-color);
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  transition: .5s ease;
+  filter: grayscale(70%);
+  font-size: 1rem; }
+  button:hover,
+  input[type=submit]:hover,
+  .button:hover {
+    filter: grayscale(0%);
+    border-radius: 6px; }
+
+input:not([type=color]), select {
+  font-size: 1rem;
+  padding: .5rem; }
+
+table td, table th {
+  padding: .2rem .5rem;
+  font-size: 1rem; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  flex-grow: 1; }
+  form h3 {
+    padding: .5rem 0 0 0; }
+    form h3 a {
+      font-size: .7em; }
+  form textarea, form input[type=text] {
+    padding: .5rem; }
+  form textarea {
+    height: 360px;
+    resize: none;
+    flex-grow: 1; }
+  form input[type=submit] {
+    margin-top: .5rem; }
+
+#html-content {
+  padding: 1rem; }
+  #html-content p {
+    padding-top: .2rem;
+    padding-bottom: .2rem; }
+  #html-content img {
+    max-width: 100%; }
+  #html-content ul, #html-content ol {
+    padding: .5rem 0 .5rem 1rem; }
+  #html-content hr {
+    background-color: var(--accent-color);
+    border: none;
+    height: 1px;
+    margin: 1rem 0; }
+  #html-content blockquote {
+    background: rgba(200, 200, 100, 0.3);
+    border-left: 4px solid #4e4e1e;
+    padding: .5rem 1rem .5rem 2rem; }
+  #html-content pre {
+    font-family: monospace; }
+  #html-content h1, #html-content h2, #html-content h3, #html-content h4, #html-content h5, #html-content h6 {
+    margin: .8em 0 .2em 0; }
+  #html-content table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    overflow-x: scroll; }
+    #html-content table, #html-content table th, #html-content table td {
+      border: 1px solid black; }
+  #html-content pre {
+    background-color: rgba(140, 140, 140, 0.4);
+    padding: .5rem; }
+  @media screen and (max-width: 700px) {
+    #html-content img,
+    #html-content hr,
+    #html-content blockquote,
+    #html-content table,
+    #html-content pre {
+      margin-left: -1rem;
+      margin-right: -1rem;
+      width: 100%;
+      max-width: unset; }
+    #html-content p {
+      text-align: justify; }
+    #html-content h1, #html-content h2, #html-content h3, #html-content h4, #html-content h5, #html-content h6 {
+      text-align: center; }
+    #html-content table {
+      border-left: 0;
+      border-right: 0; }
+      #html-content table tr td:first-of-type, #html-content table tr th:first-of-type {
+        border-left: 0; }
+      #html-content table tr td:last-of-type, #html-content table tr th:last-of-type {
+        border-right: 0; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-20px); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes blurOut {
+  from {
+    filter: blur(4px); }
+  to {
+    filter: blur(0); } }
+
+@keyframes hueRotate {
+  0% {
+    filter: hue-rotate(0deg); }
+  100% {
+    filter: hue-rotate(360deg); } }
+
+body[data-animation-enabled="1"] main {
+  animation: fadeIn ease-in .8s, slideInLeft ease-in .6s, blurOut ease-in 1.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1; }
+
+body[data-animation-enabled="1"] footer #about-jasper-lichte {
+  animation: hueRotate 4s infinite; }
