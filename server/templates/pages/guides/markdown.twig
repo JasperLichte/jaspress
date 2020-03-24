@@ -1,0 +1,235 @@
+{% include 'document.twig' %}
+{% include '@common/header.twig' %}
+<main data-page="/guides/markdown" data-x-align="center">
+    <div id="html-content">
+        <table>
+            <thead>
+            <tr>
+                <th>Description</th>
+                <th>Symbol</th>
+                <th>Example</th>
+                <th>result</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr>
+                <th>Headings</th>
+            </tr>
+
+            <tr>
+                <td>Heading lvl 1</td>
+                <td>#</td>
+                <td># I'm the largest heading!</td>
+                <td><h1>I'm the largest heading!</h1></td>
+            </tr>
+            <tr>
+                <td>Heading lvl 2</td>
+                <td>##</td>
+                <td>## I'm a large heading!</td>
+                <td><h2>I'm a large heading!</h2></td>
+            </tr>
+            <tr>
+                <td>Heading lvl 3</td>
+                <td>###</td>
+                <td>### I'm also a large heading!</td>
+                <td><h3>I'm also a large heading!</h3></td>
+            </tr>
+            <tr>
+                <td>Heading lvl 4</td>
+                <td>####</td>
+                <td>#### I'm a medium heading!</td>
+                <td><h4>I'm a medium heading!</h4></td>
+            </tr>
+            <tr>
+                <td>Heading lvl 5</td>
+                <td>######</td>
+                <td>###### I'm a small heading!</td>
+                <td><h5>I'm a small heading!</h5></td>
+            </tr>
+            <tr>
+                <td>Heading lvl 6</td>
+                <td>######</td>
+                <td>###### I'm the smallest heading!</td>
+                <td><h6>I'm the smallest heading!</h6></td>
+            </tr>
+
+            <tr>
+                <th>Text</th>
+            </tr>
+
+            <tr>
+                <td>Paragraph</td>
+                <td></td>
+                <td>Don't mind me, just a paragraph</td>
+                <td><p>Don't mind me, just a paragraph</p></td>
+            </tr>
+            <tr>
+                <td>Bold</td>
+                <td>**</td>
+                <td>**bold text**</td>
+                <td><strong>bold text</strong></td>
+            </tr>
+            <tr>
+                <td>Italic</td>
+                <td>*</td>
+                <td>*italicized text*</td>
+                <td><i>italicized text</i></td>
+            </tr>
+            <tr>
+                <td>Strikethrough</td>
+                <td>~~</td>
+                <td>~~Scratch this~~</td>
+                <td><del>Scratch this</del></td>
+            </tr>
+            <tr>
+                <td>Blockquote</td>
+                <td> > </td>
+                <td>> blockquote</td>
+                <td><blockquote>blockquote</blockquote></td>
+            </tr>
+
+            <tr>
+                <th>Lists</th>
+            </tr>
+
+            <tr>
+                <td>Unordered list</td>
+                <td>
+                    <p>* </p>
+                    <p>* </p>
+                    <p>* </p>
+                </td>
+                <td>
+                    * First<br>
+                    * Second<br>
+                    * Third<br>
+                </td>
+                <td>
+                    <ul>
+                        <li>First</li>
+                        <li>Second</li>
+                        <li>Third</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Ordered list</td>
+                <td>
+                    <p>1. </p>
+                    <p>2. </p>
+                    <p>3. </p>
+                </td>
+                <td>
+                    <pre>
+1. First
+2. Second
+3.
+    * A
+    * B
+    * C
+4. Fourth
+                    </pre>
+                </td>
+                <td>
+                    <ol>
+                        <li>First</li>
+                        <li>Second</li>
+                        <li>
+                            <ul>
+                                <li>A</li>
+                                <li>B</li>
+                                <li>C</li>
+                            </ul>
+                        </li>
+                        <li>Fourth</li>
+                    </ol>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Other</th>
+            </tr>
+
+            <tr>
+                <td>Image</td>
+                <td>![]()</td>
+                <td>![Title](https://www.example.com/image.png)</td>
+                <td>
+                    <img
+                        src="https://assets.t3n.sc/news/wp-content/uploads/2013/07/markdown_vorschau.jpg?auto=format&fit=crop&h=348&ixlib=php-2.3.0&w=620"
+                        alt="Title"
+                        width="80"
+                    >
+                </td>
+            </tr>
+            <tr>
+                <td>Link</td>
+                <td>[]()</td>
+                <td>[I'm a link](https://www.example.com)</td>
+                <td><a href="https://www.example.com">I'm a link</a></td>
+            </tr>
+            <tr>
+                <td>Horizontal rule</td>
+                <td>---</td>
+                <td>---</td>
+                <td><hr></td>
+            </tr>
+            <tr>
+                <td>Table</td>
+                <td></td>
+                <td>
+                    <pre>
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+                    </pre>
+                </td>
+                <td>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Tables</th>
+                            <th align="center">Are</th>
+                            <th align="right">Cool</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>col 3 is</td>
+                            <td align="center">right-aligned</td>
+                            <td align="right">$1600</td>
+                        </tr>
+                        <tr>
+                            <td>col 2 is</td>
+                            <td align="center">centered</td>
+                            <td align="right">$12</td>
+                        </tr>
+                        <tr>
+                            <td>zebra stripes</td>
+                            <td align="center">are neat</td>
+                            <td align="right">$1</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <style>
+        main #html-content table pre {
+            background-color: transparent;
+        }
+
+        main #html-content table tbody tr td:nth-of-type(3) {
+            font-family: monospace;
+        }
+    </style>
+
+</main>
+{% include '@common/footer.twig' %}
+{% include 'html-end.twig' %}
