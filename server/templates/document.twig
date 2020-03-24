@@ -34,4 +34,7 @@
     {% if settings.get('PAGE_LOAD_ANIMATION') == 'yes' %}
         data-animation-enabled="1"
     {% endif %}
+    {% if settings.get('HEADER_IMG_FULLSCREEN') == 'no' %}
+        data-sticky-header="{{ settings.get('HEADER_STICKY') }}"
+    {% endif %}
 >

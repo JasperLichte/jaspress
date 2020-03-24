@@ -20,6 +20,8 @@ use settings\settings\ui\colors\HeaderFontColorSetting;
 use settings\settings\ui\ContentWidthSetting;
 use settings\settings\ui\ExtraCssUrlSetting;
 use settings\settings\ui\HeaderBannerImageWidthSetting;
+use settings\settings\ui\HeaderImageFullscreenSetting;
+use settings\settings\ui\HeaderStickySetting;
 use settings\settings\ui\images\FaviconUrlSetting;
 use settings\settings\ui\images\HeaderBannerImageUrlSetting;
 use settings\settings\ui\UiScaleSetting;
@@ -69,14 +71,17 @@ class Settings
             new FooterFontColorSetting(),
             new AccentColorSetting(),
             new PageLoadAnimationSetting(),
-            new ShowHeaderSetting(),
-            new HeaderBannerImageUrlSetting(),
-            new HeaderBannerImageWidthSetting(),
-            new HeaderImageBannerPosition(),
             new UiScaleSetting(),
             new ContentWidthSetting(),
             new FaviconUrlSetting(),
             new ExtraCssUrlSetting(),
+
+            new ShowHeaderSetting(),
+            new HeaderStickySetting(),
+            new HeaderBannerImageUrlSetting(),
+            new HeaderBannerImageWidthSetting(),
+            new HeaderImageBannerPosition(),
+            new HeaderImageFullscreenSetting(),
         ];
     }
 

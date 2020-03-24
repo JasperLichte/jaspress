@@ -7,9 +7,17 @@
             </div>
         </header>
     {% else %}
-        <header class="banner-image" data-pos="{{ settings.get('HEADER_IMG_BANNER_POS') }}">
-            <div class="content">
-                <img src="{{ settings.get('HEADER_BANNER_URL') }}" alt="">
+        <header
+            class="banner-image"
+            data-fullscreen="{{ settings.get('HEADER_IMG_FULLSCREEN') }}"
+        >
+            <div
+                class="content"
+                data-pos="{{ settings.get('HEADER_IMG_BANNER_POS') }}"
+            >
+                <a href="{{ url.to('/') }}">
+                    <img src="{{ settings.get('HEADER_BANNER_URL') }}" alt="">
+                </a>
             </div>
         </header>
     {% endif %}

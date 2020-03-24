@@ -7,20 +7,41 @@ header {
   &.banner-image {
     padding: 0;
 
-    &[data-pos=left] {
-      justify-content: flex-start;
-    }
-    &[data-pos=center] {
+    .content {
+      padding: 0;
+      display: flex;
       justify-content: center;
-    }
-    &[data-pos=right] {
-      justify-content: flex-end;
+
+      &[data-pos=left] {
+        justify-content: flex-start;
+      }
+      &[data-pos=center] {
+        justify-content: center;
+      }
+      &[data-pos=right] {
+        justify-content: flex-end;
+      }
+
+      & img {
+        width: 100%;
+        max-width: var(--header-banner-image-width);
+        height: auto;
+      }
     }
 
-    & img {
-      width: 100%;
-      max-width: var(--header-banner-image-width);
-      height: auto;
+    &[data-fullscreen="yes"] {
+      .content {
+        max-width: none;
+        width: 100vw;
+        height: 100vh;
+
+        & img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          max-width: none;
+        }
+      }
     }
   }
 }

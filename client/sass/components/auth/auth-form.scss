@@ -3,9 +3,10 @@ form.auth-form {
   padding: 1rem;
   max-width: 600px;
   width: 100%;
+  flex-grow: 0;
   
   .h1 {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   input {
