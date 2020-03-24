@@ -5,7 +5,7 @@ main[data-page="/"] {
 
   #main-content {
     flex-grow: 1;
-    padding: 1rem;
+    padding: 0;
     width: 0;
   }
 
@@ -53,9 +53,12 @@ main[data-page="/"] {
   @media screen and (max-width: 900px) {
     flex-direction: row;
 
+    aside {
+      padding: .5rem
+    }
+
     #main-content, aside {
       width: 100%;
-      padding: .5rem
     }
 
     aside {
