@@ -3,6 +3,7 @@
 namespace api\actions\admin\page;
 
 use api\ApiResponse;
+use render\components\pages\StartPage;
 use util\exceptions\EmptyMemberException;
 use util\exceptions\LogicException;
 
@@ -27,7 +28,9 @@ class NewPageAction extends PageAction
 
         return $this->req->redirectWith(
             $this->res->setSuccessMessage('Page saved'),
-            $this->page->endpoint()
+            ($this->slug == 'start'
+                ? StartPage::endPoint()
+                : $this->page->endpoint())
         );
     }
 

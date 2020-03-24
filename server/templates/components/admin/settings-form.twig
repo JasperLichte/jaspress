@@ -6,7 +6,6 @@
     <table>
         <thead>
         <tr>
-            <th>Name</th>
             <th>Description</th>
             <th>Value</th>
         </tr>
@@ -14,7 +13,6 @@
         <tbody>
         {% for setting in settings.settingsByCategory(category) %}
             <tr>
-                <td>{{ setting.dbKey }}</td>
                 <td>{{ setting.description }}</td>
                 <td>
                     {% if setting.isColorSetting %}

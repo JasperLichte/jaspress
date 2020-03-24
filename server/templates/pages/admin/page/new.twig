@@ -5,7 +5,9 @@
 <form action="{{ url.api('/admin/page/new.php') }}" method="post">
     {% include '@errors/error.twig' %}
 
-    {% if slug is null %}
+    {% if slug == 'start' %}
+        <input type="hidden" name="title" value="Start" />
+    {% else %}
         <h3 data-required="1">Title</h3>
         <input type="text" name="title" title="Title" />
     {% endif %}
