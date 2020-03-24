@@ -1,4 +1,8 @@
 main[data-page="/admin/calendar"] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-x: hidden;
 
   h2 {
     font-weight: 100;

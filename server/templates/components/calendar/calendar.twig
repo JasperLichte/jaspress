@@ -1,0 +1,22 @@
+<div id="calender-wrapper">
+    {% for item in calendar.getItems %}
+        <div class="calendar-item">
+            <h4 class="h1">{{ item.title }}</h4>
+            {% if item.description != '' %}
+                <p class="description">{{ item.description }}</p>
+            {% endif %}
+
+            {% if item.url != '' %}
+                <a href="{{ item.url }}">More...</a>
+            {% endif %}
+            <p class="date">{{ item.dueDate.format('F jS, Y H:m') }}</p>
+
+            {% if user.isAdmin %}
+                <div class="actions">
+                    <a class="button" href="{{ url.to('/admin/calendar/edit.php?i=' ~ item.id) }}">Edit</a>
+                    <a class="button" href="{{ url.api('/admin/calendar/delete.php?i=' ~ item.id) }}">Delete</a>
+                </div>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>

@@ -1,31 +1,7 @@
+@import './start.scss';
 @import './page.scss';
 @import './admin/admin.scss';
 
 main[data-page="/admin/settings"] {
   flex-direction: row;
-}
-
-main[data-page="/"] {
-  .post {
-    border: 1px solid var(--accent-color);
-    border-radius: 6px;
-    padding: .5rem;
-    text-decoration: none;
-    transition: .4s ease;
-    display: block;
-    width: 100%;
-
-    h3 {
-      margin-bottom: .4rem;
-    }
-
-    p {
-      text-align: justify;
-    }
-
-    &:hover {
-      filter: hue-rotate(180deg);
-      transform: translateX(12px);
-    }
-  }
 }

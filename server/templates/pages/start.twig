@@ -1,14 +1,34 @@
 {% include 'document.twig' %}
 {% include '@common/header.twig' %}
 <main data-page="/">
-
-{% for post in blog.posts %}
-    <a href="{{ post.endpoint }}" class="post">
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.markdown.description }}...</p>
-    </a>
-{% endfor %}
-
+    <div id="main-content">
+        {% if user.isAdmin %}
+            <div class="floating-buttons-wrapper">
+                {% if page is null %}
+                    {% include '@components/inputs/floating-button.twig' with {
+                        target: url.to('/admin/page/new.php?p=start'),
+                        child: 'Create'
+                    } only %}
+                {% else %}
+                    {% include '@components/inputs/floating-button.twig' with {
+                        target: url.to('/admin/page/edit.php?p=start'),
+                        child: 'Edit'
+                    } only %}
+                {% endif %}
+            </div>
+        {% endif %}
+        {% if page is not null %}
+            <div id="html-content">
+                {{ page.markdown.htmlContent | raw }}
+            </div>
+        {% endif %}
+    </div>
+    {% if calendar.items|length > 0 %}
+        <aside>
+            <h2>Termine</h2>
+            {% include '@components/calendar/calendar.twig' %}
+        </aside>
+    {% endif %}
 </main>
 {% include '@common/footer.twig' %}
 {% include 'html-end.twig' %}
