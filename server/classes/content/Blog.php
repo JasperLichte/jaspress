@@ -29,6 +29,9 @@ class Blog
         }
     }
 
+    /**
+     * @return Page[]
+     */
     public function getPosts(): array
     {
         return $this->posts;

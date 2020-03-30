@@ -26,6 +26,8 @@
             }
         }
     </style>
+
+    <link rel="stylesheet" href="{{ state.ui.customCssFileUrl }}">
     {% if settings.get('EXTRA_CSS_URL') != '' %}
         <link rel="stylesheet" href="{{ settings.get('EXTRA_CSS_URL') }}">
     {% endif %}
@@ -35,6 +37,6 @@
         data-animation-enabled="1"
     {% endif %}
     {% if settings.get('HEADER_IMG_FULLSCREEN') == 'no' %}
-        data-sticky-header="{{ settings.get('HEADER_STICKY') }}"
+        data-sticky-header="no"
     {% endif %}
 >

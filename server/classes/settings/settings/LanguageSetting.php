@@ -12,7 +12,7 @@ class LanguageSetting extends OptionsSetting
 
     public function getDefaultValue(): string
     {
-        return 'en';
+        return 'de';
     }
 
     public static function dbKey(): string
@@ -23,7 +23,6 @@ class LanguageSetting extends OptionsSetting
     public function options()
     {
         return [
-            new Option('English', 'en'),
             new Option('Deutsch', 'de'),
         ];
     }

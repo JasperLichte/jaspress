@@ -1,0 +1,12 @@
+{% include 'document.twig' %}
+{% include '@common/header.twig' %}
+<main data-page="/admin/blog" data-x-align="center">
+    <h2 class="h1">Pages:</h2>
+    <ul>
+        {% for post in blog.posts %}
+            <li><a href="{{ post.endpoint }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+</main>
+{% include '@common/footer.twig' %}
+{% include 'html-end.twig' %}

@@ -145,7 +145,7 @@ class Request
 
     public function save(Connection $db)
     {
-        if ($this->isLocal() || ($this->getUser() != null && $this->getUser()->isAdmin())) {
+        if ($this->isLocal()) {
             return;
         }
 

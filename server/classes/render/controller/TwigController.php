@@ -45,7 +45,6 @@ class TwigController implements RenderController
                     'settings'    => Settings::getInstance(),
                     'error'       => $app->getError(),
                     'url'         => new Url(),
-                    'currentYear' => date('Y'),
                 ]);
             }
             return $this->twig->render($template . '.twig', $arguments);

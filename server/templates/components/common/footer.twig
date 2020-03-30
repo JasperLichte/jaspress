@@ -2,7 +2,7 @@
     <div id="links" class="content">
         <div id="hyperlinks">
             <span class="copyright">
-                &copy; {{ currentYear }} {{ settings.get('APP_NAME') }}
+                &copy; {{ state.ui.currentDate.format('Y') }} {{ settings.get('APP_NAME') }}
             </span>
             <a href="{{ url.to('/page.php?p=impressum') }}">Impressum - Datenschutz</a>
             <a href="{{ url.to('/page.php?p=contact') }}">Kontakt</a>

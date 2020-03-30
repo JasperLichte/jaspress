@@ -26,7 +26,7 @@ class HeaderStickySetting extends BooleanSetting
 
     public function description(): string
     {
-        return 'Header sticky';
+        return 'Header sticky. DISABLED FOR NOW!';
     }
 
 }

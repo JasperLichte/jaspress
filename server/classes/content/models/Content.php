@@ -3,6 +3,7 @@
 namespace content\models;
 
 
+use DateTime;
 use util\interfaces\Serializable;
 
 class Content implements Serializable
@@ -104,7 +105,7 @@ class Content implements Serializable
         $this->slug = $input['slug'];
         $this->title = $input['title'];
         $this->markdown = new Markdown((string)$input['markdown']);
-        $this->creationDate = new \DateTime((string)$input['creation_date']);
+        $this->creationDate = new DateTime((string)$input['creation_date']);
 
         return $this;
     }

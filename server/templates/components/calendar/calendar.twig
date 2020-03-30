@@ -7,9 +7,9 @@
             {% endif %}
 
             {% if item.url != '' %}
-                <a href="{{ item.url }}">More...</a>
+                <a href="{{ item.url }}">Mehr...</a>
             {% endif %}
-            <p class="date">{{ item.dueDate.format('F jS, Y H:m') }}</p>
+            <p class="date">{{ item.dueDate.format('F jS, Y H:i') }}</p>
 
             {% if user.isAdmin %}
                 <div class="actions">

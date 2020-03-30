@@ -10,6 +10,12 @@
     max-width: 100%;
   }
 
+  iframe {
+    width: calc(var(--content-width) - 2rem);
+    height: 100%;
+    border: none;
+  }
+
   ul, ol {
     padding: .5rem 0 .5rem 1rem;
   }

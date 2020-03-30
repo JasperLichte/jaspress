@@ -2,8 +2,12 @@
 
 namespace application\state;
 
+use application\Environment;
+use DateTime;
+use request\Url;
 use settings\Settings;
 use settings\settings\LanguageSetting;
+use util\exceptions\InvalidArgumentsException;
 
 class Ui
 {
@@ -14,9 +18,18 @@ class Ui
     /** @var string */
     private $language = '';
 
+    /** @var Url */
+    private $customCssFileUrl = null;
+
     public function __construct()
     {
         $this->language = Settings::getInstance()->get(LanguageSetting::dbKey())->getValue();
+
+        try {
+            $appId = Environment::getInstance()->get('APP_ID');
+            $this->customCssFileUrl = Url::css('/custom/' . $appId . '.css');
+        } catch (InvalidArgumentsException $e) {
+        }
     }
 
     public function getTitle(): string
@@ -39,6 +52,16 @@ class Ui
     public function setLanguage(string $language): void
     {
         $this->language = $language;
+    }
+
+    public function getCurrentDate(): DateTime
+    {
+        return new DateTime();
+    }
+
+    public function getCustomCssFileUrl(): ?Url
+    {
+        return $this->customCssFileUrl;
     }
 
 }
