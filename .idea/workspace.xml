@@ -2,32 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="299940d3-f5fd-488b-89f0-ae98e7a94a2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/-/admin/blog/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/css/custom/buxtehude-im-wandel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/classes/render/components/pages/admin/blog/BlogPage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/templates/pages/admin/blog/blog.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sass/components/markdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/sass/components/markdown.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/application/state/Ui.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/application/state/Ui.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/content/Blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/content/Blog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/content/models/Content.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/content/models/Content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/render/controller/TwigController.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/render/controller/TwigController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/request/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/request/Request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/settings/settings/LanguageSetting.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/settings/settings/LanguageSetting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/settings/settings/ui/HeaderStickySetting.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/settings/settings/ui/HeaderStickySetting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/server/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/templates/components/calendar/calendar.twig" beforeDir="false" afterPath="$PROJECT_DIR$/server/templates/components/calendar/calendar.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/templates/components/common/footer.twig" beforeDir="false" afterPath="$PROJECT_DIR$/server/templates/components/common/footer.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/templates/document.twig" beforeDir="false" afterPath="$PROJECT_DIR$/server/templates/document.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/templates/pages/admin/dashboard.twig" beforeDir="false" afterPath="$PROJECT_DIR$/server/templates/pages/admin/dashboard.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/vendor/composer/ClassLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/server/vendor/composer/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/vendor/symfony/polyfill-ctype/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/vendor/symfony/polyfill-ctype/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/vendor/symfony/polyfill-mbstring/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/server/vendor/symfony/polyfill-mbstring/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/vendor/symfony/polyfill-mbstring/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/vendor/symfony/polyfill-mbstring/bootstrap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/vendor/symfony/polyfill-mbstring/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/vendor/symfony/polyfill-mbstring/composer.json" afterDir="false" />
     </list>
     <list id="54206370-4125-4ad1-85e5-1eba66e5ddc9" name="ignore" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
@@ -144,14 +120,7 @@
       <workItem from="1584956052050" duration="18965000" />
       <workItem from="1585043150538" duration="12522000" />
       <workItem from="1585060505903" duration="119000" />
-      <workItem from="1585553133783" duration="6987000" />
-    </task>
-    <task id="LOCAL-00062" summary="Initialize styles">
-      <created>1584271892120</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1584271892120</updated>
+      <workItem from="1585553133783" duration="7139000" />
     </task>
     <task id="LOCAL-00063" summary="Add own styles for footer bg and font colors">
       <created>1584272553633</created>
@@ -489,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585060228413</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="Bug fixes">
+      <created>1585560225794</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1585560225799</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,7 +488,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Work on styles" />
     <MESSAGE value="Add missing html title attribute on input" />
     <MESSAGE value="Adjust UI" />
     <MESSAGE value="New setting category 'Header'" />
@@ -537,9 +512,14 @@
     <MESSAGE value="Tweak UI/UX" />
     <MESSAGE value="Add markdown guide" />
     <MESSAGE value="Fix styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix styles" />
+    <MESSAGE value="Bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2140" y="470" width="860" height="610" key="CommitChangelistDialog2" timestamp="1585560225522">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2140" y="470" width="860" height="610" key="CommitChangelistDialog2/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585560225522" />
     <state width="1034" height="690" key="GridCell.Tab.0.bottom" timestamp="1585556995304">
       <screen x="0" y="397" width="1920" height="683" />
     </state>
@@ -588,6 +568,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="1920" y="774" width="324" height="257" key="VCS.EditChangelistDialog/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585554867833" />
+    <state x="2200" y="552" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1585560229097">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2200" y="552" width="800" height="528" key="Vcs.Push.Dialog.v2/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585560229097" />
     <state x="340" y="397" width="1580" height="683" key="find.popup" timestamp="1585556138276">
       <screen x="0" y="397" width="1920" height="683" />
     </state>
