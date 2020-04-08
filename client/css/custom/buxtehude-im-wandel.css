@@ -1,21 +1,12 @@
 #html-content h1,
-#html-content h3,
-#html-content h5 {
-    color: var(--accent-color);
-}
-
 #html-content h2,
+#html-content h3,
 #html-content h4,
+#html-content h5,
 #html-content h6 {
     color: var(--header-font-color);
 }
 
 #html-content strong {
     color: var(--accent-color);
-}
-
-#html-content iframe {
-    width: calc(var(--content-width) - 2rem);
-    height: 100%;
-    border: none;
 }
