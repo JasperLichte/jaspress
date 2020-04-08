@@ -17,7 +17,7 @@ class ResetSettingAction extends AdminAction
             return $this->req->reloadWith($this->res->setErrorMessage('Paramater "key" cannot be empty'));
         }
 
-        $setting = Settings::getInstance()->get($key);
+        $setting = Settings::getInstance($this->db)->get($key);
         if ($setting === null) {
             return $this->req->reloadWith($this->res->setErrorMessage('Invalid key'));
         }

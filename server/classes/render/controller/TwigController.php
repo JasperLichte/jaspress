@@ -42,7 +42,7 @@ class TwigController implements RenderController
                 $arguments = array_merge($arguments, [
                     'state'       => $state,
                     'user'        => $state->getUser(),
-                    'settings'    => Settings::getInstance(),
+                    'settings'    => Settings::getInstance($app->getClientDb()),
                     'error'       => $app->getError(),
                     'url'         => new Url(),
                     'customizer'  => new ClientCustomizer(\application\Environment::getInstance(), $this),

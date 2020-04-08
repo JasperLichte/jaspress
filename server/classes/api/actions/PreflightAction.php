@@ -18,7 +18,7 @@ class PreflightAction extends Action
     public function run(): ApiResponse
     {
         $user = $this->req->getUser();
-        $settings = Settings::getInstance();
+        $settings = Settings::getInstance($this->db);
 
         return $this->res->withData([
             'user' => $user,

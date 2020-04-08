@@ -126,12 +126,7 @@ class ApiResponse
             $retVals['data'] = $this->data;
         }
 
-        $env = Environment::getInstance();
-        try {
-            header('Access-Control-Allow-Origin: ' . $env->get('CLIENT_ROOT_URL'));
-        } catch(InvalidArgumentsException $e) {}
-
-        header('Access-Control-Allow-Credentials: true');
+        header('Access-Control-Allow-Origin: *');
         header('Access-Control-Allow-Headers: content-type');
         header('Content-Type: ' . $this->format);
         http_response_code($this->statusCode);

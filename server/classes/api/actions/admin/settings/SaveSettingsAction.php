@@ -17,7 +17,7 @@ class SaveSettingsAction extends AdminAction
     {
         parent::__construct();
 
-        $this->settings = Settings::getInstance();
+        $this->settings = Settings::getInstance($this->db);
     }
 
     public function run(): ApiResponse

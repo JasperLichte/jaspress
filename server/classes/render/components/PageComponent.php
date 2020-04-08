@@ -60,7 +60,7 @@ abstract class PageComponent extends AbstractPageComponent
 
     protected function buildTitle(string $title = ''): string
     {
-        $appName = Settings::getInstance()->get(AppNameSetting::dbKey())->getValue();
+        $appName = Settings::getInstance($this->db)->get(AppNameSetting::dbKey())->getValue();
         return (empty($title) ? $appName : $title . ' | ' . $appName);
     }
 

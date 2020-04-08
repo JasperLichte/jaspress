@@ -24,6 +24,6 @@ class HeaderFontColorSetting extends ColorSetting
 
     public function getDefaultValue(): string
     {
-        return Settings::getInstance()->get(FontColorSetting::dbKey());
+        return Settings::getInstance($this->db)->get(FontColorSetting::dbKey());
     }
 }

@@ -41,18 +41,18 @@ class Settings
     /** @var Connection */
     private $db;
 
-    public static function getInstance(): Settings
+    public static function getInstance(Connection $db): Settings
     {
         if (self::$instance === null) {
-            self::$instance = new Settings();
+            self::$instance = new Settings($db);
         }
 
         return self::$instance;
     }
 
-    public function __construct()
+    public function __construct(Connection $db)
     {
-        $this->db = Connection::getInstance();
+        $this->db = $db;
         $this->initSettings();
         $this->loadValues();
     }

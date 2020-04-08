@@ -24,6 +24,6 @@ class FooterFontColorSetting extends ColorSetting
 
     public function getDefaultValue(): string
     {
-        return Settings::getInstance()->get(HeaderFontColorSetting::dbKey());
+        return Settings::getInstance($this->db)->get(HeaderFontColorSetting::dbKey());
     }
 }

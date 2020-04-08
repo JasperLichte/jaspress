@@ -9,23 +9,26 @@ use util\exceptions\InvalidArgumentsException;
 class Connection
 {
 
-    // @var PDO
     private $pdo;
 
     // @var Connection
-    private static $instance = null;
+    private static $rootInstance = null;
+
+    // @var Connection
+    private static $clientInstance = null;
 
     /**
      * @param string $dbName
      * @throws InvalidArgumentsException
      */
-    private function __construct(string $dbName = '')
+    private function __construct(string $dbName)
     {
         $env = Environment::getInstance();
 
         if (empty($dbName)) {
             $dbName = $env->get('DB_NAME');
         }
+
         $this->pdo = new PDO(
             'mysql:host=' . $env->get('DB_HOST') . ';dbname=' . $dbName,
             $env->get('DB_USER'),
@@ -40,11 +43,19 @@ class Connection
 
     public static function getInstance(string $dbName = '')
     {
-        if (self::$instance == null) {
-            self::$instance = new Connection($dbName);
-        }
+        if (empty($dbName)) {
+            if (self::$rootInstance == null) {
+                self::$rootInstance = new Connection('');
+            }
 
-        return self::$instance;
+            return self::$rootInstance;
+        } else {
+            if (self::$clientInstance == null) {
+                self::$clientInstance = new Connection($dbName);
+            }
+
+            return self::$clientInstance;
+        }
     }
 
     public function __invoke()

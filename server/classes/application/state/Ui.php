@@ -3,6 +3,7 @@
 namespace application\state;
 
 use application\Environment;
+use database\Connection;
 use DateTime;
 use request\Url;
 use settings\Settings;
@@ -18,9 +19,9 @@ class Ui
     /** @var string */
     private $language = '';
 
-    public function __construct()
+    public function __construct(Connection $db)
     {
-        $this->language = Settings::getInstance()->get(LanguageSetting::dbKey())->getValue();
+        $this->language = Settings::getInstance($db)->get(LanguageSetting::dbKey())->getValue();
     }
 
     public function getTitle(): string

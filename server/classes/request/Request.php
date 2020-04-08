@@ -186,14 +186,11 @@ class Request
 
     public function getLicense(Connection $db): ?License
     {
-        if ($this->issetHeader('Authorization')) {
-            return null;
+        $url = parse_url($_SERVER['HTTP_HOST']);
+        if (!empty($url) && isset($url['host']) && !empty($url['host'])) {
+            return new License($db, $url['host']);
         }
-        $matches = [];
-        preg_match('/Token token="(.*)"/', $this->getHeader('Authorization'), $matches);
-        if(isset($matches[1]) && !empty($matches[1])) {
-            return new License($db, $matches[1]);
-        }
+
         return null;
     }
 

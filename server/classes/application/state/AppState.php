@@ -26,7 +26,7 @@ class AppState
     public function __construct(Connection $db)
     {
         $this->menu = new Menu();
-        $this->ui = new Ui();
+        $this->ui = new Ui($db);
         $this->user = User::loadFromSession($db);
     }
 

@@ -24,6 +24,6 @@ class FooterBackgroundColorSetting extends ColorSetting
 
     public function getDefaultValue(): string
     {
-        return Settings::getInstance()->get(HeaderBackgroundColorSetting::dbKey());
+        return Settings::getInstance($this->db)->get(HeaderBackgroundColorSetting::dbKey());
     }
 }
