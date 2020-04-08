@@ -4,6 +4,7 @@ namespace database;
 
 use application\Environment;
 use PDO;
+use util\exceptions\InvalidArgumentsException;
 
 class Connection
 {
@@ -14,6 +15,10 @@ class Connection
     // @var Connection
     private static $instance = null;
 
+    /**
+     * @param string $dbName
+     * @throws InvalidArgumentsException
+     */
     private function __construct(string $dbName = '')
     {
         $env = Environment::getInstance();
