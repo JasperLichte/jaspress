@@ -92,4 +92,11 @@ class Url
         return $url;
     }
 
+    public static function js(string $path): Url
+    {
+        $url = new Url($path);
+        $url->prepend(Config::ROOT_URL() . '/client/js');
+        return $url;
+    }
+
 }

@@ -5,6 +5,7 @@ namespace render\controller;
 require_once __DIR__ . '/../../../vendor/autoload.php';
 
 use application\App;
+use config\ClientCustomizer;
 use request\Url;
 use settings\Settings;
 use Twig\Environment;
@@ -13,9 +14,7 @@ use Twig\Loader\FilesystemLoader;
 class TwigController implements RenderController
 {
 
-    /**
-     * @var Environment
-     */
+    /** @var Environment */
     private $twig;
 
     public function __construct()
@@ -29,6 +28,7 @@ class TwigController implements RenderController
         $loader->addPath($basePath . '/server/templates/components/common', 'common');
         $loader->addPath($basePath . '/server/templates/components/errors/', 'errors');
         $loader->addPath($basePath . '/server/templates/api/', 'api');
+        $loader->addPath($basePath . '/server/templates/custom/', 'custom');
 
         $this->twig = new Environment($loader);
     }
@@ -45,10 +45,14 @@ class TwigController implements RenderController
                     'settings'    => Settings::getInstance(),
                     'error'       => $app->getError(),
                     'url'         => new Url(),
+                    'customizer'  => new ClientCustomizer(\application\Environment::getInstance(), $this),
                 ]);
             }
             return $this->twig->render($template . '.twig', $arguments);
         } catch (\Exception $e) {}
+        if (strpos($template, '@custom/') !== false) {
+            return '';
+        }
         return $this->render('@pages/404');
     }
 
