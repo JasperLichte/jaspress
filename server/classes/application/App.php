@@ -6,12 +6,17 @@ use application\state\AppState;
 use database\Connection;
 use render\controller\RenderController;
 use render\controller\TwigController;
+use request\License;
 use request\Request;
 
 class App
 {
+
     /** @var App */
     private static $instance;
+
+    /** @var bool */
+    private $succesfulInit = true;
 
     /** @var Request */
     private $request;
@@ -26,17 +31,29 @@ class App
     private $state;
 
     /** @var Connection */
-    private $db;
+    private $rootDb;
+
+    /** @var Connection */
+    private $clientDb;
 
     private function __construct()
     {
-        $this->db = Connection::getInstance();
-        $this->state = new AppState($this->db);
         $this->request = new Request();
+        $this->rootDb = Connection::getInstance();
         $this->env = Environment::getInstance();
         $this->renderController = new TwigController();
 
-        $this->request->save($this->db);
+        $license = $this->request->getLicense($this->rootDb);
+        if (License::_isValid($license)) {
+            $this->clientDb = $license->getDb();
+
+            $this->state = new AppState($this->clientDb);
+            $this->state->setLicense($license);
+
+            $this->request->save($this->clientDb);
+        } else {
+            $this->succesfulInit = false;
+        }
     }
 
     public static function getInstance()
@@ -67,9 +84,14 @@ class App
         return $this->renderController;
     }
 
-    public function getDb(): Connection
+    public function getRootDb(): Connection
     {
-        return $this->db;
+        return $this->rootDb;
+    }
+
+    public function getClientDb(): Connection
+    {
+        return $this->clientDb;
     }
 
     public function getError(): ?string
@@ -80,6 +102,11 @@ class App
     public function dispose()
     {
         unset($_SESSION['error']);
+    }
+
+    public function isSuccesfulInit(): bool
+    {
+        return $this->succesfulInit;
     }
 
 }

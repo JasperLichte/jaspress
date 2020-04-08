@@ -15,26 +15,14 @@ use util\exceptions\LogicException;
 abstract class PageComponent extends AbstractPageComponent
 {
 
-    /** @var Request */
-    protected $req;
-
     /** @var RenderController */
     protected $renderController;
 
-     /** @var Connection */
-    protected $db;
-
-    /** @var App */
-    private $app;
 
     public function __construct()
     {
-        $this->app = App::getInstance();
-
-        $this->req = $this->app->getRequest();
+        parent::__construct();
         $this->renderController = $this->app->getRenderController();
-
-        $this->db = $this->app->getDb();
     }
 
     protected function render(): string
@@ -74,11 +62,6 @@ abstract class PageComponent extends AbstractPageComponent
     {
         $appName = Settings::getInstance()->get(AppNameSetting::dbKey())->getValue();
         return (empty($title) ? $appName : $title . ' | ' . $appName);
-    }
-
-    private function checkPermission(Permission $permission): bool
-    {
-        return $permission->check($this->req->getUser());
     }
 
 }

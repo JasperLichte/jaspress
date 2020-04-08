@@ -5,6 +5,7 @@
         "erusev/parsedown": "dev-master",
       "ext-pdo": "*",
       "ext-iconv": "*",
-      "ext-json": "*"
+      "ext-json": "*",
+      "ext-apache": "*"
     }
 }

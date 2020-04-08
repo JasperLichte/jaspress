@@ -6,6 +6,7 @@ namespace application\state;
 use application\menu\Menu;
 use auth\models\User;
 use database\Connection;
+use request\License;
 
 class AppState
 {
@@ -18,6 +19,9 @@ class AppState
 
     /** @var User */
     private $user = null;
+
+    /** @var License  */
+    private $license = null;
 
     public function __construct(Connection $db)
     {
@@ -46,6 +50,17 @@ class AppState
         $this->ui = $ui;
 
         return $this;
+    }
+
+    public function setLicense(License $license)
+    {
+        $this->license = $license;
+        return $this;
+    }
+
+    public function getLicense(): License
+    {
+        return $this->license;
     }
 
 }

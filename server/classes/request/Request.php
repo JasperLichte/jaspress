@@ -19,11 +19,15 @@ class Request
     /** @var array */
     private $files;
 
+    /** @var array */
+    private $headers;
+
     public function __construct()
     {
         $this->get = $_GET;
         $this->post = $_POST;
         $this->files = $_FILES;
+        $this->headers = apache_request_headers();
     }
 
     public function getAllPost(): array
@@ -62,6 +66,11 @@ class Request
         return isset($this->files[$key]);
     }
 
+    public function issetHeader(string $key): bool
+    {
+        return isset($this->headers[$key]);
+    }
+
     public function getPost(string $key): string
     {
         return $this->post[$key];
@@ -75,6 +84,11 @@ class Request
     public function getFile(string $key): File
     {
         return (new File())->deserialize($this->files[$key]);
+    }
+
+    public function getHeader(string $key): string
+    {
+        return $this->headers[$key];
     }
 
     public function getUser(): ?User
@@ -168,6 +182,19 @@ class Request
         $this->redirectTo($url);
 
         return $res;
+    }
+
+    public function getLicense(Connection $db): ?License
+    {
+        if ($this->issetHeader('Authorization')) {
+            return null;
+        }
+        $matches = [];
+        preg_match('/Token token="(.*)"/', $this->getHeader('Authorization'), $matches);
+        if(isset($matches[1]) && !empty($matches[1])) {
+            return new License($db, $matches[1]);
+        }
+        return null;
     }
 
 }

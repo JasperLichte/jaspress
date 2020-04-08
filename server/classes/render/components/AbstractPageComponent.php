@@ -3,10 +3,11 @@
 namespace render\components;
 
 
+use application\AppContainer;
 use permissions\Permission;
 use request\Url;
 
-abstract class AbstractPageComponent
+abstract class AbstractPageComponent extends AppContainer
 {
 
     /** @var bool */

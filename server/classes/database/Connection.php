@@ -14,11 +14,15 @@ class Connection
     // @var Connection
     private static $instance = null;
 
-    private function __construct()
+    private function __construct(string $dbName = '')
     {
         $env = Environment::getInstance();
+
+        if (empty($dbName)) {
+            $dbName = $env->get('DB_NAME');
+        }
         $this->pdo = new PDO(
-            'mysql:host=' . $env->get('DB_HOST') . ';dbname=' . $env->get('DB_NAME'),
+            'mysql:host=' . $env->get('DB_HOST') . ';dbname=' . $dbName,
             $env->get('DB_USER'),
             $env->get('DB_PASSWORD')
         );
@@ -29,10 +33,10 @@ class Connection
         return $this->pdo;
     }
 
-    public static function getInstance()
+    public static function getInstance(string $dbName = '')
     {
         if (self::$instance == null) {
-            self::$instance = new Connection();
+            self::$instance = new Connection($dbName);
         }
 
         return self::$instance;

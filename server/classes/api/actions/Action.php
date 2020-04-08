@@ -3,29 +3,19 @@
 namespace api\actions;
 
 use api\ApiResponse;
-use application\App;
-use database\Connection;
+use application\AppContainer;
 use permissions\Permission;
-use request\Request;
 use request\Url;
 
-abstract class Action
+abstract class Action extends AppContainer
 {
-
-    /** @var Request */
-    protected $req;
 
     /** @var ApiResponse */
     protected $res;
 
-    /** @var Connection */
-    protected $db;
-
     public function __construct()
     {
-        $app = App::getInstance();
-        $this->req = $app->getRequest();
-        $this->db = $app->getDb();
+        parent::__construct();
         $this->res = new ApiResponse();
     }
 
@@ -42,10 +32,5 @@ abstract class Action
     abstract public function run(): ApiResponse;
 
     abstract public function permission(): Permission;
-
-    private function checkPermission(Permission $permission): bool
-    {
-        return $permission->check($this->req->getUser());
-    }
 
 }
