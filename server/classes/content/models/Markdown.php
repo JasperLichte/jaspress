@@ -4,8 +4,9 @@ namespace content\models;
 
 
 use Parsedown;
+use util\interfaces\Jsonable;
 
-class Markdown
+class Markdown extends Jsonable
 {
 
     /** @var string */
@@ -56,6 +57,13 @@ class Markdown
     public function getDescription(): string
     {
         return $this->description;
+    }
+
+    public function jsonSerialize()
+    {
+        $vars = get_object_vars($this);
+
+        return $vars;
     }
 
 }

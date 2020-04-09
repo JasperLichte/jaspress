@@ -4,9 +4,10 @@ namespace content\models;
 
 
 use DateTime;
+use util\interfaces\Jsonable;
 use util\interfaces\Serializable;
 
-class Content implements Serializable
+class Content extends Jsonable implements Serializable
 {
 
     /** @var string */

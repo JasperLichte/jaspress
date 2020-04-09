@@ -129,7 +129,17 @@ class Settings
     {
         $out = [];
         foreach ($this->settings as $setting) {
-            $out[$setting::dbKey()] = $setting;
+            $val = [
+                'key' => $setting::dbKey(),
+                'value' => $setting->getValue(),
+                'defaultValue' => $setting->getDefaultValue(),
+            ];
+
+            if ($setting instanceof UiSetting) {
+                $val['cssProperty'] = $setting->cssProperty();
+            }
+
+            $out[] = $val;
         }
         return $out;
     }
