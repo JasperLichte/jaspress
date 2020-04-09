@@ -21,9 +21,13 @@ abstract class BaseSetting extends Jsonable
     /** @var SavingStrategy */
     protected static $savingStrategy = null;
 
-    public function __construct()
+    /** @var Connection */
+    protected $db;
+
+    public function __construct(Connection $db)
     {
         self::$savingStrategy = new DefaultStrategy();
+        $this->db = $db;
     }
 
     public function setValue(string $value): void

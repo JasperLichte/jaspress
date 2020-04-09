@@ -186,9 +186,12 @@ class Request
 
     public function getLicense(Connection $db): ?License
     {
-        $url = parse_url($_SERVER['HTTP_HOST']);
-        if (!empty($url) && isset($url['host']) && !empty($url['host'])) {
-            return new License($db, $url['host']);
+        if ($this->issetGet('license')) {
+            return new License($db, $this->getGet('license'));
+        }
+
+        if ($this->issetPost('license')) {
+            return new License($db, $this->getPost('license'));
         }
 
         return null;

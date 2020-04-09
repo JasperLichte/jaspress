@@ -2,6 +2,7 @@
 
 namespace settings\settings\ui\colors;
 
+use database\Connection;
 use settings\categories\ColorSettingCategory;
 use settings\categories\SettingsCategory;
 use settings\settings\ui\UiSetting;
@@ -14,9 +15,9 @@ abstract class ColorSetting extends UiSetting
     /** @var SettingsCategory */
     private $category;
 
-    public function __construct()
+    public function __construct(Connection $db)
     {
-        parent::__construct();
+        parent::__construct($db);
 
         $this->category = new ColorSettingCategory();
     }

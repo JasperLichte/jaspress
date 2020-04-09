@@ -2,26 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="299940d3-f5fd-488b-89f0-ae98e7a94a2f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/api/error/invalid_license.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/classes/api/actions/error/ErrorAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/classes/util/exceptions/InvalidLicenseException.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/base.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/base.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/api/ApiResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/api/ApiResponse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/api/actions/PreflightAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/api/actions/PreflightAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/api/actions/admin/settings/ResetSettingAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/api/actions/admin/settings/ResetSettingAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/api/actions/admin/settings/SaveSettingsAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/api/actions/admin/settings/SaveSettingsAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/application/state/AppState.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/application/state/AppState.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/application/state/Ui.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/application/state/Ui.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/database/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/database/Connection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/render/components/PageComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/render/components/PageComponent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/render/controller/TwigController.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/render/controller/TwigController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/classes/request/License.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/request/License.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/classes/request/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/request/Request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/classes/settings/BaseSetting.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/settings/BaseSetting.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/classes/settings/Settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/settings/Settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/settings/settings/ui/colors/FooterBackgroundColorSetting.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/settings/settings/ui/colors/FooterBackgroundColorSetting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/settings/settings/ui/colors/FooterFontColorSetting.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/settings/settings/ui/colors/FooterFontColorSetting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/settings/settings/ui/colors/HeaderFontColorSetting.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/settings/settings/ui/colors/HeaderFontColorSetting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/classes/settings/settings/ui/colors/ColorSetting.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/settings/settings/ui/colors/ColorSetting.php" afterDir="false" />
     </list>
     <list id="54206370-4125-4ad1-85e5-1eba66e5ddc9" name="ignore" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,41 +51,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/.idea/workspace.xml">
-      <ranges>
-        <range start1="4" end1="6" start2="4" end2="20" changelist="299940d3-f5fd-488b-89f0-ae98e7a94a2f" />
-        <range start1="9" end1="9" start2="23" end2="24" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="39" end1="39" start2="54" end2="55" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="44" end1="44" start2="60" end2="61" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="65" end1="71" start2="82" end2="82" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="82" end1="83" start2="93" end2="94" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="122" end1="158" start2="133" end2="136" changelist="299940d3-f5fd-488b-89f0-ae98e7a94a2f" />
-        <range start1="467" end1="468" start2="445" end2="481" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="490" end1="495" start2="503" end2="503" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="515" end1="516" start2="523" end2="529" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="518" end1="520" start2="531" end2="541" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="521" end1="524" start2="542" end2="545" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="525" end1="527" start2="546" end2="553" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="529" end1="531" start2="555" end2="557" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="533" end1="535" start2="559" end2="561" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="537" end1="539" start2="563" end2="565" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="541" end1="543" start2="567" end2="569" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="545" end1="547" start2="571" end2="573" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="549" end1="551" start2="575" end2="577" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="553" end1="555" start2="579" end2="581" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="556" end1="556" start2="582" end2="586" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="558" end1="558" start2="588" end2="589" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="562" end1="564" start2="593" end2="595" changelist="299940d3-f5fd-488b-89f0-ae98e7a94a2f" />
-        <range start1="566" end1="566" start2="597" end2="598" changelist="299940d3-f5fd-488b-89f0-ae98e7a94a2f" />
-        <range start1="570" end1="572" start2="602" end2="609" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="573" end1="576" start2="610" end2="613" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-        <range start1="578" end1="580" start2="615" end2="618" changelist="299940d3-f5fd-488b-89f0-ae98e7a94a2f" />
-        <range start1="582" end1="584" start2="620" end2="623" changelist="299940d3-f5fd-488b-89f0-ae98e7a94a2f" />
-        <range start1="586" end1="586" start2="625" end2="626" changelist="54206370-4125-4ad1-85e5-1eba66e5ddc9" />
-      </ranges>
-    </file>
   </component>
   <component name="PhpServers">
     <servers>
@@ -168,14 +125,8 @@
       <workItem from="1585060505903" duration="119000" />
       <workItem from="1585553133783" duration="7790000" />
       <workItem from="1586330538809" duration="5724000" />
-      <workItem from="1586345853224" duration="12568000" />
-    </task>
-    <task id="LOCAL-00068" summary="Make header and footer font color depend from body font color">
-      <created>1584274972204</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1584274972204</updated>
+      <workItem from="1586345853224" duration="13228000" />
+      <workItem from="1586413539972" duration="1343000" />
     </task>
     <task id="LOCAL-00069" summary="Round borders in settings categories">
       <created>1584275044587</created>
@@ -478,7 +429,49 @@
       <option name="project" value="LOCAL" />
       <updated>1585560225799</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="extend readme">
+      <created>1585560363619</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1585560363619</updated>
+    </task>
+    <task id="LOCAL-00113" summary="Add customizer">
+      <created>1586334344231</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1586334344231</updated>
+    </task>
+    <task id="LOCAL-00114" summary="Adjust custom styles">
+      <created>1586334508044</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1586334508044</updated>
+    </task>
+    <task id="LOCAL-00115" summary="Add concept of licenses">
+      <created>1586353137748</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1586353137749</updated>
+    </task>
+    <task id="LOCAL-00116" summary="Refactor">
+      <created>1586353844158</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1586353844158</updated>
+    </task>
+    <task id="LOCAL-00117" summary="Fix db connection instances">
+      <created>1586359713796</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1586359713796</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,12 +494,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add missing html title attribute on input" />
-    <MESSAGE value="Adjust UI" />
-    <MESSAGE value="New setting category 'Header'" />
-    <MESSAGE value="Adjust user interface, new setting for scaling" />
-    <MESSAGE value="Add statistics page" />
-    <MESSAGE value="Adjust styles" />
     <MESSAGE value="Delete pages only temporarily" />
     <MESSAGE value="Delete pages only temporarily #2" />
     <MESSAGE value="Fix issue with deleted pages" />
@@ -526,79 +513,114 @@
     <MESSAGE value="Add markdown guide" />
     <MESSAGE value="Fix styles" />
     <MESSAGE value="Bug fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes" />
+    <MESSAGE value="extend readme" />
+    <MESSAGE value="Add customizer" />
+    <MESSAGE value="Adjust custom styles" />
+    <MESSAGE value="Add concept of licenses" />
+    <MESSAGE value="Refactor" />
+    <MESSAGE value="Fix db connection instances" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix db connection instances" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2140" y="470" width="860" height="610" key="CommitChangelistDialog2" timestamp="1585560225522">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="1687" y="397" width="696" height="1012" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586358815977">
+      <screen x="1080" y="370" width="1920" height="1080" />
     </state>
-    <state x="2140" y="470" width="860" height="610" key="CommitChangelistDialog2/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585560225522" />
-    <state width="1034" height="690" key="GridCell.Tab.0.bottom" timestamp="1585556995304">
+    <state x="1687" y="397" width="696" height="1012" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586358815977" />
+    <state x="1773" y="660" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586351936187">
+      <screen x="1080" y="370" width="1920" height="1080" />
+    </state>
+    <state x="1773" y="660" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586351936187" />
+    <state x="1823" y="830" width="424" height="144" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1586331017584">
+      <screen x="1080" y="370" width="1920" height="1080" />
+    </state>
+    <state x="1823" y="830" width="424" height="144" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586331017584" />
+    <state x="1300" y="798" width="943" height="611" key="CommitChangelistDialog2" timestamp="1586414918760">
+      <screen x="1080" y="370" width="1920" height="1080" />
+    </state>
+    <state x="2140" y="470" width="860" height="610" key="CommitChangelistDialog2/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585560363548" />
+    <state x="1300" y="798" width="943" height="611" key="CommitChangelistDialog2/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586414918760" />
+    <state x="1180" y="495" width="1720" height="814" key="DiffContextDialog" timestamp="1586413620176">
+      <screen x="1080" y="370" width="1920" height="1080" />
+    </state>
+    <state x="1180" y="495" width="1720" height="814" key="DiffContextDialog/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586413620176" />
+    <state x="1823" y="660" width="424" height="484" key="FileChooserDialogImpl" timestamp="1586354121388">
+      <screen x="1080" y="370" width="1920" height="1080" />
+    </state>
+    <state x="1823" y="660" width="424" height="484" key="FileChooserDialogImpl/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586354121388" />
+    <state width="1034" height="690" key="GridCell.Tab.0.bottom" timestamp="1585572976085">
       <screen x="0" y="397" width="1920" height="683" />
     </state>
-    <state width="1034" height="690" key="GridCell.Tab.0.bottom/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585556995304" />
-    <state width="1034" height="690" key="GridCell.Tab.0.center" timestamp="1585556995304">
+    <state width="1034" height="690" key="GridCell.Tab.0.bottom/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585572976085" />
+    <state width="1034" height="690" key="GridCell.Tab.0.center" timestamp="1585572976085">
       <screen x="0" y="397" width="1920" height="683" />
     </state>
-    <state width="1034" height="690" key="GridCell.Tab.0.center/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585556995304" />
-    <state width="1034" height="690" key="GridCell.Tab.0.left" timestamp="1585556995304">
+    <state width="1034" height="690" key="GridCell.Tab.0.center/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585572976085" />
+    <state width="1034" height="690" key="GridCell.Tab.0.left" timestamp="1585572976084">
       <screen x="0" y="397" width="1920" height="683" />
     </state>
-    <state width="1034" height="690" key="GridCell.Tab.0.left/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585556995304" />
-    <state width="1034" height="690" key="GridCell.Tab.0.right" timestamp="1585556995304">
+    <state width="1034" height="690" key="GridCell.Tab.0.left/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585572976084" />
+    <state width="1034" height="690" key="GridCell.Tab.0.right" timestamp="1585572976085">
       <screen x="0" y="397" width="1920" height="683" />
     </state>
-    <state width="1034" height="690" key="GridCell.Tab.0.right/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585556995304" />
-    <state width="1034" height="690" key="GridCell.Tab.1.bottom" timestamp="1585556995305">
+    <state width="1034" height="690" key="GridCell.Tab.0.right/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585572976085" />
+    <state width="1034" height="690" key="GridCell.Tab.1.bottom" timestamp="1585572976085">
       <screen x="0" y="397" width="1920" height="683" />
     </state>
-    <state width="1034" height="690" key="GridCell.Tab.1.bottom/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585556995305" />
-    <state width="1034" height="690" key="GridCell.Tab.1.center" timestamp="1585556995304">
+    <state width="1034" height="690" key="GridCell.Tab.1.bottom/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585572976085" />
+    <state width="1034" height="690" key="GridCell.Tab.1.center" timestamp="1585572976085">
       <screen x="0" y="397" width="1920" height="683" />
     </state>
-    <state width="1034" height="690" key="GridCell.Tab.1.center/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585556995304" />
-    <state width="1034" height="690" key="GridCell.Tab.1.left" timestamp="1585556995304">
+    <state width="1034" height="690" key="GridCell.Tab.1.center/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585572976085" />
+    <state width="1034" height="690" key="GridCell.Tab.1.left" timestamp="1585572976085">
       <screen x="0" y="397" width="1920" height="683" />
     </state>
-    <state width="1034" height="690" key="GridCell.Tab.1.left/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585556995304" />
-    <state width="1034" height="690" key="GridCell.Tab.1.right" timestamp="1585556995304">
+    <state width="1034" height="690" key="GridCell.Tab.1.left/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585572976085" />
+    <state width="1034" height="690" key="GridCell.Tab.1.right" timestamp="1585572976085">
       <screen x="0" y="397" width="1920" height="683" />
     </state>
-    <state width="1034" height="690" key="GridCell.Tab.1.right/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585556995304" />
-    <state x="999" y="707" width="921" height="373" key="NewPhpClassDialog" timestamp="1585556422892">
-      <screen x="0" y="397" width="1920" height="683" />
+    <state width="1034" height="690" key="GridCell.Tab.1.right/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585572976085" />
+    <state x="1929" y="819" width="785" height="373" key="NewPhpClassDialog" timestamp="1586414361201">
+      <screen x="1080" y="370" width="1920" height="1080" />
     </state>
     <state x="999" y="707" width="921" height="373" key="NewPhpClassDialog/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585556422892" />
-    <state x="335" y="884" width="399" height="149" key="NewPhpFileDialog" timestamp="1585556723086">
-      <screen x="0" y="397" width="1920" height="683" />
+    <state x="1929" y="819" width="785" height="373" key="NewPhpClassDialog/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586414361201" />
+    <state x="1415" y="1140" width="399" height="149" key="NewPhpFileDialog" timestamp="1586414128606">
+      <screen x="1080" y="370" width="1920" height="1080" />
     </state>
     <state x="335" y="884" width="399" height="149" key="NewPhpFileDialog/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585556723086" />
-    <state width="498" height="706" key="SwitcherDM" timestamp="1586359642631">
+    <state x="1415" y="1140" key="NewPhpFileDialog/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586414128606" />
+    <state width="498" height="706" key="SwitcherDM" timestamp="1586414662139">
       <screen x="1080" y="370" width="1920" height="1080" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585556761421" />
-    <state width="498" height="706" key="SwitcherDM/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586359642631" />
+    <state width="498" height="706" key="SwitcherDM/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586414662139" />
     <state x="1920" y="774" width="324" height="257" key="VCS.EditChangelistDialog" timestamp="1585554867833">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="1920" y="774" width="324" height="257" key="VCS.EditChangelistDialog/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585554867833" />
-    <state x="2200" y="552" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1585560229097">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="1360" y="881" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1586359715240">
+      <screen x="1080" y="370" width="1920" height="1080" />
     </state>
-    <state x="2200" y="552" width="800" height="528" key="Vcs.Push.Dialog.v2/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585560229097" />
-    <state x="340" y="397" width="1580" height="683" key="find.popup" timestamp="1585556138276">
-      <screen x="0" y="397" width="1920" height="683" />
+    <state x="2200" y="552" width="800" height="528" key="Vcs.Push.Dialog.v2/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585560365031" />
+    <state x="1360" y="881" width="800" height="528" key="Vcs.Push.Dialog.v2/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586359715240" />
+    <state x="1808" y="822" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586413548129">
+      <screen x="1080" y="370" width="1920" height="1080" />
+    </state>
+    <state x="1808" y="822" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586413548129" />
+    <state x="1420" y="397" width="1580" height="1012" key="find.popup" timestamp="1586359578374">
+      <screen x="1080" y="370" width="1920" height="1080" />
     </state>
     <state x="340" y="397" width="1580" height="683" key="find.popup/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585556138276" />
     <state x="1420" y="397" width="1580" height="1012" key="find.popup/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586359578374" />
-    <state width="300" height="57" key="javadoc.popup.new" timestamp="1586359649847">
+    <state width="300" height="57" key="javadoc.popup.new" timestamp="1586414883031">
       <screen x="1080" y="370" width="1920" height="1080" />
     </state>
     <state width="300" height="36" key="javadoc.popup.new/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585559623788" />
-    <state width="300" height="57" key="javadoc.popup.new/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586359649847" />
-    <state x="1283" y="376" width="672" height="1073" key="search.everywhere.popup" timestamp="1586359136286">
+    <state width="300" height="57" key="javadoc.popup.new/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586414883031" />
+    <state x="1283" y="376" width="672" height="1073" key="search.everywhere.popup" timestamp="1586414045299">
       <screen x="1080" y="370" width="1920" height="1080" />
     </state>
     <state x="203" y="401" width="672" height="678" key="search.everywhere.popup/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585559306773" />
+    <state x="1283" y="376" width="672" height="1073" key="search.everywhere.popup/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586414045299" />
   </component>
 </project>

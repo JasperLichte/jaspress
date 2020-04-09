@@ -3,6 +3,7 @@
 namespace request;
 
 use database\Connection;
+use permissions\Permission;
 
 class License
 {
@@ -20,7 +21,7 @@ class License
     private $isValid = false;
 
     /** @var string */
-    private $dbName;
+    private $dbName = '';
 
     public function __construct(Connection $rootDb, string $token)
     {
