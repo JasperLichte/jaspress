@@ -1,4 +1,12 @@
-# PHP CMS
+# jaspress
+
+## API
+## authentication
+| description | path | paramaters |
+| --- | --- | --- |
+| create a new user | `/api/auth/register.php` | <ul><li>`email`</li><li>`password`</li></ul> |
+| login a user | `/api/auth/login.php` | <ul><li>`email`</li><li>`password`</li></ul> |
+| logout | `/api/auth/logout.php` |  |
 
 ## .env
 The .env file in the root directory may hold following key-value pairs:
