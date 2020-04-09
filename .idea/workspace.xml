@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="299940d3-f5fd-488b-89f0-ae98e7a94a2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/error/invalid_license.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/classes/api/actions/error/ErrorAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/classes/util/exceptions/InvalidLicenseException.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/request/License.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/request/License.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/request/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/request/Request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/settings/BaseSetting.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/settings/BaseSetting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/settings/Settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/settings/Settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/classes/settings/settings/ui/colors/ColorSetting.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/settings/settings/ui/colors/ColorSetting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/classes/api/ApiResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/api/ApiResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/classes/application/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/classes/application/App.php" afterDir="false" />
     </list>
     <list id="54206370-4125-4ad1-85e5-1eba66e5ddc9" name="ignore" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
@@ -126,28 +120,7 @@
       <workItem from="1585553133783" duration="7790000" />
       <workItem from="1586330538809" duration="5724000" />
       <workItem from="1586345853224" duration="13228000" />
-      <workItem from="1586413539972" duration="1343000" />
-    </task>
-    <task id="LOCAL-00069" summary="Round borders in settings categories">
-      <created>1584275044587</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1584275044587</updated>
-    </task>
-    <task id="LOCAL-00070" summary="Add missing dependencies">
-      <created>1584544076089</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1584544076090</updated>
-    </task>
-    <task id="LOCAL-00071" summary="Move page endpoints">
-      <created>1584544124761</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1584544124761</updated>
+      <workItem from="1586413539972" duration="12025000" />
     </task>
     <task id="LOCAL-00072" summary="Change default for settings">
       <created>1584544837878</created>
@@ -471,7 +444,28 @@
       <option name="project" value="LOCAL" />
       <updated>1586359713796</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="Fix licensing">
+      <created>1586414943348</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1586414943349</updated>
+    </task>
+    <task id="LOCAL-00119" summary="Refactoring">
+      <created>1586428143959</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1586428143959</updated>
+    </task>
+    <task id="LOCAL-00120" summary="Documentation">
+      <created>1586428159198</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1586428159198</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,9 +488,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Delete pages only temporarily" />
-    <MESSAGE value="Delete pages only temporarily #2" />
-    <MESSAGE value="Fix issue with deleted pages" />
     <MESSAGE value="Tweak UI" />
     <MESSAGE value="Fix input type for content width setting" />
     <MESSAGE value="Tweak some default values in color settings" />
@@ -519,26 +510,29 @@
     <MESSAGE value="Add concept of licenses" />
     <MESSAGE value="Refactor" />
     <MESSAGE value="Fix db connection instances" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix db connection instances" />
+    <MESSAGE value="Fix licensing" />
+    <MESSAGE value="Refactoring" />
+    <MESSAGE value="Documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Documentation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1687" y="397" width="696" height="1012" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586358815977">
       <screen x="1080" y="370" width="1920" height="1080" />
     </state>
     <state x="1687" y="397" width="696" height="1012" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586358815977" />
-    <state x="1773" y="660" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586351936187">
+    <state x="1773" y="660" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586424118604">
       <screen x="1080" y="370" width="1920" height="1080" />
     </state>
-    <state x="1773" y="660" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586351936187" />
+    <state x="1773" y="660" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586424118604" />
     <state x="1823" y="830" width="424" height="144" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1586331017584">
       <screen x="1080" y="370" width="1920" height="1080" />
     </state>
     <state x="1823" y="830" width="424" height="144" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586331017584" />
-    <state x="1300" y="798" width="943" height="611" key="CommitChangelistDialog2" timestamp="1586414918760">
+    <state x="1300" y="798" width="943" height="611" key="CommitChangelistDialog2" timestamp="1586435338359">
       <screen x="1080" y="370" width="1920" height="1080" />
     </state>
     <state x="2140" y="470" width="860" height="610" key="CommitChangelistDialog2/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585560363548" />
-    <state x="1300" y="798" width="943" height="611" key="CommitChangelistDialog2/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586414918760" />
+    <state x="1300" y="798" width="943" height="611" key="CommitChangelistDialog2/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586435338359" />
     <state x="1180" y="495" width="1720" height="814" key="DiffContextDialog" timestamp="1586413620176">
       <screen x="1080" y="370" width="1920" height="1080" />
     </state>
@@ -579,48 +573,49 @@
       <screen x="0" y="397" width="1920" height="683" />
     </state>
     <state width="1034" height="690" key="GridCell.Tab.1.right/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585572976085" />
-    <state x="1929" y="819" width="785" height="373" key="NewPhpClassDialog" timestamp="1586414361201">
+    <state x="1929" y="819" width="777" height="373" key="NewPhpClassDialog" timestamp="1586424030364">
       <screen x="1080" y="370" width="1920" height="1080" />
     </state>
     <state x="999" y="707" width="921" height="373" key="NewPhpClassDialog/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585556422892" />
-    <state x="1929" y="819" width="785" height="373" key="NewPhpClassDialog/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586414361201" />
-    <state x="1415" y="1140" width="399" height="149" key="NewPhpFileDialog" timestamp="1586414128606">
+    <state x="1929" y="819" width="777" height="373" key="NewPhpClassDialog/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586424030364" />
+    <state x="1415" y="1140" width="399" height="149" key="NewPhpFileDialog" timestamp="1586423973419">
       <screen x="1080" y="370" width="1920" height="1080" />
     </state>
     <state x="335" y="884" width="399" height="149" key="NewPhpFileDialog/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585556723086" />
-    <state x="1415" y="1140" key="NewPhpFileDialog/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586414128606" />
-    <state width="498" height="706" key="SwitcherDM" timestamp="1586414662139">
+    <state x="1415" y="1140" width="399" height="149" key="NewPhpFileDialog/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586423973419" />
+    <state width="498" height="706" key="SwitcherDM" timestamp="1586432988976">
       <screen x="1080" y="370" width="1920" height="1080" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585556761421" />
-    <state width="498" height="706" key="SwitcherDM/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586414662139" />
+    <state width="498" height="706" key="SwitcherDM/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586432988976" />
     <state x="1920" y="774" width="324" height="257" key="VCS.EditChangelistDialog" timestamp="1585554867833">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="1920" y="774" width="324" height="257" key="VCS.EditChangelistDialog/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585554867833" />
-    <state x="1360" y="881" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1586359715240">
+    <state x="1360" y="881" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1586428160182">
       <screen x="1080" y="370" width="1920" height="1080" />
     </state>
     <state x="2200" y="552" width="800" height="528" key="Vcs.Push.Dialog.v2/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585560365031" />
-    <state x="1360" y="881" width="800" height="528" key="Vcs.Push.Dialog.v2/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586359715240" />
+    <state x="1360" y="881" width="800" height="528" key="Vcs.Push.Dialog.v2/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586428160182" />
     <state x="1808" y="822" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586413548129">
       <screen x="1080" y="370" width="1920" height="1080" />
     </state>
     <state x="1808" y="822" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586413548129" />
-    <state x="1420" y="397" width="1580" height="1012" key="find.popup" timestamp="1586359578374">
+    <state x="1420" y="397" width="1580" height="1012" key="find.popup" timestamp="1586433536195">
       <screen x="1080" y="370" width="1920" height="1080" />
     </state>
     <state x="340" y="397" width="1580" height="683" key="find.popup/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585556138276" />
-    <state x="1420" y="397" width="1580" height="1012" key="find.popup/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586359578374" />
-    <state width="300" height="57" key="javadoc.popup.new" timestamp="1586414883031">
+    <state x="1420" y="397" width="1580" height="1012" key="find.popup/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586433536195" />
+    <state width="300" height="57" key="javadoc.popup.new" timestamp="1586433672933">
       <screen x="1080" y="370" width="1920" height="1080" />
     </state>
     <state width="300" height="36" key="javadoc.popup.new/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585559623788" />
-    <state width="300" height="57" key="javadoc.popup.new/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586414883031" />
-    <state x="1283" y="376" width="672" height="1073" key="search.everywhere.popup" timestamp="1586414045299">
+    <state width="300" height="57" key="javadoc.popup.new/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586433672933" />
+    <state x="1283" y="376" width="672" height="1073" key="search.everywhere.popup" timestamp="1586431692078">
       <screen x="1080" y="370" width="1920" height="1080" />
     </state>
     <state x="203" y="401" width="672" height="678" key="search.everywhere.popup/0.397.1920.683/1920.0.1920.1080@0.397.1920.683" timestamp="1585559306773" />
-    <state x="1283" y="376" width="672" height="1073" key="search.everywhere.popup/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586414045299" />
+    <state x="114" y="403" width="672" height="1006" key="search.everywhere.popup/1080.370.1920.1080/0.397.1080.1012@0.397.1080.1012" timestamp="1586422046976" />
+    <state x="1283" y="376" width="672" height="1073" key="search.everywhere.popup/1080.370.1920.1080/0.397.1080.1012@1080.370.1920.1080" timestamp="1586431692078" />
   </component>
 </project>

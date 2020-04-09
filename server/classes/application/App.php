@@ -51,6 +51,7 @@ class App
             $this->state->setLicense($license);
 
             $this->request->save($this->clientDb);
+            $this->succesfulInit = true;
         } else {
             $this->succesfulInit = false;
         }
