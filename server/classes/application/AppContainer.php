@@ -32,7 +32,9 @@ class AppContainer
         $this->req = $this->app->getRequest();
 
         if (!$this->app->isSuccesfulInit()) {
-            $this->handleInvalidLicense();
+            if ($this->licenseNeeded()) {
+                $this->handleInvalidLicense();
+            }
         } else {
             $this->rootDb = $this->app->getRootDb();
             $this->db = $this->app->getClientDb();
@@ -50,6 +52,11 @@ class AppContainer
             License::_isValid($this->app->getState()->getLicense())
             && $permission->check($this->req->getUser())
         );
+    }
+
+    protected function licenseNeeded(): bool
+    {
+        return true;
     }
 
 }
