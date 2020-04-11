@@ -1,8 +1,7 @@
 <?php
 
+require_once __DIR__ . '/headers.php';
 require_once __DIR__ . '/autoload.php';
-
-header('Access-Control-Allow-Origin: *');
 session_start();
 
 ini_set('display_errors', 0);
